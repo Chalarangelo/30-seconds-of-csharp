@@ -10,9 +10,10 @@ Explain briefly how the snippet works.
 ```csharp
 public static partial class _30s 
 {
-	public static void MyFunction() {
+  public static void MyFunction() 
+  {
     // Your code here
-	}
+  }
 }
 ```
 
