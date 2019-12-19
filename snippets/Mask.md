@@ -3,7 +3,7 @@ title: Mask
 tags: string,utility,intermediate
 ---
 
-Replaces all but the last  `n`  characters in a string with the specified `mask` character.
+Replaces all but the last `n` characters in a string with the specified `mask` character.
 
 Use `string.Substring()` to get the last `n` characters of the passed string, `str`.
 Use `string.PadLeft()` to add as many `mask` characters as necessary to the start of the string to return a string of the same length.
@@ -25,5 +25,5 @@ string s = "1234567890";
 
 _30s.Mask(s); // "******7890"
 _30s.Mask(s, 3); // "*******890"
-_30s.Mask(s, 2, '$'); // "$$$$$$$$90"
+_30s.Mask(s, 2, '/$'); // "$$$$$$$$90"
 ```
