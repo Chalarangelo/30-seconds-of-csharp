@@ -3,9 +3,9 @@ title: Stringify
 tags: utility,array,list,beginner
 ---
 
-Combines the elements of an enumerable into a string.
+Combines the elements of an enumerable object into a string.
 
-Use `string.Join()` to combine all elements in the `Enumerable` into a `string`, using `delimiter`.
+Use `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.
 Omit the second argument, `delimiter`, to use the default delimiter of `","`.
 
 ```csharp
