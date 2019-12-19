@@ -1,0 +1,501 @@
+{
+  "data": [
+    {
+      "id": "All",
+      "title": "All",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "All.md",
+        "text": "Returns `True` if the provided predicate function returns `True` for all elements in a collection, `False` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `True` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool All<T>(T[] arr, Predicate<T> match) \n  {\n    return Array.TrueForAll(arr, match);\n  }\n  public static bool All<T>(T[] arr) \n  {\n    return Array.TrueForAll(arr, val => val != null);\n  }\n}",
+          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.All(nums, x => x > 1); // True\n_30s.All(nums); // True"
+        },
+        "tags": [
+          "array",
+          "lambda",
+          "overload",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c6044d1f81802fa062b94ca120c3f38356d908aedd47236165ffe873584bdf86",
+        "firstSeen": "1576571828",
+        "lastUpdated": "1576571828",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Capitalize",
+      "title": "Capitalize",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Capitalize.md",
+        "text": "Capitalizes the first letter of a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `chars`.\nUse `char.ToUpper(chars[0])` to capitalize the first letter.\nFinally, return a `new string()` from the `chars` array.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string Capitalize(string str) \n  {\n    char[] chars = str.ToCharArray();\n    chars[0] = char.ToUpper(chars[0]);\n    return new string(chars);\n  }\n}",
+          "example": "string s = \"fooBar\";\n\n_30s.Capitalize(s); // \"FooBar\""
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6e6736b4336748ddfc57d973b0fd51a0e0fff079aaae5684ba4597a08ea362f4",
+        "firstSeen": "1576570223",
+        "lastUpdated": "1576570223",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Chunk",
+      "title": "Chunk",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Chunk.md",
+        "text": "Chunks an array into smaller arrays of a specified size.\n\nUse `IEnumerable.Select()` to convert the given list to index-value pairs.\nUse `IEnumerable.GroupBy()` to split elements into groups based on their index.\nUse `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.\nFinally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.\nIf the original list can't be split evenly, the final chunk will contain the remaining elements.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static List<List<T>> Chunk<T>(List<T> list, int size)\n  {\n    return list\n      .Select((x, i) => new { Index = i, Value = x })\n      .GroupBy(x => x.Index / size)\n      .Select(x => x.Select(v => v.Value).ToList())\n      .ToList();\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };\n\n_30s.Chunk(nums, 2); // { {1, 2}, {3, 4}, {5} }"
+        },
+        "tags": [
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "4b5e3410d1ad58102d284d69b135de6ab0d7a352a2af2a0325ccc44d06600c53",
+        "firstSeen": "1576588682",
+        "lastUpdated": "1576747041",
+        "updateCount": 4,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "CompactWhitespace",
+      "title": "CompactWhitespace",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "CompactWhitespace.md",
+        "text": "Returns a string with whitespaces compacted.\n\nUse `Regex.Replace()` with a regular expression to replace all occurences of 2 or more subsequent whitespace characters with a single space.\n\n",
+        "codeBlocks": {
+          "code": "using System.Text.RegularExpressions;\n\npublic static partial class _30s \n{\n  public static string CompactWhitespace(string str) \n  {\n    return Regex.Replace(str, @\"\\s{2,}\", \" \");\n  }\n}",
+          "example": "string s = \"Lorem    ipsum\\n   dolor sit   amet\";\n\n_30s.CompactWhitespace(s); // \"Lorem ipsum dolor sit amet\""
+        },
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "598628d7d76e067aa9ac395263c2851d1190c2c4d5c274f45beb499b0f411602",
+        "firstSeen": "1576588810",
+        "lastUpdated": "1576588810",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Decapitalize",
+      "title": "Decapitalize",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Decapitalize.md",
+        "text": "Decapitalizes the first letter of a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `chars`.\nUse `char.ToLower(chars[0])` to decapitalize the first letter.\nFinally, return a `new string()` from the `chars` array.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string Decapitalize(string str) \n  {\n    char[] chars = str.ToCharArray();\n    chars[0] = char.ToLower(chars[0]);\n    return new string(chars);\n  }\n}",
+          "example": "string s = \"FooBar\";\n\n_30s.Decapitalize(s); // \"fooBar\""
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6e0f3b18da2fa4e3eec6de9d45e8889b5af803ff36c4e3a85b37d9dafaa36be7",
+        "firstSeen": "1576570276",
+        "lastUpdated": "1576570276",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "DistinctValues",
+      "title": "DistinctValues",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "DistinctValues.md",
+        "text": "Returns all distinct values in an array.\n\nUse `Enumerable.Distinct()` to get the distinct values in the given array.\nUse `Enumerable.ToArray()` to convert the result to an array and return it.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static T[] DistinctValues<T>(T[] arr) \n  {\n    return arr.Distinct().ToArray();\n  }\n}",
+          "example": "int[] nums =  { 1, 2, 1, 3, 3, 4, 5 };\n\n_30s.DistinctValues(nums); // { 1, 2, 3, 4, 5 }"
+        },
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "23d7f6b38ecde3077fb22e65a2aa77642c3dfdb0b8e4e6571f544fe5015155fb",
+        "firstSeen": "1576588434",
+        "lastUpdated": "1576742363",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsDouble",
+      "title": "IsDouble",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsDouble.md",
+        "text": "Returns `True` if the given string can be parsed into a double, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
+        "codeBlocks": {
+          "code": "using System.Globalization;\n\npublic static partial class _30s \n{\n  public static bool IsDouble(string num) \n  {\n    Double _ = 0.0;\n    return Double.TryParse(num, NumberStyles.Float, NumberFormatInfo.CurrentInfo, out _);\n  }\n}",
+          "example": "_30s.IsDouble(\"2\"); // True\n_30s.IsDouble(\"hi\"); // False"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "97f3c210b542d4aae691e66f78f7d630352470be67f8e176074285e4abc323d2",
+        "firstSeen": "1576587842",
+        "lastUpdated": "1576587842",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsEven",
+      "title": "IsEven",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsEven.md",
+        "text": "Returns `True` if the given number is even, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is even, `False` if the number is odd.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsEven(int n) \n  {\n    return n % 2 == 0;\n  }\n}",
+          "example": "_30s.IsEven(2); // True\n_30s.IsEven(3); // False"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "cdc43c7f86e5f20a93a4f1ab39dc9f67de019ad67d4d8cdaae094dca62d22f49",
+        "firstSeen": "1576570816",
+        "lastUpdated": "1576570816",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsInteger",
+      "title": "IsInteger",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsInteger.md",
+        "text": "Returns `True` if the given string can be parsed into an integer, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Globalization;\n\npublic static partial class _30s \n{\n  public static bool IsInteger(string num) \n  {\n    Double _ = 0.0;\n    return Double.TryParse(num, NumberStyles.Integer, NumberFormatInfo.CurrentInfo, out _);\n  }\n}",
+          "example": "_30s.IsInteger(\"2\"); // True\n_30s.IsInteger(\"3.1\"); // False"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2b53765c77a81a4a249cad4654cffbac84b6392da16ccce450ca854c5c0ce3e4",
+        "firstSeen": "1576587836",
+        "lastUpdated": "1576587836",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsLower",
+      "title": "IsLower",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsLower.md",
+        "text": "Checks if a string is lower case.\n\nConvert the given string to lower case, using  `string.ToLower()`  and compare it to the original.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsLower(string str) \n  {\n    return str.ToLower() == str;\n  }\n}",
+          "example": "string s1 = \"abc\";\nstring s2 = \"cDe\";\n\n_30s.IsLower(s1); // True\n_30s.IsLower(s2); // False"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "017f5bf87114fe1b469aea3199b8ba47fc70ac1671c131f50792b69cf3c93746",
+        "firstSeen": "1576571006",
+        "lastUpdated": "1576571006",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsOdd",
+      "title": "IsOdd",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsOdd.md",
+        "text": "Returns `True` if the given number is odd, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is odd, `False` if the number is even.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsOdd(int n) \n  {\n    return n % 2 != 0;\n  }\n}",
+          "example": "_30s.IsOdd(3); // True\n_30s.IsOdd(4); // False"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db",
+        "firstSeen": "1576570824",
+        "lastUpdated": "1576570824",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsUpper",
+      "title": "IsUpper",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsUpper.md",
+        "text": "Checks if a string is upper case.\n\nConvert the given string to upper case, using  `string.ToUpper()`  and compare it to the original.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsUpper(string str) \n  {\n    return str.ToUpper() == str;\n  }\n}",
+          "example": "string s1 = \"ABC\";\nstring s2 = \"cDe\";\n\n_30s.IsUpper(s1); // True\n_30s.IsUpper(s2); // False"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b",
+        "firstSeen": "1576571048",
+        "lastUpdated": "1576571048",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Mask",
+      "title": "Mask",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Mask.md",
+        "text": "Replaces all but the last `n` characters in a string with the specified `mask` character.\n\nUse `string.Substring()` to get the last `n` characters of the passed string, `str`.\nUse `string.PadLeft()` to add as many `mask` characters as necessary to the start of the string to return a string of the same length.\nOmit the third argument, `mask`, to use a default character of `'*'`.\nOmit the second argument, `n`, to keep a default of `4` characters unmasked.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string Mask(string str, int n = 4, char mask = '*') \n  {\n    return str.Substring(str.Length - n).PadLeft(str.Length, mask);\n  }\n}",
+          "example": "string s = \"1234567890\";\n\n_30s.Mask(s); // \"******7890\"\n_30s.Mask(s, 3); // \"*******890\"\n_30s.Mask(s, 2, '/$'); // \"$$$$$$$$90\""
+        },
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9c469a03a2325eba95f39d919a8e4a0cbe7e5e6d849e772067368e04f4d4a425",
+        "firstSeen": "1576588260",
+        "lastUpdated": "1576742322",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "MaxDateTime",
+      "title": "MaxDateTime",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "MaxDateTime.md",
+        "text": "Returns the maximum of two `DateTime` values.\n\nUse the conditional operator (`?:`) to return the maximum of the two values.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static DateTime MaxDateTime(DateTime d1, DateTime d2) \n  {\n    return (d1 > d2) ? d1 : d2;\n  }\n}",
+          "example": "DateTime d1 = new DateTime(DateTime.MaxValue.Ticks);\nDateTime d2 = new DateTime(DateTime.MinValue.Ticks);\n\n_30s.MaxDateTime(d1, d2); // 12/31/9999 11:59:59 PM"
+        },
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8052e3922028cb52cc0737402a13b27a277587374c00fe928bc379dd0489ce97",
+        "firstSeen": "1576588060",
+        "lastUpdated": "1576742823",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "MinDateTime",
+      "title": "MinDateTime",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "MinDateTime.md",
+        "text": "Returns the minimum of two `DateTime` values.\n\nUse the conditional operator (`?:`) to return the minimum of the two values.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static DateTime MinDateTime(DateTime d1, DateTime d2) \n  {\n    return (d1 < d2) ? d1 : d2;\n  }\n}",
+          "example": "DateTime d1 = new DateTime(DateTime.MaxValue.Ticks);\nDateTime d2 = new DateTime(DateTime.MinValue.Ticks);\n\n_30s.MinDateTime(d1, d2); // 1/1/0001 12:00:00 AM"
+        },
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c39e58af84153f01abf9f57262cd67d2431cc553399eb360e9b0741261c58a93",
+        "firstSeen": "1576588054",
+        "lastUpdated": "1576742838",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "None",
+      "title": "None",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "None.md",
+        "text": "Returns `True` if the provided predicate function returns `False` for all elements in a collection, `False` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `False` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool None<T>(T[] arr, Predicate<T> match) \n  {\n    return !Array.Exists(arr, match);\n  }\n  public static bool None<T>(T[] arr) \n  {\n    return Array.Exists(arr, val => val == null);\n  }\n}",
+          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.None(nums, x => x < 0); // True\n_30s.None(nums); // False"
+        },
+        "tags": [
+          "array",
+          "lambda",
+          "overload",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8c7a1751ce92f61972e334db3791d736dd052dd90e3b40d576f264c9a8991f6c",
+        "firstSeen": "1576571834",
+        "lastUpdated": "1576571834",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Stringify",
+      "title": "Stringify",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Stringify.md",
+        "text": "Combines the elements of an enumerable object into a string.\n\nUse `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.\nOmit the second argument, `delimiter`, to use the default delimiter of `\",\"`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string Stringify<T> (IEnumerable<T> elements, delimiter = \",\") \n  {\n    return string.Join(delimiter, elements);\n  }\n}",
+          "example": "IList<string> s = new List<string> {\"a\", \"b\", \"c\"};\nint[] n = {1, 2, 3};\n\n_30s.Stringify(s); // \"a,b,c\"\n_30s.Stringify(n, \" \"); // \"1 2 3\""
+        },
+        "tags": [
+          "utility",
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "95b002967fde3476aa21e966bdfdb51e45459003b3d0b7105336684b38a49c43",
+        "firstSeen": "1576698679",
+        "lastUpdated": "1576746981",
+        "updateCount": 3,
+        "authorCount": 3
+      }
+    },
+    {
+      "id": "Swap",
+      "title": "Swap",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Swap.md",
+        "text": "Swaps the values of two variables of the same type.\n\nPass both values by reference using the `ref` keyword, then use a `temp` variable to swap their values.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static void Swap<T> (ref T val1, ref T val2) \n  {\n    var temp = val1;\n    val1 = val2;\n    val2 = temp;\n  }\n}",
+          "example": "string a = \"Ipsum\";\nstring b = \"Lorem\";\n\n_30s.Swap(ref a, ref b); // a = \"Lorem\", b = \"Ipsum\""
+        },
+        "tags": [
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "22bf5dfd734ebeea4868687cf82f7f63e612a95b95372abd37d7e76df04132d4",
+        "firstSeen": "1576588339",
+        "lastUpdated": "1576588339",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Tomorrow",
+      "title": "Tomorrow",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Tomorrow.md",
+        "text": "Returns tomorrow's `DateTime` value.\n\nUse `DateTime.Now` to get the current date, then use `DateTime.AddDays(1)` to increment by `1`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static DateTime Tomorrow() \n  {\n    return DateTime.Now.AddDays(1);\n  }\n}",
+          "example": "_30s.Tomorrow(); // 12/22/2019 11:00:49 AM (if it's 12/21/2019 11:00:49 AM)"
+        },
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8e45c27d173cec524bf003c180a9dff03dc99b7533402c1abdca717cdc23eb17",
+        "firstSeen": "1576572220",
+        "lastUpdated": "1576572220",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Yesterday",
+      "title": "Yesterday",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Yesterday.md",
+        "text": "Returns yesterday's `DateTime` value.\n\nUse `DateTime.Now` to get the current date, then use `DateTime.AddDays(-1)` to decrement by `1`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static DateTime Yesterday() \n  {\n    return DateTime.Now.AddDays(-1);\n  }\n}",
+          "example": "_30s.Yesterday(); // 12/20/2019 11:00:49 AM (if it's 12/21/2019 11:00:49 AM)"
+        },
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "01a571b15be333f136b4b28634ed1732688a9b2a4184d04ce9989c0ec30d7b44",
+        "firstSeen": "1576572213",
+        "lastUpdated": "1576572213",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    }
+  ],
+  "meta": {
+    "specification": "http://jsonapi.org/format/",
+    "type": "snippetArray",
+    "language": {
+      "short": "csharp",
+      "long": "C#"
+    }
+  }
+}

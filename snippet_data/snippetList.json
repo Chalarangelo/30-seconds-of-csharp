@@ -1,0 +1,321 @@
+{
+  "data": [
+    {
+      "id": "All",
+      "type": "snippetListing",
+      "title": "All",
+      "attributes": {
+        "text": "Returns `True` if the provided predicate function returns `True` for all elements in a collection, `False` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `True` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
+        "tags": [
+          "array",
+          "lambda",
+          "overload",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c6044d1f81802fa062b94ca120c3f38356d908aedd47236165ffe873584bdf86"
+      }
+    },
+    {
+      "id": "Capitalize",
+      "type": "snippetListing",
+      "title": "Capitalize",
+      "attributes": {
+        "text": "Capitalizes the first letter of a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `chars`.\nUse `char.ToUpper(chars[0])` to capitalize the first letter.\nFinally, return a `new string()` from the `chars` array.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6e6736b4336748ddfc57d973b0fd51a0e0fff079aaae5684ba4597a08ea362f4"
+      }
+    },
+    {
+      "id": "Chunk",
+      "type": "snippetListing",
+      "title": "Chunk",
+      "attributes": {
+        "text": "Chunks an array into smaller arrays of a specified size.\n\nUse `IEnumerable.Select()` to convert the given list to index-value pairs.\nUse `IEnumerable.GroupBy()` to split elements into groups based on their index.\nUse `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.\nFinally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.\nIf the original list can't be split evenly, the final chunk will contain the remaining elements.\n\n",
+        "tags": [
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "4b5e3410d1ad58102d284d69b135de6ab0d7a352a2af2a0325ccc44d06600c53"
+      }
+    },
+    {
+      "id": "CompactWhitespace",
+      "type": "snippetListing",
+      "title": "CompactWhitespace",
+      "attributes": {
+        "text": "Returns a string with whitespaces compacted.\n\nUse `Regex.Replace()` with a regular expression to replace all occurences of 2 or more subsequent whitespace characters with a single space.\n\n",
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "598628d7d76e067aa9ac395263c2851d1190c2c4d5c274f45beb499b0f411602"
+      }
+    },
+    {
+      "id": "Decapitalize",
+      "type": "snippetListing",
+      "title": "Decapitalize",
+      "attributes": {
+        "text": "Decapitalizes the first letter of a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `chars`.\nUse `char.ToLower(chars[0])` to decapitalize the first letter.\nFinally, return a `new string()` from the `chars` array.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6e0f3b18da2fa4e3eec6de9d45e8889b5af803ff36c4e3a85b37d9dafaa36be7"
+      }
+    },
+    {
+      "id": "DistinctValues",
+      "type": "snippetListing",
+      "title": "DistinctValues",
+      "attributes": {
+        "text": "Returns all distinct values in an array.\n\nUse `Enumerable.Distinct()` to get the distinct values in the given array.\nUse `Enumerable.ToArray()` to convert the result to an array and return it.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "23d7f6b38ecde3077fb22e65a2aa77642c3dfdb0b8e4e6571f544fe5015155fb"
+      }
+    },
+    {
+      "id": "IsDouble",
+      "type": "snippetListing",
+      "title": "IsDouble",
+      "attributes": {
+        "text": "Returns `True` if the given string can be parsed into a double, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "97f3c210b542d4aae691e66f78f7d630352470be67f8e176074285e4abc323d2"
+      }
+    },
+    {
+      "id": "IsEven",
+      "type": "snippetListing",
+      "title": "IsEven",
+      "attributes": {
+        "text": "Returns `True` if the given number is even, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is even, `False` if the number is odd.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "cdc43c7f86e5f20a93a4f1ab39dc9f67de019ad67d4d8cdaae094dca62d22f49"
+      }
+    },
+    {
+      "id": "IsInteger",
+      "type": "snippetListing",
+      "title": "IsInteger",
+      "attributes": {
+        "text": "Returns `True` if the given string can be parsed into an integer, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2b53765c77a81a4a249cad4654cffbac84b6392da16ccce450ca854c5c0ce3e4"
+      }
+    },
+    {
+      "id": "IsLower",
+      "type": "snippetListing",
+      "title": "IsLower",
+      "attributes": {
+        "text": "Checks if a string is lower case.\n\nConvert the given string to lower case, using  `string.ToLower()`  and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "017f5bf87114fe1b469aea3199b8ba47fc70ac1671c131f50792b69cf3c93746"
+      }
+    },
+    {
+      "id": "IsOdd",
+      "type": "snippetListing",
+      "title": "IsOdd",
+      "attributes": {
+        "text": "Returns `True` if the given number is odd, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is odd, `False` if the number is even.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db"
+      }
+    },
+    {
+      "id": "IsUpper",
+      "type": "snippetListing",
+      "title": "IsUpper",
+      "attributes": {
+        "text": "Checks if a string is upper case.\n\nConvert the given string to upper case, using  `string.ToUpper()`  and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b"
+      }
+    },
+    {
+      "id": "Mask",
+      "type": "snippetListing",
+      "title": "Mask",
+      "attributes": {
+        "text": "Replaces all but the last `n` characters in a string with the specified `mask` character.\n\nUse `string.Substring()` to get the last `n` characters of the passed string, `str`.\nUse `string.PadLeft()` to add as many `mask` characters as necessary to the start of the string to return a string of the same length.\nOmit the third argument, `mask`, to use a default character of `'*'`.\nOmit the second argument, `n`, to keep a default of `4` characters unmasked.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9c469a03a2325eba95f39d919a8e4a0cbe7e5e6d849e772067368e04f4d4a425"
+      }
+    },
+    {
+      "id": "MaxDateTime",
+      "type": "snippetListing",
+      "title": "MaxDateTime",
+      "attributes": {
+        "text": "Returns the maximum of two `DateTime` values.\n\nUse the conditional operator (`?:`) to return the maximum of the two values.\n\n",
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8052e3922028cb52cc0737402a13b27a277587374c00fe928bc379dd0489ce97"
+      }
+    },
+    {
+      "id": "MinDateTime",
+      "type": "snippetListing",
+      "title": "MinDateTime",
+      "attributes": {
+        "text": "Returns the minimum of two `DateTime` values.\n\nUse the conditional operator (`?:`) to return the minimum of the two values.\n\n",
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c39e58af84153f01abf9f57262cd67d2431cc553399eb360e9b0741261c58a93"
+      }
+    },
+    {
+      "id": "None",
+      "type": "snippetListing",
+      "title": "None",
+      "attributes": {
+        "text": "Returns `True` if the provided predicate function returns `False` for all elements in a collection, `False` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `False` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
+        "tags": [
+          "array",
+          "lambda",
+          "overload",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8c7a1751ce92f61972e334db3791d736dd052dd90e3b40d576f264c9a8991f6c"
+      }
+    },
+    {
+      "id": "Stringify",
+      "type": "snippetListing",
+      "title": "Stringify",
+      "attributes": {
+        "text": "Combines the elements of an enumerable object into a string.\n\nUse `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.\nOmit the second argument, `delimiter`, to use the default delimiter of `\",\"`.\n\n",
+        "tags": [
+          "utility",
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "95b002967fde3476aa21e966bdfdb51e45459003b3d0b7105336684b38a49c43"
+      }
+    },
+    {
+      "id": "Swap",
+      "type": "snippetListing",
+      "title": "Swap",
+      "attributes": {
+        "text": "Swaps the values of two variables of the same type.\n\nPass both values by reference using the `ref` keyword, then use a `temp` variable to swap their values.\n\n",
+        "tags": [
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "22bf5dfd734ebeea4868687cf82f7f63e612a95b95372abd37d7e76df04132d4"
+      }
+    },
+    {
+      "id": "Tomorrow",
+      "type": "snippetListing",
+      "title": "Tomorrow",
+      "attributes": {
+        "text": "Returns tomorrow's `DateTime` value.\n\nUse `DateTime.Now` to get the current date, then use `DateTime.AddDays(1)` to increment by `1`.\n\n",
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8e45c27d173cec524bf003c180a9dff03dc99b7533402c1abdca717cdc23eb17"
+      }
+    },
+    {
+      "id": "Yesterday",
+      "type": "snippetListing",
+      "title": "Yesterday",
+      "attributes": {
+        "text": "Returns yesterday's `DateTime` value.\n\nUse `DateTime.Now` to get the current date, then use `DateTime.AddDays(-1)` to decrement by `1`.\n\n",
+        "tags": [
+          "date",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "01a571b15be333f136b4b28634ed1732688a9b2a4184d04ce9989c0ec30d7b44"
+      }
+    }
+  ],
+  "meta": {
+    "specification": "http://jsonapi.org/format/",
+    "type": "snippetListingArray",
+    "language": {
+      "short": "csharp",
+      "long": "C#"
+    }
+  }
+}
