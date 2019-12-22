@@ -3,7 +3,7 @@ title: Head
 tags: array,list,beginner
 ---
 
-Returns the head of a `IEnumerable`.
+Returns the head of an `IEnumerable`.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.
