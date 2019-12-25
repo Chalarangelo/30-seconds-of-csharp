@@ -5,7 +5,7 @@ tags: array,list,intermediate
 
 Counts the occurences of a value in an `IEnumerable`.
 
-Use `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals` to compare each value in the `IEnumerable` with `el`.
+Use `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.
 
 ```csharp
 using System.Collections.Generic;
