@@ -27,6 +27,31 @@
       }
     },
     {
+      "id": "ByteArrayToHex",
+      "title": "ByteArrayToHex",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "ByteArrayToHex.md",
+        "text": "Converts a `byte` array to its hexadecimal string representation.\n\nUse `BitConverter.ToString()` to convert the `byte` array to a string.\nUse `string.Replace()` to remove dashes in the produced string.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string ByteArrayToHex(byte[] bytes) \n  {\n    return BitConverter.ToString(bytes).Replace(\"-\", \"\");\n  }\n}",
+          "example": "byte[] data = { 241, 89, 54 };\n\n_30s.ByteArrayToHex(data); // \"F15936\""
+        },
+        "tags": [
+          "array",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "67fb03f80d82f6737e6f9a44bc271f4b10e4661f03ee9f95be249da0f09e1820",
+        "firstSeen": "1577294963",
+        "lastUpdated": "1577294963",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Capitalize",
       "title": "Capitalize",
       "type": "snippet",
@@ -101,6 +126,31 @@
       }
     },
     {
+      "id": "CountOccurences",
+      "title": "CountOccurences",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "CountOccurences.md",
+        "text": "Counts the occurences of a value in an `IEnumerable`.\n\nUse `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static int CountOccurences<T>(IEnumerable<T> obj, T el) \n  {\n    return obj.Count(f => EqualityComparer<T>.Default.Equals(f, el));\n  }\n}",
+          "example": "string s = \"fooBar\";\nList<int> nums = new List<int>(){ 1, 2, 3, 3, 3, 4, 5, 6 };\n\n_30s.CountOccurences(s,'o'); // 2\n_30s.CountOccurences(nums,3); // 3"
+        },
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e416d30956587c04825689ab69a33d68fc2690fe2f422debf9fc892e770d7c3b",
+        "firstSeen": "1577278755",
+        "lastUpdated": "1577279440",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Decapitalize",
       "title": "Decapitalize",
       "type": "snippet",
@@ -145,6 +195,181 @@
         "firstSeen": "1576588434",
         "lastUpdated": "1576742363",
         "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "FilterString",
+      "title": "FilterString",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FilterString.md",
+        "text": "Filter a string's contents to include only alphanumeric and allowed characters.\n\nUse `string.ToCharArray()` in combination with `Array.FindAll()` to check if each character in the string is alphanumeric or contained in the `filter`.\nOmit the second argument, `filter`, to only allow alphanumeric characters.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string FilterString(string s, string filter = \"\")\n  {\n    return new string(\n      Array.FindAll(s.ToCharArray(), c => char.IsLetterOrDigit(c) || filter.Contains(c))\n    );\n  }\n}",
+          "example": "string s = \"@30_seconds_of_code#-$\";\n\n_30s.FilterString(s); // \"30secondsofcode\"\n_30s.FilterString(s,\"_\"); // \"30_seconds_of_code\"\n_30s.FilterString(s,\"_@\"); // \"@30_seconds_of_code\""
+        },
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "06cfb76e42df33a38a44ef4e2f232a5b4bb019afb25298d9428d4db935beb84f",
+        "firstSeen": "1577297645",
+        "lastUpdated": "1577297645",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "GetFirstN",
+      "title": "GetFirstN",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "GetFirstN.md",
+        "text": "Returns the first `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(n)` to get the first `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static IEnumerable<T> GetFirstN<T>(IEnumerable<T> list, int n = 1)\n  {\n    return list.Count() != 0 ? list.Take(n) : default(IEnumerable<T>);\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };\n\n_30s.GetFirstN(nums); // { 1 }\n_30s.GetFirstN(nums, 3); // { 1, 2, 3 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c00408502f5bd2f067727d0ab68cded73200c0c64c68b096c0e94eb61795592d",
+        "firstSeen": "1577047252",
+        "lastUpdated": "1577047252",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "GetLastN",
+      "title": "GetLastN",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "GetLastN.md",
+        "text": "Returns the last `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static IEnumerable<T> GetLastN<T>(IEnumerable<T> list, int n = 1)\n  {\n    return list.Count() != 0 ? list.Skip(list.Count() - n) : default(IEnumerable<T>);\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };\n\n_30s.GetLastN(nums); // { 5 }\n_30s.GetLastN(nums, 3); // { 3, 4, 5 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8578add19a89ab0c15c79a6030f687362fccca235f86b05393cc673d8c145bf4",
+        "firstSeen": "1577047634",
+        "lastUpdated": "1577047634",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "GetType",
+      "title": "GetType",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "GetType.md",
+        "text": "Returns the type of the given object.\n\nUse `typeof()` on the given object's type.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static Type GetType<T>(T obj) \n  {\n    return typeof(T);\n  }\n}",
+          "example": "string s = \"fooBar\";\nList<string> list = new List<string>() { \"a\", \"b\", \"c\" };\n\n_30s.GetType(s); // System.String\n_30s.GetType(list); // System.Collections.Generic.List`1[System.String]"
+        },
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "229825e3b5d2a4ffd29cb3adc18aa2d51a8eb10c037eb28a6632fef89105c941",
+        "firstSeen": "1577278779",
+        "lastUpdated": "1577278779",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Head",
+      "title": "Head",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Head.md",
+        "text": "Returns the head of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.\nIf the enumerable object is empty, return the `default()` value for the given type.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static T Head<T>(IEnumerable<T> list) \n  {\n    return list.Count() != 0 ? list.Take(1).ToArray()[0] : default(T);\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };\nList<int> empty = new List<int>(){ };\nchar[] chars = {'A','B','C'};\n\n_30s.Head(nums); // 1\n_30s.Head(empty); // 0\n_30s.Head(chars); // 'A'"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "014c9c4ff5672a67a24dc3096071ecc9441a85c9a16bf3eac6fa5ebdf3097ef1",
+        "firstSeen": "1577045234",
+        "lastUpdated": "1577050262",
+        "updateCount": 3,
+        "authorCount": 3
+      }
+    },
+    {
+      "id": "HexToByteArray",
+      "title": "HexToByteArray",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "HexToByteArray.md",
+        "text": "Converts a hexadecimal string to a `byte` array.\n\nUse `Enumerable.Range()` in combination with `string.Length` to get the indices of the given string in an array.\nUse `Enumerable.Where()` to get only the even indices in the previous range.\nUse `Enumerable.Select()` in combination with `Convert.ToByte()` and `string.Substring()` to convert each byte's hex code to a `byte`.\nFinally, use `Enumerable.ToArray()` to return a `byte[]`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static byte[] HexToByteArray(string hex)\n  {\n    return Enumerable.Range(0, hex.Length)\n      .Where(x => x % 2 == 0)\n      .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))\n      .ToArray();\n  }\n}",
+          "example": "_30s.HexToByteArray(\"F15936\"); // { 241, 89, 54 }"
+        },
+        "tags": [
+          "string",
+          "utility",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "804a476d856f46835e8d5fa36c3b799e8b483679cf514f1d967e319ff47187f8",
+        "firstSeen": "1577294976",
+        "lastUpdated": "1577294976",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsA",
+      "title": "IsA",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsA.md",
+        "text": "Returns `True` if the given object is of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsA<T>(object obj) \n  {\n    return obj is T;\n  }\n}",
+          "example": "string s = \"fooBar\";\n\n_30s.IsA<string>(s); // True\n_30s.IsA<int>(s); // False"
+        },
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189",
+        "firstSeen": "1577278798",
+        "lastUpdated": "1577278798",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
@@ -245,6 +470,31 @@
       }
     },
     {
+      "id": "IsNotA",
+      "title": "IsNotA",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsNotA.md",
+        "text": "Returns `True` if the given object is not of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsNotA<T>(object obj) \n  {\n    return !(obj is T);\n  }\n}",
+          "example": "string s = \"fooBar\";\n\n_30s.IsNotA<string>(s); // False\n_30s.IsNotA<int>(s); // True"
+        },
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "69eb40555c39d919cd23f60bbc5c7b29cc6a814483671cfafd4251b83822a694",
+        "firstSeen": "1577278815",
+        "lastUpdated": "1577278815",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "IsOdd",
       "title": "IsOdd",
       "type": "snippet",
@@ -264,6 +514,30 @@
         "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db",
         "firstSeen": "1576570824",
         "lastUpdated": "1576570824",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsPowerOfTwo",
+      "title": "IsPowerOfTwo",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsPowerOfTwo.md",
+        "text": "Returns `True` if the given number is a power of `2`, `False` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsPowerOfTwo(ulong n) \n  {\n    return (n != 0) && ((n & (n - 1)) == 0);\n  }\n}",
+          "example": "_30s.IsPowerOfTwo(0); // False\n_30s.IsPowerOfTwo(1); // True\n_30s.IsPowerOfTwo(8); // True"
+        },
+        "tags": [
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "48bd0fd976b443a4d7434ed4878e8ece7d69a3a13619cfc154d7a75e24f2309c",
+        "firstSeen": "1577278834",
+        "lastUpdated": "1577278834",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -392,6 +666,154 @@
       }
     },
     {
+      "id": "PadNumber",
+      "title": "PadNumber",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "PadNumber.md",
+        "text": "Pads a given number to the specified `length`.\n\nUse `Int32.ToString()` with an appropriate format specifier, produced using string interpolation.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string PadNumber(int n, int length)\n  {\n    return n.ToString($\"D{length}\");\n  }\n}",
+          "example": "_30s.PadNumber(1234,6); // \"001234\""
+        },
+        "tags": [
+          "string",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8d7933f298a3879af003418959a66b5d9352170e60db91c3f60c9383e1947ede",
+        "firstSeen": "1577299654",
+        "lastUpdated": "1577299654",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Repeat",
+      "title": "Repeat",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Repeat.md",
+        "text": "Creates a new string by repeating the given string `n` times.\n\nUse `Enumerable.Repeat()` to repeat `s` `n` times, `string.Concat()` to convert the result to a `string`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static string Repeat(string s, int n)\n  {\n    return string.Concat(Enumerable.Repeat(s, n));\n  }\n}",
+          "example": "_30s.Repeat(\"Ha\",5); // \"HaHaHaHaHa\""
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "70e7982d16309005ea8218b60659eb2003dd9685b970dd17b257b9b885441be2",
+        "firstSeen": "1577298772",
+        "lastUpdated": "1577298772",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Reverse",
+      "title": "Reverse",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Reverse.md",
+        "text": "Reverses a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `Array.Reverse()` to reverse the array.\nUse `IEnumerable.ToArray()` to create an array of `char` and pass it to a `new string()`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static void Reverse(string s) \n  {\n    return new string(s.ToCharArray().Reverse().ToArray());\n  }\n}",
+          "example": "string s = \"Hello World\";\n\n_30s.Reverse(s); // \"dlroW olleH\""
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e79c14b00d42af188414b6a8642f62f4820e716927e2722181b01bb612184aaf",
+        "firstSeen": "1577278851",
+        "lastUpdated": "1577278851",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Shuffle",
+      "title": "Shuffle",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Shuffle.md",
+        "text": "Randomizes the order of the values of an `IList`, updating the original `IList` object.\n\nUse the [Fisher-Yates algorithm](\nhttps://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static void Shuffle<T>(IList<T> list)\n  {\n    Random rand = new Random();\n    for (int n = list.Count() - 1 ; n > 0 ; n--)\n    {\n      int k = rand.Next(n + 1);\n      T value = list[k];\n      list[k] = list[n];\n      list[n] = value;\n    }\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5, 6 };\nint[] arr = { 1, 2, 3, 4, 5, 6 };\n\n_30s.Shuffle(nums); // nums = { 3, 5, 2, 1, 4, 6 }\n_30s.Shuffle(arr); // arr = { 6, 2, 5, 1, 4, 3 }"
+        },
+        "tags": [
+          "list",
+          "array",
+          "random",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "787070230c11fcce2e124507fade7a887e048b3d696a201bf509d16921fa70e8",
+        "firstSeen": "1577050162",
+        "lastUpdated": "1577050162",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "SplitLines",
+      "title": "SplitLines",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "SplitLines.md",
+        "text": "Splits a multiline string into an array of lines.\n\nUse `string.Split()` with all forms of the newline separator to split the string into an array of strings.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string[] SplitLines(string s)\n  {\n    return s.Split(new[] { \"\\r\\n\", \"\\r\", \"\\n\" }, StringSplitOptions.None);\n  }\n}",
+          "example": "string s = \"This\\nis a\\nmultiline\\nstring.\\n\";\n\n_30s.SplitLines(s); // {\"This\", \"is a\", \"multiline\", \"string.\" , \"\"}"
+        },
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c087d30e60ecacd0162674cef0d197a8dda8ef980c4268df031b2b3a8f8bb2dd",
+        "firstSeen": "1577298283",
+        "lastUpdated": "1577298283",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "SplitStringBy",
+      "title": "SplitStringBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "SplitStringBy.md",
+        "text": "Splits a string into an array of strings using a multicharacter (string) separator.\n\nUse `string.Split()` with the given `separator` to split the string into an array of strings.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string[] SplitStringBy(string s, string separator) \n  {\n    return s.Split(new[] {separator}, StringSplitOptions.None);\n  }\n}",
+          "example": "string s = \"Apples--oranges--pears\";\n\n_30s.SplitStringBy(s,\"--\"); // {Apples, oranges, pears}"
+        },
+        "tags": [
+          "string",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "85b5a86433c25b8a5c1d3429dde3a36c03f0cab77c489d9f30b6233d0e3aecad",
+        "firstSeen": "1577294370",
+        "lastUpdated": "1577294370",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Stringify",
       "title": "Stringify",
       "type": "snippet",
@@ -399,7 +821,7 @@
         "fileName": "Stringify.md",
         "text": "Combines the elements of an enumerable object into a string.\n\nUse `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.\nOmit the second argument, `delimiter`, to use the default delimiter of `\",\"`.\n\n",
         "codeBlocks": {
-          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string Stringify<T> (IEnumerable<T> elements, delimiter = \",\") \n  {\n    return string.Join(delimiter, elements);\n  }\n}",
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static string Stringify<T> (IEnumerable<T> elements, string delimiter = \",\") \n  {\n    return string.Join(delimiter, elements);\n  }\n}",
           "example": "IList<string> s = new List<string> {\"a\", \"b\", \"c\"};\nint[] n = {1, 2, 3};\n\n_30s.Stringify(s); // \"a,b,c\"\n_30s.Stringify(n, \" \"); // \"1 2 3\""
         },
         "tags": [
@@ -410,11 +832,35 @@
         ]
       },
       "meta": {
-        "hash": "95b002967fde3476aa21e966bdfdb51e45459003b3d0b7105336684b38a49c43",
+        "hash": "45df41ece158c680c9623ac822578976c526ce96a027f1d74bf62dbeddaecd7f",
         "firstSeen": "1576698679",
-        "lastUpdated": "1576746981",
-        "updateCount": 3,
-        "authorCount": 3
+        "lastUpdated": "1577045822",
+        "updateCount": 4,
+        "authorCount": 4
+      }
+    },
+    {
+      "id": "Subarray",
+      "title": "Subarray",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Subarray.md",
+        "text": "Returns a subarray of the given array starting at the given index and having the specified length.\n\nUse `ArraySegment()` with the given array, `arr`, `start` and `length` to get the subarray.\nConvert the result to an array, using `ArraySegment.ToArray()`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\n\npublic static partial class _30s \n{\n  public static T[] Subarray<T> (T[] arr, int start, int length) \n  {\n    return new ArraySegment<T>( arr, start, length ).ToArray();\n  }\n}",
+          "example": "int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n\n_30s.Subarray(nums,3,6); // {3, 4, 5, 6, 7, 8}"
+        },
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "9d3d9ac579ead5497ce7230af2374446035dcdbcdd86e6720a4a066cdab59331",
+        "firstSeen": "1577296269",
+        "lastUpdated": "1577296269",
+        "updateCount": 2,
+        "authorCount": 2
       }
     },
     {
@@ -439,6 +885,31 @@
         "lastUpdated": "1576588339",
         "updateCount": 2,
         "authorCount": 2
+      }
+    },
+    {
+      "id": "Tail",
+      "title": "Tail",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Tail.md",
+        "text": "Returns the tail of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(1)` to get the whole object except for the first element.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<T> Tail<T>(IEnumerable<T> list) \n  {\n    return list.Count() != 0 ? list.Skip(1) : default(IEnumerable<T>);\n  }\n}",
+          "example": "List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };\nchar[] chars = {'A','B','C'};\n\n_30s.Tail(nums); // { 2, 3, 4, 5 }\n_30s.Tail(chars); // {'B','C'}"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f706c3ae89aac3d3605dcbaec88f05df0307e39dccbf52c253a7bde1f810bb41",
+        "firstSeen": "1577046323",
+        "lastUpdated": "1577050262",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {

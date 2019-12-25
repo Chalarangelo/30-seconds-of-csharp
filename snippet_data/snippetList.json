@@ -18,6 +18,22 @@
       }
     },
     {
+      "id": "ByteArrayToHex",
+      "type": "snippetListing",
+      "title": "ByteArrayToHex",
+      "attributes": {
+        "text": "Converts a `byte` array to its hexadecimal string representation.\n\nUse `BitConverter.ToString()` to convert the `byte` array to a string.\nUse `string.Replace()` to remove dashes in the produced string.\n\n",
+        "tags": [
+          "array",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "67fb03f80d82f6737e6f9a44bc271f4b10e4661f03ee9f95be249da0f09e1820"
+      }
+    },
+    {
       "id": "Capitalize",
       "type": "snippetListing",
       "title": "Capitalize",
@@ -65,6 +81,22 @@
       }
     },
     {
+      "id": "CountOccurences",
+      "type": "snippetListing",
+      "title": "CountOccurences",
+      "attributes": {
+        "text": "Counts the occurences of a value in an `IEnumerable`.\n\nUse `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e416d30956587c04825689ab69a33d68fc2690fe2f422debf9fc892e770d7c3b"
+      }
+    },
+    {
       "id": "Decapitalize",
       "type": "snippetListing",
       "title": "Decapitalize",
@@ -92,6 +124,118 @@
       },
       "meta": {
         "hash": "23d7f6b38ecde3077fb22e65a2aa77642c3dfdb0b8e4e6571f544fe5015155fb"
+      }
+    },
+    {
+      "id": "FilterString",
+      "type": "snippetListing",
+      "title": "FilterString",
+      "attributes": {
+        "text": "Filter a string's contents to include only alphanumeric and allowed characters.\n\nUse `string.ToCharArray()` in combination with `Array.FindAll()` to check if each character in the string is alphanumeric or contained in the `filter`.\nOmit the second argument, `filter`, to only allow alphanumeric characters.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "06cfb76e42df33a38a44ef4e2f232a5b4bb019afb25298d9428d4db935beb84f"
+      }
+    },
+    {
+      "id": "GetFirstN",
+      "type": "snippetListing",
+      "title": "GetFirstN",
+      "attributes": {
+        "text": "Returns the first `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(n)` to get the first `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c00408502f5bd2f067727d0ab68cded73200c0c64c68b096c0e94eb61795592d"
+      }
+    },
+    {
+      "id": "GetLastN",
+      "type": "snippetListing",
+      "title": "GetLastN",
+      "attributes": {
+        "text": "Returns the last `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8578add19a89ab0c15c79a6030f687362fccca235f86b05393cc673d8c145bf4"
+      }
+    },
+    {
+      "id": "GetType",
+      "type": "snippetListing",
+      "title": "GetType",
+      "attributes": {
+        "text": "Returns the type of the given object.\n\nUse `typeof()` on the given object's type.\n\n",
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "229825e3b5d2a4ffd29cb3adc18aa2d51a8eb10c037eb28a6632fef89105c941"
+      }
+    },
+    {
+      "id": "Head",
+      "type": "snippetListing",
+      "title": "Head",
+      "attributes": {
+        "text": "Returns the head of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.\nIf the enumerable object is empty, return the `default()` value for the given type.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "014c9c4ff5672a67a24dc3096071ecc9441a85c9a16bf3eac6fa5ebdf3097ef1"
+      }
+    },
+    {
+      "id": "HexToByteArray",
+      "type": "snippetListing",
+      "title": "HexToByteArray",
+      "attributes": {
+        "text": "Converts a hexadecimal string to a `byte` array.\n\nUse `Enumerable.Range()` in combination with `string.Length` to get the indices of the given string in an array.\nUse `Enumerable.Where()` to get only the even indices in the previous range.\nUse `Enumerable.Select()` in combination with `Convert.ToByte()` and `string.Substring()` to convert each byte's hex code to a `byte`.\nFinally, use `Enumerable.ToArray()` to return a `byte[]`.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "804a476d856f46835e8d5fa36c3b799e8b483679cf514f1d967e319ff47187f8"
+      }
+    },
+    {
+      "id": "IsA",
+      "type": "snippetListing",
+      "title": "IsA",
+      "attributes": {
+        "text": "Returns `True` if the given object is of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189"
       }
     },
     {
@@ -155,6 +299,22 @@
       }
     },
     {
+      "id": "IsNotA",
+      "type": "snippetListing",
+      "title": "IsNotA",
+      "attributes": {
+        "text": "Returns `True` if the given object is not of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
+        "tags": [
+          "type",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "69eb40555c39d919cd23f60bbc5c7b29cc6a814483671cfafd4251b83822a694"
+      }
+    },
+    {
       "id": "IsOdd",
       "type": "snippetListing",
       "title": "IsOdd",
@@ -167,6 +327,21 @@
       },
       "meta": {
         "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db"
+      }
+    },
+    {
+      "id": "IsPowerOfTwo",
+      "type": "snippetListing",
+      "title": "IsPowerOfTwo",
+      "attributes": {
+        "text": "Returns `True` if the given number is a power of `2`, `False` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
+        "tags": [
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "48bd0fd976b443a4d7434ed4878e8ece7d69a3a13619cfc154d7a75e24f2309c"
       }
     },
     {
@@ -248,6 +423,100 @@
       }
     },
     {
+      "id": "PadNumber",
+      "type": "snippetListing",
+      "title": "PadNumber",
+      "attributes": {
+        "text": "Pads a given number to the specified `length`.\n\nUse `Int32.ToString()` with an appropriate format specifier, produced using string interpolation.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "8d7933f298a3879af003418959a66b5d9352170e60db91c3f60c9383e1947ede"
+      }
+    },
+    {
+      "id": "Repeat",
+      "type": "snippetListing",
+      "title": "Repeat",
+      "attributes": {
+        "text": "Creates a new string by repeating the given string `n` times.\n\nUse `Enumerable.Repeat()` to repeat `s` `n` times, `string.Concat()` to convert the result to a `string`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "70e7982d16309005ea8218b60659eb2003dd9685b970dd17b257b9b885441be2"
+      }
+    },
+    {
+      "id": "Reverse",
+      "type": "snippetListing",
+      "title": "Reverse",
+      "attributes": {
+        "text": "Reverses a string.\n\nUse `string.ToCharArray()` to convert the string to an array of `char`, `Array.Reverse()` to reverse the array.\nUse `IEnumerable.ToArray()` to create an array of `char` and pass it to a `new string()`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e79c14b00d42af188414b6a8642f62f4820e716927e2722181b01bb612184aaf"
+      }
+    },
+    {
+      "id": "Shuffle",
+      "type": "snippetListing",
+      "title": "Shuffle",
+      "attributes": {
+        "text": "Randomizes the order of the values of an `IList`, updating the original `IList` object.\n\nUse the [Fisher-Yates algorithm](\nhttps://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.\n\n",
+        "tags": [
+          "list",
+          "array",
+          "random",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "787070230c11fcce2e124507fade7a887e048b3d696a201bf509d16921fa70e8"
+      }
+    },
+    {
+      "id": "SplitLines",
+      "type": "snippetListing",
+      "title": "SplitLines",
+      "attributes": {
+        "text": "Splits a multiline string into an array of lines.\n\nUse `string.Split()` with all forms of the newline separator to split the string into an array of strings.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c087d30e60ecacd0162674cef0d197a8dda8ef980c4268df031b2b3a8f8bb2dd"
+      }
+    },
+    {
+      "id": "SplitStringBy",
+      "type": "snippetListing",
+      "title": "SplitStringBy",
+      "attributes": {
+        "text": "Splits a string into an array of strings using a multicharacter (string) separator.\n\nUse `string.Split()` with the given `separator` to split the string into an array of strings.\n\n",
+        "tags": [
+          "string",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "85b5a86433c25b8a5c1d3429dde3a36c03f0cab77c489d9f30b6233d0e3aecad"
+      }
+    },
+    {
       "id": "Stringify",
       "type": "snippetListing",
       "title": "Stringify",
@@ -261,7 +530,22 @@
         ]
       },
       "meta": {
-        "hash": "95b002967fde3476aa21e966bdfdb51e45459003b3d0b7105336684b38a49c43"
+        "hash": "45df41ece158c680c9623ac822578976c526ce96a027f1d74bf62dbeddaecd7f"
+      }
+    },
+    {
+      "id": "Subarray",
+      "type": "snippetListing",
+      "title": "Subarray",
+      "attributes": {
+        "text": "Returns a subarray of the given array starting at the given index and having the specified length.\n\nUse `ArraySegment()` with the given array, `arr`, `start` and `length` to get the subarray.\nConvert the result to an array, using `ArraySegment.ToArray()`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "9d3d9ac579ead5497ce7230af2374446035dcdbcdd86e6720a4a066cdab59331"
       }
     },
     {
@@ -277,6 +561,22 @@
       },
       "meta": {
         "hash": "22bf5dfd734ebeea4868687cf82f7f63e612a95b95372abd37d7e76df04132d4"
+      }
+    },
+    {
+      "id": "Tail",
+      "type": "snippetListing",
+      "title": "Tail",
+      "attributes": {
+        "text": "Returns the tail of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(1)` to get the whole object except for the first element.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f706c3ae89aac3d3605dcbaec88f05df0307e39dccbf52c253a7bde1f810bb41"
       }
     },
     {
