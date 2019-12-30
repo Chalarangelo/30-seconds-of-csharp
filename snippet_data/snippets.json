@@ -689,6 +689,31 @@
       }
     },
     {
+      "id": "MostFrequent",
+      "title": "MostFrequent",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "MostFrequent.md",
+        "text": "Returns the most frequent element of an `IEnumerable`.\n\nUse `IEnumerable.GroupBy()` to group `values` by value.\nUse `IEnumerable.OrderByDescending()` in combination with `Enumerable.Count()` to order the results in descending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static T MostFrequent<T> (IEnumerable<T> values) {\n    return values\n      .GroupBy(v => v)\n      .OrderByDescending(v => v.Count())\n      .First()\n      .Key;\n  }\n}",
+          "example": "int [] nums = { 1, 2, 3, 3, 2, 3 };\nList<string> str = new List<string> { \"a\", \"b\", \"b\", \"c\" };\n\n_30s.MostFrequent(nums); // 3\n_30s.MostFrequent(str); // \"b\""
+        },
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "f55d7e9928ecf8a4a1bdcea0da1cc65e1c8fa241996134b077dcaf1a014d0da9",
+        "firstSeen": "1577704578",
+        "lastUpdated": "1577704578",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "None",
       "title": "None",
       "type": "snippet",

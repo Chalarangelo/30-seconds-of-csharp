@@ -437,6 +437,22 @@
       }
     },
     {
+      "id": "MostFrequent",
+      "type": "snippetListing",
+      "title": "MostFrequent",
+      "attributes": {
+        "text": "Returns the most frequent element of an `IEnumerable`.\n\nUse `IEnumerable.GroupBy()` to group `values` by value.\nUse `IEnumerable.OrderByDescending()` in combination with `Enumerable.Count()` to order the results in descending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "f55d7e9928ecf8a4a1bdcea0da1cc65e1c8fa241996134b077dcaf1a014d0da9"
+      }
+    },
+    {
       "id": "None",
       "type": "snippetListing",
       "title": "None",
