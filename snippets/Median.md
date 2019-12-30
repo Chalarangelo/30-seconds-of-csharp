@@ -6,7 +6,8 @@ tags: math,beginner
 Finds the median of a list of numbers.
 
 Use the `params` keyword to accept either an array or a variable number of arguments.
-Sort the array using `Array.sort()` and find the median, which is either the middle element of the list if the list length is odd or the average of the two middle elements if the list length is even.
+Sort the array using `Array.sort()` and find the median. 
+Which is either the middle element of the list, if the list length is odd or the average of the two middle elements, if the list length is even.
 
 ```csharp
 public static partial class _30s 
