@@ -407,6 +407,21 @@
       }
     },
     {
+      "id": "Median",
+      "type": "snippetListing",
+      "title": "Median",
+      "attributes": {
+        "text": "Finds the median of a list of numbers.\n\nUse the `params` keyword to accept either an array or a variable number of arguments.\nSort the array using `Array.sort()` and find the median. \nWhich is either the middle element of the list, if the list length is odd or the average of the two middle elements, if the list length is even.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "36ad6e587f9de3d589119ea0dc61c59c490a88caab192e8da895ada709f20684"
+      }
+    },
+    {
       "id": "MinDateTime",
       "type": "snippetListing",
       "title": "MinDateTime",

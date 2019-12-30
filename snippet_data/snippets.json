@@ -641,6 +641,30 @@
       }
     },
     {
+      "id": "Median",
+      "title": "Median",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Median.md",
+        "text": "Finds the median of a list of numbers.\n\nUse the `params` keyword to accept either an array or a variable number of arguments.\nSort the array using `Array.sort()` and find the median. \nWhich is either the middle element of the list, if the list length is odd or the average of the two middle elements, if the list length is even.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static double Median (params double[] values) {\n    Array.Sort(values);\n    if (values.Length % 2 == 0)\n      return (values[values.Length / 2 - 1] + values[values.Length / 2]) / 2;\n    return (double)values[values.Length / 2];\n  }\n}",
+          "example": "double [] nums = { 5, 6, 7, 8 };\n\n_30s.Median(4, 8, 1); // 4\n_30s.Median(nums); // 6.5"
+        },
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "36ad6e587f9de3d589119ea0dc61c59c490a88caab192e8da895ada709f20684",
+        "firstSeen": "1577702621",
+        "lastUpdated": "1577728899",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "MinDateTime",
       "title": "MinDateTime",
       "type": "snippet",
