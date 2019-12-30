@@ -25,5 +25,5 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.MyFunction(); // Result
+_30s.Fibonacci(7); // { 0, 1, 1, 2, 3, 5, 8, 13 }
 ```
