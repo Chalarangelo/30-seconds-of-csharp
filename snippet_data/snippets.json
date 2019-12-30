@@ -226,6 +226,31 @@
       }
     },
     {
+      "id": "Fibonacci",
+      "title": "Fibonacci",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Fibonacci.md",
+        "text": "Generates an array, containing the Fibonacci sequence, up until the nth term.\n\nStarting with `0` and `1`, loop from `2` through `n` adding the sum of the last two numbers and appending to the sequence.\nIf `n` is less or equal to `0`, return a list containing `0`.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static int[] Fibonacci (int n) {\n    if (n <= 0 )  return new [] { 0 };\n    int [] fib = new int[n + 1];\n    fib[0] = 0;\n    fib[1] = 1;\n    for (int i = 2; i <= n; i ++) {\n      fib[i] = fib[i - 1] + fib[i - 2];\n    }\n    return fib;\n  }\n}",
+          "example": "_30s.Fibonacci(7); // { 0, 1, 1, 2, 3, 5, 8, 13 }"
+        },
+        "tags": [
+          "math",
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "99369a3e23e7f70853b4c5519e407e89beda8f9365588564112dd0b3453b627f",
+        "firstSeen": "1577709389",
+        "lastUpdated": "1577730148",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "FilterString",
       "title": "FilterString",
       "type": "snippet",

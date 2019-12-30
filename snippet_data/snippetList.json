@@ -145,6 +145,22 @@
       }
     },
     {
+      "id": "Fibonacci",
+      "type": "snippetListing",
+      "title": "Fibonacci",
+      "attributes": {
+        "text": "Generates an array, containing the Fibonacci sequence, up until the nth term.\n\nStarting with `0` and `1`, loop from `2` through `n` adding the sum of the last two numbers and appending to the sequence.\nIf `n` is less or equal to `0`, return a list containing `0`.\n\n",
+        "tags": [
+          "math",
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "99369a3e23e7f70853b4c5519e407e89beda8f9365588564112dd0b3453b627f"
+      }
+    },
+    {
       "id": "FilterString",
       "type": "snippetListing",
       "title": "FilterString",
