@@ -27,6 +27,33 @@
       }
     },
     {
+      "id": "AverageBy",
+      "title": "AverageBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "AverageBy.md",
+        "text": "Returns the average of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Average()` to get the average of the resulting values.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static double AverageBy<T> (IEnumerable<T> values, Func<T,int> fn) {\n    return values.Select(fn).Average();\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\n\n_30s.AverageBy(p, v => v.a); // 2.5\n_30s.AverageBy(p, v => v.b); // 1.5"
+        },
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6140561e57f7bf1b16c65ca4d839b7d4dcd0a645c01f5bde94d4bafd96f68b45",
+        "firstSeen": "1577708404",
+        "lastUpdated": "1577708404",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "ByteArrayToHex",
       "title": "ByteArrayToHex",
       "type": "snippet",
@@ -617,6 +644,33 @@
       }
     },
     {
+      "id": "MaxBy",
+      "title": "MaxBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "MaxBy.md",
+        "text": "Returns the maximum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Max()` to get the maximum of the resulting values.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s\n{\n  public static double MaxBy<T> (IEnumerable<T> values, Func<T,int> fn) {\n    return values.Select(fn).Max();\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\n\n_30s.MaxBy(p, v => v.a); // 3\n_30s.MaxBy(p, v => v.b); // 2"
+        },
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "b812f6649954eb1e53641a13cf9418410474b3286444b4be8aad91b578efa45c",
+        "firstSeen": "1577708411",
+        "lastUpdated": "1577708411",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "MaxDateTime",
       "title": "MaxDateTime",
       "type": "snippet",
@@ -661,6 +715,33 @@
         "firstSeen": "1577702621",
         "lastUpdated": "1577728899",
         "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "MinBy",
+      "title": "MinBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "MinBy.md",
+        "text": "Returns the minimum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Min()` to get the minimum of the resulting values.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static double MinBy<T> (IEnumerable<T> values, Func<T,int> fn) {\n    return values.Select(fn).Min();\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\n\n_30s.MinBy(p, v => v.a); // 2\n_30s.MinBy(p, v => v.b); // 1"
+        },
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "a2dd63035f6b8ca7a40146283c0ed56aa1e65ae808a5a7ecf80c152a99280ca6",
+        "firstSeen": "1577708417",
+        "lastUpdated": "1577708417",
+        "updateCount": 2,
         "authorCount": 2
       }
     },

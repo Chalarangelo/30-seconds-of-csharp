@@ -18,6 +18,24 @@
       }
     },
     {
+      "id": "AverageBy",
+      "type": "snippetListing",
+      "title": "AverageBy",
+      "attributes": {
+        "text": "Returns the average of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Average()` to get the average of the resulting values.\n\n",
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6140561e57f7bf1b16c65ca4d839b7d4dcd0a645c01f5bde94d4bafd96f68b45"
+      }
+    },
+    {
       "id": "ByteArrayToHex",
       "type": "snippetListing",
       "title": "ByteArrayToHex",
@@ -392,6 +410,24 @@
       }
     },
     {
+      "id": "MaxBy",
+      "type": "snippetListing",
+      "title": "MaxBy",
+      "attributes": {
+        "text": "Returns the maximum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Max()` to get the maximum of the resulting values.\n\n",
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "b812f6649954eb1e53641a13cf9418410474b3286444b4be8aad91b578efa45c"
+      }
+    },
+    {
       "id": "MaxDateTime",
       "type": "snippetListing",
       "title": "MaxDateTime",
@@ -419,6 +455,24 @@
       },
       "meta": {
         "hash": "36ad6e587f9de3d589119ea0dc61c59c490a88caab192e8da895ada709f20684"
+      }
+    },
+    {
+      "id": "MinBy",
+      "type": "snippetListing",
+      "title": "MinBy",
+      "attributes": {
+        "text": "Returns the minimum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Min()` to get the minimum of the resulting values.\n\n",
+        "tags": [
+          "math",
+          "list",
+          "array",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "a2dd63035f6b8ca7a40146283c0ed56aa1e65ae808a5a7ecf80c152a99280ca6"
       }
     },
     {
