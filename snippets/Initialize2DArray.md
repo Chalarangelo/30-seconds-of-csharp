@@ -29,5 +29,5 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.Initialize2DArray(2, 3, 5); { {5, 5}, {5, 5}, {5, 5} }
+_30s.Initialize2DArray(2, 3, 5); // { {5, 5}, {5, 5}, {5, 5} }
 ```
