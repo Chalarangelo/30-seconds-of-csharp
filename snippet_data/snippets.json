@@ -349,6 +349,31 @@
       }
     },
     {
+      "id": "Initialize2DArray",
+      "title": "Initialize2DArray",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Initialize2DArray.md",
+        "text": "Initializes a 2D array of the given width, height and value.\n\nUse `Enumerable.Repeat()` to repeat `value` `width` times, convert to an array and repeat `height` times using the same method.\nUse `IEnumerable.Select()` and `IEnumerable.First()` to convert the jagged array to a 2D array.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static T[,] Initialize2DArray<T> (int width, int height, T value) \n  {\n    return new[] { new T [height, width] }\n      .Select(_ => new { x = _, y = Enumerable.Repeat(\n          Enumerable.Repeat(value, width).ToArray(), height\n        )\n        .ToArray()\n        .Select((a, ia) => a.Select((b, ib) => _[ia, ib] = b).Count()).Count() }\n      )\n      .Select(_ => _.x)\n      .First();\n  }\n}",
+          "example": "_30s.Initialize2DArray(2, 3, 5); // { {5, 5}, {5, 5}, {5, 5} }"
+        },
+        "tags": [
+          "array",
+          "utility",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "db9f2c7e764584ee9f1fc568aadeb80552f1f805e5a88fae4232e8dd0e9becc5",
+        "firstSeen": "1577701612",
+        "lastUpdated": "1577727939",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "IsA",
       "title": "IsA",
       "type": "snippet",

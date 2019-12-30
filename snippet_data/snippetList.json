@@ -223,6 +223,22 @@
       }
     },
     {
+      "id": "Initialize2DArray",
+      "type": "snippetListing",
+      "title": "Initialize2DArray",
+      "attributes": {
+        "text": "Initializes a 2D array of the given width, height and value.\n\nUse `Enumerable.Repeat()` to repeat `value` `width` times, convert to an array and repeat `height` times using the same method.\nUse `IEnumerable.Select()` and `IEnumerable.First()` to convert the jagged array to a 2D array.\n\n",
+        "tags": [
+          "array",
+          "utility",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "db9f2c7e764584ee9f1fc568aadeb80552f1f805e5a88fae4232e8dd0e9becc5"
+      }
+    },
+    {
       "id": "IsA",
       "type": "snippetListing",
       "title": "IsA",
