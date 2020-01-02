@@ -130,6 +130,22 @@
       }
     },
     {
+      "id": "Difference",
+      "type": "snippetListing",
+      "title": "Difference",
+      "attributes": {
+        "text": "Returns the difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "46b6d3a3e03f63071feae41cb1a17c24256070d762ec208567c50917517f1785"
+      }
+    },
+    {
       "id": "DistinctValues",
       "type": "snippetListing",
       "title": "DistinctValues",
@@ -174,6 +190,38 @@
       },
       "meta": {
         "hash": "06cfb76e42df33a38a44ef4e2f232a5b4bb019afb25298d9428d4db935beb84f"
+      }
+    },
+    {
+      "id": "Flatten",
+      "type": "snippetListing",
+      "title": "Flatten",
+      "attributes": {
+        "text": "Flattens a 2D `IEnumerable` into a single dimension.\n\nUse `IEnumerable.SelectMany()` to flatten the 2D enumerable object.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e67ddb79ac9e8ba4ecf0a092914f6372db9a2e84e1f1d51d467b6c73e85ea47e"
+      }
+    },
+    {
+      "id": "FormatDuration",
+      "type": "snippetListing",
+      "title": "FormatDuration",
+      "attributes": {
+        "text": "Returns the human readable format of the given number of seconds.\n\nUse `TimeSpan.FromSeconds()` to convert the number of `seconds` to a `TimeSpan` object.\nUse `TimeSpan.ToString()` with an appropriate format specifier to return a human readable string of the value.\n\n",
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ce80ceea60396be86ca2feb5986264436dd566bd04851656d310f3dd4462af94"
       }
     },
     {
@@ -556,6 +604,40 @@
       }
     },
     {
+      "id": "RandomDoubleInRange",
+      "type": "snippetListing",
+      "title": "RandomDoubleInRange",
+      "attributes": {
+        "text": "Returns a random double in the specified range.\n\nUse `Random.NextDouble()` to generate a random value and map it to the desired range using multiplication.\n\n",
+        "tags": [
+          "math",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "5adcd7cd83ed3ed5a11b4726f8fd5613ff76faf5af7dbc7845541aaddbdcc446"
+      }
+    },
+    {
+      "id": "RandomIntegerInRange",
+      "type": "snippetListing",
+      "title": "RandomIntegerInRange",
+      "attributes": {
+        "text": "Returns a random integer in the specified range.\n\nUse `Random.Next()` to generate an integer in the desired range.\n\n",
+        "tags": [
+          "math",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "9a3c55a7b319be95782949ed29297a326dae3cd0d2ce07167669108d92a4f149"
+      }
+    },
+    {
       "id": "Repeat",
       "type": "snippetListing",
       "title": "Repeat",
@@ -678,6 +760,22 @@
       },
       "meta": {
         "hash": "22bf5dfd734ebeea4868687cf82f7f63e612a95b95372abd37d7e76df04132d4"
+      }
+    },
+    {
+      "id": "SymmetricDifference",
+      "type": "snippetListing",
+      "title": "SymmetricDifference",
+      "attributes": {
+        "text": "Returns the symmetric difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "897e3dc5a4f926679248175024eb56db619c53d365ca83f44f0ce8e5133d813f"
       }
     },
     {

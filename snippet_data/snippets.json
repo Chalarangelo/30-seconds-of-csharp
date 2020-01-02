@@ -202,6 +202,31 @@
       }
     },
     {
+      "id": "Difference",
+      "title": "Difference",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Difference.md",
+        "text": "Returns the difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<T> Difference<T>(IEnumerable<T> a, IEnumerable<T> b) \n  {\n    return a.Except(b);\n  }\n}",
+          "example": "int [] a = { 1, 2, 3, 5 };\nint [] b = { 1, 2, 4 };\n\n_30s.Difference(a, b); // { 3, 5 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "46b6d3a3e03f63071feae41cb1a17c24256070d762ec208567c50917517f1785",
+        "firstSeen": "1577899906",
+        "lastUpdated": "1577950429",
+        "updateCount": 3,
+        "authorCount": 3
+      }
+    },
+    {
       "id": "DistinctValues",
       "title": "DistinctValues",
       "type": "snippet",
@@ -271,6 +296,56 @@
         "hash": "06cfb76e42df33a38a44ef4e2f232a5b4bb019afb25298d9428d4db935beb84f",
         "firstSeen": "1577297645",
         "lastUpdated": "1577297645",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "Flatten",
+      "title": "Flatten",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Flatten.md",
+        "text": "Flattens a 2D `IEnumerable` into a single dimension.\n\nUse `IEnumerable.SelectMany()` to flatten the 2D enumerable object.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<T> Flatten<T>(IEnumerable<IEnumerable<T>> obj) \n  {\n    return obj.SelectMany(v => v);\n  }\n}",
+          "example": "int [][] x = {\n  new [] {1, 2, 3},\n  new [] {4, 5, 6}\n};\n\n_30s.Flatten(x); // {1, 2, 3, 4, 5, 6}"
+        },
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e67ddb79ac9e8ba4ecf0a092914f6372db9a2e84e1f1d51d467b6c73e85ea47e",
+        "firstSeen": "1577901874",
+        "lastUpdated": "1577901874",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "FormatDuration",
+      "title": "FormatDuration",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FormatDuration.md",
+        "text": "Returns the human readable format of the given number of seconds.\n\nUse `TimeSpan.FromSeconds()` to convert the number of `seconds` to a `TimeSpan` object.\nUse `TimeSpan.ToString()` with an appropriate format specifier to return a human readable string of the value.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string FormatDuration(double seconds) \n  {\n    return TimeSpan.FromSeconds(seconds).ToString(@\"d\\.hh\\:mm\\:ss\\.fff\");\n  }\n}",
+          "example": "_30s.FormatDuration(34325055.574); // 397.06:44:15.574"
+        },
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "ce80ceea60396be86ca2feb5986264436dd566bd04851656d310f3dd4462af94",
+        "firstSeen": "1577898136",
+        "lastUpdated": "1577898136",
         "updateCount": 2,
         "authorCount": 2
       }
@@ -871,6 +946,58 @@
       }
     },
     {
+      "id": "RandomDoubleInRange",
+      "title": "RandomDoubleInRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "RandomDoubleInRange.md",
+        "text": "Returns a random double in the specified range.\n\nUse `Random.NextDouble()` to generate a random value and map it to the desired range using multiplication.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static double RandomDoubleInRange(double min, double max) \n  {\n    return (new Random().NextDouble() * (max - min)) + min;\n  }\n}",
+          "example": "_30s.RandomDoubleInRange(0.5, 5); // 2.20486941011849"
+        },
+        "tags": [
+          "math",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "5adcd7cd83ed3ed5a11b4726f8fd5613ff76faf5af7dbc7845541aaddbdcc446",
+        "firstSeen": "1577899135",
+        "lastUpdated": "1577950429",
+        "updateCount": 3,
+        "authorCount": 3
+      }
+    },
+    {
+      "id": "RandomIntegerInRange",
+      "title": "RandomIntegerInRange",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "RandomIntegerInRange.md",
+        "text": "Returns a random integer in the specified range.\n\nUse `Random.Next()` to generate an integer in the desired range.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static int RandomIntegerInRange(int min, int max) \n  {\n    return new Random().Next(min, max);\n  }\n}",
+          "example": "_30s.RandomIntegerInRange(0, 5); // 2"
+        },
+        "tags": [
+          "math",
+          "utility",
+          "random",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "9a3c55a7b319be95782949ed29297a326dae3cd0d2ce07167669108d92a4f149",
+        "firstSeen": "1577899120",
+        "lastUpdated": "1577899120",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Repeat",
       "title": "Repeat",
       "type": "snippet",
@@ -1065,6 +1192,31 @@
         "lastUpdated": "1576588339",
         "updateCount": 2,
         "authorCount": 2
+      }
+    },
+    {
+      "id": "SymmetricDifference",
+      "title": "SymmetricDifference",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "SymmetricDifference.md",
+        "text": "Returns the symmetric difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<T> SymmetricDifference<T>(IEnumerable<T> a, IEnumerable<T> b) \n  {\n    return a.Except(b).Union(b.Except(a));\n  }\n}",
+          "example": "int [] a = { 1, 2, 3, 5 };\nint [] b = { 1, 2, 4 };\n\n_30s.SymmetricDifference(a, b); // { 3, 5, 4 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "897e3dc5a4f926679248175024eb56db619c53d365ca83f44f0ce8e5133d813f",
+        "firstSeen": "1577899917",
+        "lastUpdated": "1577950429",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
