@@ -25,5 +25,5 @@ public static partial class _30s
 int [] a = { 1, 2, 3, 5 };
 int [] b = { 1, 2, 4 };
 
-_30s.SymmetricDifference(a,b); // { 3, 5, 4 }
+_30s.SymmetricDifference(a, b); // { 3, 5, 4 }
 ```

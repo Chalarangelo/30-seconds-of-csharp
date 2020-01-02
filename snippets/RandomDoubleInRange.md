@@ -5,7 +5,7 @@ tags: math,utility,random,beginner
 
 Returns a random double in the specified range.
 
-Use `Random.NextDouble()` to generate a random value, map it to the desired range using multiplication.
+Use `Random.NextDouble()` to generate a random value and map it to the desired range using multiplication.
 
 ```csharp
 public static partial class _30s 
