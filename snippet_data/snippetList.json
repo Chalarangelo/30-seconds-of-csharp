@@ -161,6 +161,22 @@
       }
     },
     {
+      "id": "DuplicateValues",
+      "type": "snippetListing",
+      "title": "DuplicateValues",
+      "attributes": {
+        "text": "Returns all distinct values in an `IEnumerable`.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.\nUse `IEnumerable.Where()` to create select only the groups with a count greater than `1`.\nUse `IEnumerable.Select()` to return the `Key` property of each group.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "b38a89668fec6cde8e3a2600c69974aeb003dc86bdff6f3e2a7c90078ed10e09"
+      }
+    },
+    {
       "id": "Fibonacci",
       "type": "snippetListing",
       "title": "Fibonacci",
@@ -190,6 +206,23 @@
       },
       "meta": {
         "hash": "06cfb76e42df33a38a44ef4e2f232a5b4bb019afb25298d9428d4db935beb84f"
+      }
+    },
+    {
+      "id": "FindParityOutliers",
+      "type": "snippetListing",
+      "title": "FindParityOutliers",
+      "attributes": {
+        "text": "Given an `IEnumerable`, returns the items that are parity outliers.\n\nUse `IEnumerable.GroupBy()` to create groups for each parity (`0` and `1`).\nUse `IEnumerable.OrderBy()` in combination with `Enumerable.Count()` to order the two groups in ascending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the least common parity value.\nFinally, use `IEnumerable.Where()` to get all elements with the least common parity value.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "743880a305f4e310ebe1f9066bd5b712c5fe0e0445a5cc14281285913a53938e"
       }
     },
     {
@@ -334,6 +367,21 @@
       },
       "meta": {
         "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189"
+      }
+    },
+    {
+      "id": "IsDivisible",
+      "type": "snippetListing",
+      "title": "IsDivisible",
+      "attributes": {
+        "text": "Checks if the first numeric argument is divisible by the second one.\n\nUse the modulo operator (`%`) to check if the remainder is equal to `0`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e486d684dd4dda046b6af539447d258ad4e4200e1056fa7117548ba74efe0009"
       }
     },
     {
