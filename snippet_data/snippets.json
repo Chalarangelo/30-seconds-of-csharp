@@ -402,6 +402,32 @@
       }
     },
     {
+      "id": "GCD",
+      "title": "GCD",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "GCD.md",
+        "text": "Calculates the greatest common divisor of the given numbers.\n\nDefine a `GCD()` function for two numbers, which uses recursion.\nBase case is when `y` equals `0`, which returns `x`.\nOtherwise the GCD of `y` and the remainder of the division `x/y` is returned.\nDefine an overload that accepts multiple numbers or an array and use `Enumerable.Aggregate()` to apply `GCD()` to them.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static int GCD(params int[] nums)\n  {\n    return nums.Aggregate(GCD);\n  }\n  public static int GCD(int x, int y)\n  {\n    return y == 0 ? x : GCD(y, x % y);\n  }\n}",
+          "example": "_30s.GCD(8, 36, 28); // 4"
+        },
+        "tags": [
+          "math",
+          "recursion",
+          "overload",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "663b772ad09cb136533ccdcf8575185260e8df7fb94dd67e6c7a75f942baded2",
+        "firstSeen": "1578229187",
+        "lastUpdated": "1578229187",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "GetFirstN",
       "title": "GetFirstN",
       "type": "snippet",
@@ -789,6 +815,31 @@
         "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b",
         "firstSeen": "1576571048",
         "lastUpdated": "1576571048",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "LCM",
+      "title": "LCM",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "LCM.md",
+        "text": "Calculates the least common multiple of the given numbers.\n\nDefine a `_GCD()` method that determines the greatest common divisor, using recursion.\nUse `_GCD()` and the fact that `LCM(x, y) = x * y / GCD(x,y)` to determine the least common multiple.\nUse `Enumerable.Aggregate()` to apply `LCM()` to all the given arguments.\n\n",
+        "codeBlocks": {
+          "code": "using System.Linq;\n\npublic static partial class _30s \n{\n  public static int LCM(params int[] nums)\n  {\n    return nums.Aggregate((x,y) => (x * y) / _GCD(x, y));\n  }\n  private static int _GCD(int x, int y)\n  {\n    return y == 0 ? x : _GCD(y, x % y);\n  }\n}",
+          "example": "_30s.LCM(1, 3, 4, 5); // 60\n_30s.LCM(new [] {12, 7}); // 84"
+        },
+        "tags": [
+          "math",
+          "recursion",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "0b43be4b8b7f5cdb2cabdb7d87422f5c2a1e0c37439678ce282309429b50128a",
+        "firstSeen": "1578229860",
+        "lastUpdated": "1578229860",
         "updateCount": 2,
         "authorCount": 2
       }
