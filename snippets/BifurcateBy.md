@@ -14,7 +14,7 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static void BifurcateBy<T>(IEnumerable<T> items, Predicate<T> filter, out T [] filteredTrue, out T [] filteredFalse)
+  public static void BifurcateBy<T>(IEnumerable<T> items, Predicate<T> filter, out T[] filteredTrue, out T[] filteredFalse)
   {
     filteredTrue = items.Where(i => filter(i) == true).ToArray();
     filteredFalse = items.Where(i => filter(i) == false).ToArray();
@@ -23,9 +23,9 @@ public static partial class _30s
 ```
 
 ```csharp
-int[] nums = {1, 2, 3, 4};
-int[] n1;
-int[] n2;
+int [] nums = {1, 2, 3, 4};
+int [] n1;
+int [] n2;
 
-_30s.BifurcateBy(nums, x => x%2 == 0, out n1, out n2); // n1 = {2, 4}, n2 = {1, 3}
+_30s.BifurcateBy(nums, x => x % 2 == 0, out n1, out n2); // n1 = {2, 4}, n2 = {1, 3}
 ```
