@@ -148,6 +148,22 @@
       }
     },
     {
+      "id": "DayOfTheWeek",
+      "type": "snippetListing",
+      "title": "DayOfTheWeek",
+      "attributes": {
+        "text": "Returns the string representation of the weekday for the given `DateTime`.\n\nUse `DateTime.ToString()` with an appropriate format modifier to return the day of the week.\n\n",
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "7cb211a7085714f4e5d405c793a10c5410ea1db6ae29ad57a0eea5b4f65032de"
+      }
+    },
+    {
       "id": "Decapitalize",
       "type": "snippetListing",
       "title": "Decapitalize",
@@ -553,6 +569,38 @@
       },
       "meta": {
         "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b"
+      }
+    },
+    {
+      "id": "IsWeekday",
+      "type": "snippetListing",
+      "title": "IsWeekday",
+      "attributes": {
+        "text": "Returns `True` if the given `DateTime` is a weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c5742b2499fcf5967a9fd646e5e6af5998d4b20fc2658949666f3867b78564bc"
+      }
+    },
+    {
+      "id": "IsWeekend",
+      "type": "snippetListing",
+      "title": "IsWeekend",
+      "attributes": {
+        "text": "Returns `True` if the given `DateTime` is a not weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "bd6d4d87118801450cc16551e42f70a38d210115da6689cbbbb8a8ca1d16fce7"
       }
     },
     {

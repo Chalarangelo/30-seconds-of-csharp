@@ -229,6 +229,31 @@
       }
     },
     {
+      "id": "DayOfTheWeek",
+      "title": "DayOfTheWeek",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "DayOfTheWeek.md",
+        "text": "Returns the string representation of the weekday for the given `DateTime`.\n\nUse `DateTime.ToString()` with an appropriate format modifier to return the day of the week.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static string DayOfTheWeek(DateTime date) \n  {\n    return date.ToString(\"dddd\");  \n  }\n}",
+          "example": "_30s.DayOfTheWeek(new DateTime(2020, 1, 15)); // \"Wednesday\""
+        },
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "7cb211a7085714f4e5d405c793a10c5410ea1db6ae29ad57a0eea5b4f65032de",
+        "firstSeen": "1578312313",
+        "lastUpdated": "1578312313",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Decapitalize",
       "title": "Decapitalize",
       "type": "snippet",
@@ -866,6 +891,56 @@
         "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b",
         "firstSeen": "1576571048",
         "lastUpdated": "1576571048",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsWeekday",
+      "title": "IsWeekday",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsWeekday.md",
+        "text": "Returns `True` if the given `DateTime` is a weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsWeekday(DateTime date) \n  {\n    return date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday;\n    }\n}",
+          "example": "_30s.IsWeekday(new DateTime(2020, 1, 15)); // True\n_30s.IsWeekday(new DateTime(2020, 1, 19)); // False"
+        },
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c5742b2499fcf5967a9fd646e5e6af5998d4b20fc2658949666f3867b78564bc",
+        "firstSeen": "1578312944",
+        "lastUpdated": "1578312944",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsWeekend",
+      "title": "IsWeekend",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsWeekend.md",
+        "text": "Returns `True` if the given `DateTime` is a not weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
+        "codeBlocks": {
+          "code": "public static partial class _30s \n{\n  public static bool IsWeekend(DateTime date) \n  {\n    return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;\n  }\n}",
+          "example": "_30s.IsWeekend(new DateTime(2020, 1, 15)); // False\n_30s.IsWeekend(new DateTime(2020, 1, 19)); // True"
+        },
+        "tags": [
+          "date",
+          "utility",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "bd6d4d87118801450cc16551e42f70a38d210115da6689cbbbb8a8ca1d16fce7",
+        "firstSeen": "1578312955",
+        "lastUpdated": "1578312955",
         "updateCount": 2,
         "authorCount": 2
       }
