@@ -523,6 +523,22 @@
       }
     },
     {
+      "id": "KeepUpToN",
+      "type": "snippetListing",
+      "title": "KeepUpToN",
+      "attributes": {
+        "text": "Filters an `IEnumerable` keeping up to `n` occurences of each value.\n\nUse `IEnumerable.Distinct()` in combination with `IEnumerable.ToDictionary()` to create a dictionary with an initial count of `0` for each distinct value in `data`.\nUse `IEnumerable.Where()` to filter out occurences after the `n`th one for each element, using the previously created dictionary.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "10ba7fc64a93b12c76b3ae98cca28ece42be888d4e4cda45a2d9f1bcdbf45f4a"
+      }
+    },
+    {
       "id": "LCM",
       "type": "snippetListing",
       "title": "LCM",

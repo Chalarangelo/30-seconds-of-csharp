@@ -820,6 +820,31 @@
       }
     },
     {
+      "id": "KeepUpToN",
+      "title": "KeepUpToN",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "KeepUpToN.md",
+        "text": "Filters an `IEnumerable` keeping up to `n` occurences of each value.\n\nUse `IEnumerable.Distinct()` in combination with `IEnumerable.ToDictionary()` to create a dictionary with an initial count of `0` for each distinct value in `data`.\nUse `IEnumerable.Where()` to filter out occurences after the `n`th one for each element, using the previously created dictionary.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<T> KeepUpToN<T>(IEnumerable<T> data, int n)\n  {\n    var occurences = data.Distinct().ToDictionary(i => i, value => 0);\n    return data.Where(i => occurences[i]++ < n);\n  }\n}",
+          "example": "int [] nums = {1, 1, 2, 3, 3, 3, 1};\n\n_30s.KeepUpToN(nums, 2); // {1, 1, 2, 3, 3}"
+        },
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "10ba7fc64a93b12c76b3ae98cca28ece42be888d4e4cda45a2d9f1bcdbf45f4a",
+        "firstSeen": "1578255997",
+        "lastUpdated": "1578255997",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "LCM",
       "title": "LCM",
       "type": "snippet",
