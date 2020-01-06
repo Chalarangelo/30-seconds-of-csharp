@@ -346,8 +346,8 @@
       "attributes": {
         "text": "Returns the type of the given object.\n\nUse `typeof()` on the given object's type.\n\n",
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },
@@ -410,8 +410,8 @@
       "attributes": {
         "text": "Returns `True` if the given object is of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },
@@ -501,8 +501,8 @@
       "attributes": {
         "text": "Returns `True` if the given object is not of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },

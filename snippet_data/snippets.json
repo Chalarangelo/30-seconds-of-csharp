@@ -540,16 +540,16 @@
           "example": "string s = \"fooBar\";\nList<string> list = new List<string>() { \"a\", \"b\", \"c\" };\n\n_30s.GetType(s); // System.String\n_30s.GetType(list); // System.Collections.Generic.List`1[System.String]"
         },
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },
       "meta": {
         "hash": "229825e3b5d2a4ffd29cb3adc18aa2d51a8eb10c037eb28a6632fef89105c941",
         "firstSeen": "1577278779",
-        "lastUpdated": "1577278779",
-        "updateCount": 2,
+        "lastUpdated": "1578311231",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -640,16 +640,16 @@
           "example": "string s = \"fooBar\";\n\n_30s.IsA<string>(s); // True\n_30s.IsA<int>(s); // False"
         },
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },
       "meta": {
         "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189",
         "firstSeen": "1577278798",
-        "lastUpdated": "1577278798",
-        "updateCount": 2,
+        "lastUpdated": "1578311198",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -785,16 +785,16 @@
           "example": "string s = \"fooBar\";\n\n_30s.IsNotA<string>(s); // False\n_30s.IsNotA<int>(s); // True"
         },
         "tags": [
-          "type",
           "utility",
+          "type",
           "beginner"
         ]
       },
       "meta": {
         "hash": "69eb40555c39d919cd23f60bbc5c7b29cc6a814483671cfafd4251b83822a694",
         "firstSeen": "1577278815",
-        "lastUpdated": "1577278815",
-        "updateCount": 2,
+        "lastUpdated": "1578311216",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
