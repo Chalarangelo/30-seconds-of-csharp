@@ -36,6 +36,39 @@
       }
     },
     {
+      "id": "Bifurcate",
+      "type": "snippetListing",
+      "title": "Bifurcate",
+      "attributes": {
+        "text": "Splits values into two groups. \nIf an element in `filter` is `true`, the corresponding element in the collection belongs to the first group; otherwise, it belongs to the second group.\n\nUse `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9fe4ed1ea98f4fba8fec43fc419c68ade61b067660ab13ac67767daa7389d86f"
+      }
+    },
+    {
+      "id": "BifurcateBy",
+      "type": "snippetListing",
+      "title": "BifurcateBy",
+      "attributes": {
+        "text": "Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. \nIf the predicate function returns a truthy value, the collection element belongs to the first group; otherwise, it belongs to the second group.\n\nUse `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c8ca5fff72ff7c76108c4e101393bf763e8ca304cc54f93b0172576b7a3fd492"
+      }
+    },
+    {
       "id": "ByteArrayToHex",
       "type": "snippetListing",
       "title": "ByteArrayToHex",

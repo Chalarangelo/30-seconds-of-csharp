@@ -54,6 +54,57 @@
       }
     },
     {
+      "id": "Bifurcate",
+      "title": "Bifurcate",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Bifurcate.md",
+        "text": "Splits values into two groups. \nIf an element in `filter` is `true`, the corresponding element in the collection belongs to the first group; otherwise, it belongs to the second group.\n\nUse `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static void Bifurcate<T>(IEnumerable<T> items, IList<bool> filter, out T[] filteredTrue, out T[] filteredFalse)\n  {\n    filteredTrue = items.Where((val, i) => filter[i] == true).ToArray();\n    filteredFalse = items.Where((val, i) => filter[i] == false).ToArray();\n  }\n}",
+          "example": "int [] nums = {1, 2, 3, 4};\nbool [] filter = {true, true, false, true};\nint [] n1;\nint [] n2;\n\n_30s.Bifurcate(nums, filter, out n1, out n2); // // n1 = {1, 2, 4}, n2 = {3}"
+        },
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9fe4ed1ea98f4fba8fec43fc419c68ade61b067660ab13ac67767daa7389d86f",
+        "firstSeen": "1578310519",
+        "lastUpdated": "1578310929",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "BifurcateBy",
+      "title": "BifurcateBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "BifurcateBy.md",
+        "text": "Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. \nIf the predicate function returns a truthy value, the collection element belongs to the first group; otherwise, it belongs to the second group.\n\nUse `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static void BifurcateBy<T>(IEnumerable<T> items, Predicate<T> filter, out T[] filteredTrue, out T[] filteredFalse)\n  {\n    filteredTrue = items.Where(i => filter(i) == true).ToArray();\n    filteredFalse = items.Where(i => filter(i) == false).ToArray();\n  }\n}",
+          "example": "int [] nums = {1, 2, 3, 4};\nint [] n1;\nint [] n2;\n\n_30s.BifurcateBy(nums, x => x % 2 == 0, out n1, out n2); // n1 = {2, 4}, n2 = {1, 3}"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c8ca5fff72ff7c76108c4e101393bf763e8ca304cc54f93b0172576b7a3fd492",
+        "firstSeen": "1578310595",
+        "lastUpdated": "1578310946",
+        "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "ByteArrayToHex",
       "title": "ByteArrayToHex",
       "type": "snippet",
