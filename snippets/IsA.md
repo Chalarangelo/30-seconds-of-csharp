@@ -1,6 +1,6 @@
 ---
 title: IsA
-tags: type,utility,beginner
+tags: utility,type,beginner
 ---
 
 Returns `True` if the given object is of the specified type, `False` otherwise.
