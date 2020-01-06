@@ -1,6 +1,6 @@
 ---
 title: GetType
-tags: type,utility,beginner
+tags: utility,type,beginner
 ---
 
 Returns the type of the given object.
