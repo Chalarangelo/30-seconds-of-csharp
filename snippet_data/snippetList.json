@@ -258,6 +258,23 @@
       }
     },
     {
+      "id": "FindIndexOfAll",
+      "type": "snippetListing",
+      "title": "FindIndexOfAll",
+      "attributes": {
+        "text": "Returns all indices in an `IList` that match the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `False` and return only matching indices.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "06bd86223581d73444c8f3a87337aed9132640d9428311b8deb0a2e6aece8bb4"
+      }
+    },
+    {
       "id": "FindParityOutliers",
       "type": "snippetListing",
       "title": "FindParityOutliers",
@@ -401,6 +418,22 @@
       },
       "meta": {
         "hash": "804a476d856f46835e8d5fa36c3b799e8b483679cf514f1d967e319ff47187f8"
+      }
+    },
+    {
+      "id": "IndexOfAll",
+      "type": "snippetListing",
+      "title": "IndexOfAll",
+      "attributes": {
+        "text": "Returns all indices of `n` in an `IList`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` in combination with `object.Equals()` to compare each value in `data` to `n` and return only matching indices.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "319f736b56e445dcea90ed9b1417ed5f1a24320fb9a7d414165779859d7176fb"
       }
     },
     {
