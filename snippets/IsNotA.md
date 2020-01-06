@@ -1,6 +1,6 @@
 ---
 title: IsNotA
-tags: type,utility,beginner
+tags: utility,type,beginner
 ---
 
 Returns `True` if the given object is not of the specified type, `False` otherwise.
