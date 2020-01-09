@@ -3,7 +3,7 @@ title: IsDouble
 tags: math,beginner
 ---
 
-Returns `True` if the given string can be parsed into a double, `False` otherwise.
+Returns `true` if the given string can be parsed into a double, `false` otherwise.
 
 Return the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.
 
@@ -21,6 +21,6 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsDouble("2"); // True
-_30s.IsDouble("hi"); // False
+_30s.IsDouble("2"); // true
+_30s.IsDouble("hi"); // false
 ```

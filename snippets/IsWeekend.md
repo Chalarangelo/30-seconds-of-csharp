@@ -3,7 +3,7 @@ title: IsWeekend
 tags: date,utility,beginner
 ---
 
-Returns `True` if the given `DateTime` is a not weekday, `False` otherwise.
+Returns `true` if the given `DateTime` is a not weekday, `false` otherwise.
 
 Use `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.
 
@@ -18,6 +18,6 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsWeekend(new DateTime(2020, 1, 15)); // False
-_30s.IsWeekend(new DateTime(2020, 1, 19)); // True
+_30s.IsWeekend(new DateTime(2020, 1, 15)); // false
+_30s.IsWeekend(new DateTime(2020, 1, 19)); // true
 ```

@@ -3,7 +3,7 @@ title: IsNotA
 tags: utility,type,beginner
 ---
 
-Returns `True` if the given object is not of the specified type, `False` otherwise.
+Returns `true` if the given object is not of the specified type, `false` otherwise.
 
 Use the `is` operator to check if `obj` is not of the given type, `T`.
 
@@ -20,6 +20,6 @@ public static partial class _30s
 ```csharp
 string s = "fooBar";
 
-_30s.IsNotA<string>(s); // False
-_30s.IsNotA<int>(s); // True
+_30s.IsNotA<string>(s); // false
+_30s.IsNotA<int>(s); // true
 ```

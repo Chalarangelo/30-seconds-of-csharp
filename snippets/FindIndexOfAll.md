@@ -6,7 +6,7 @@ tags: array,list,lambda,intermediate
 Returns all indices in an `IList` that match the given predicate function, `match`.
 
 Use `Enumerable.Range()` to iterate over all indices in `data`.
-Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `False` and return only matching indices.
+Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false` and return only matching indices.
 
 ```csharp
 using System.Collections.Generic;

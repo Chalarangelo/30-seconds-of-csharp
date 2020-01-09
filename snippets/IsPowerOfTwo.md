@@ -3,7 +3,7 @@ title: IsPowerOfTwo
 tags: math,intermediate
 ---
 
-Returns `True` if the given number is a power of `2`, `False` otherwise.
+Returns `true` if the given number is a power of `2`, `false` otherwise.
 
 Use the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.
 Additionally, check that `n` is different from `0`.
@@ -19,7 +19,7 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsPowerOfTwo(0); // False
-_30s.IsPowerOfTwo(1); // True
-_30s.IsPowerOfTwo(8); // True
+_30s.IsPowerOfTwo(0); // false
+_30s.IsPowerOfTwo(1); // true
+_30s.IsPowerOfTwo(8); // true
 ```

@@ -18,5 +18,5 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsDivisible(6, 3); // True
+_30s.IsDivisible(6, 3); // true
 ```

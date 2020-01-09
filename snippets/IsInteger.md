@@ -3,7 +3,7 @@ title: IsInteger
 tags: math,beginner
 ---
 
-Returns `True` if the given string can be parsed into an integer, `False` otherwise.
+Returns `true` if the given string can be parsed into an integer, `false` otherwise.
 
 Return the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.
 Use `Double.TryParse()` to allow handling of values larger than `Int64`.
@@ -22,6 +22,6 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsInteger("2"); // True
-_30s.IsInteger("3.1"); // False
+_30s.IsInteger("2"); // true
+_30s.IsInteger("3.1"); // false
 ```
