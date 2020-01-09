@@ -6,10 +6,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "All.md",
-        "text": "Returns `True` if the provided predicate function returns `True` for all elements in a collection, `False` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `True` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool All<T>(T[] arr, Predicate<T> match) \n  {\n    return Array.TrueForAll(arr, match);\n  }\n  public static bool All<T>(T[] arr) \n  {\n    return Array.TrueForAll(arr, val => val != null);\n  }\n}",
-          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.All(nums, x => x > 1); // True\n_30s.All(nums); // True"
+          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.All(nums, x => x > 1); // true\n_30s.All(nums); // true"
         },
         "tags": [
           "array",
@@ -19,11 +19,11 @@
         ]
       },
       "meta": {
-        "hash": "c6044d1f81802fa062b94ca120c3f38356d908aedd47236165ffe873584bdf86",
+        "hash": "9f49ae6a8de2ddb83806e74ec242b56c6b90fe9ee84c49d12b7585fc6abe9474",
         "firstSeen": "1576571828",
-        "lastUpdated": "1576571828",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -407,7 +407,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "FindIndexOfAll.md",
-        "text": "Returns all indices in an `IList` that match the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `False` and return only matching indices.\n\n",
+        "text": "Returns all indices in an `IList` that match the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false` and return only matching indices.\n\n",
         "codeBlocks": {
           "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<int> FindIndexOfAll<T>(IList<T> data, Predicate<T> match)\n  {\n    return Enumerable\n      .Range(0, data.Count())\n      .Where(i => match(data[i]));\n  }\n}",
           "example": "int[] nums = {1, 2, 4, 5, 2, 2, 4};\n\n_30s.FindIndexOfAll(nums, x => x % 2 != 0); // {0, 3}"
@@ -420,10 +420,10 @@
         ]
       },
       "meta": {
-        "hash": "06bd86223581d73444c8f3a87337aed9132640d9428311b8deb0a2e6aece8bb4",
+        "hash": "44b16b26051594c284b048330167da876bec316c2d63fc9edac5c251121bc96e",
         "firstSeen": "1578315613",
-        "lastUpdated": "1578315613",
-        "updateCount": 2,
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -710,10 +710,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsA.md",
-        "text": "Returns `True` if the given object is of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
+        "text": "Returns `true` if the given object is of the specified type, `false` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsA<T>(object obj) \n  {\n    return obj is T;\n  }\n}",
-          "example": "string s = \"fooBar\";\n\n_30s.IsA<string>(s); // True\n_30s.IsA<int>(s); // False"
+          "example": "string s = \"fooBar\";\n\n_30s.IsA<string>(s); // true\n_30s.IsA<int>(s); // false"
         },
         "tags": [
           "utility",
@@ -722,10 +722,10 @@
         ]
       },
       "meta": {
-        "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189",
+        "hash": "c45f870ccfad72b8183ef726d10a590534b2f54632293cc87fb287edab74ae49",
         "firstSeen": "1577278798",
-        "lastUpdated": "1578311198",
-        "updateCount": 3,
+        "lastUpdated": "1578592261",
+        "updateCount": 4,
         "authorCount": 2
       }
     },
@@ -738,7 +738,7 @@
         "text": "Checks if the first numeric argument is divisible by the second one.\n\nUse the modulo operator (`%`) to check if the remainder is equal to `0`.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsDivisible(long dividend, long divisor) \n  {\n    return dividend % divisor == 0;\n  }\n}",
-          "example": "_30s.IsDivisible(6, 3); // True"
+          "example": "_30s.IsDivisible(6, 3); // true"
         },
         "tags": [
           "math",
@@ -746,10 +746,10 @@
         ]
       },
       "meta": {
-        "hash": "e486d684dd4dda046b6af539447d258ad4e4200e1056fa7117548ba74efe0009",
+        "hash": "c873bd95a37f8ef96f4c136e920c68c739a88e6e9a5843e01cf6d6b240a2f9fe",
         "firstSeen": "1578076381",
-        "lastUpdated": "1578076381",
-        "updateCount": 2,
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -759,10 +759,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsDouble.md",
-        "text": "Returns `True` if the given string can be parsed into a double, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
+        "text": "Returns `true` if the given string can be parsed into a double, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
         "codeBlocks": {
           "code": "using System.Globalization;\n\npublic static partial class _30s \n{\n  public static bool IsDouble(string num) \n  {\n    Double _ = 0.0;\n    return Double.TryParse(num, NumberStyles.Float, NumberFormatInfo.CurrentInfo, out _);\n  }\n}",
-          "example": "_30s.IsDouble(\"2\"); // True\n_30s.IsDouble(\"hi\"); // False"
+          "example": "_30s.IsDouble(\"2\"); // true\n_30s.IsDouble(\"hi\"); // false"
         },
         "tags": [
           "math",
@@ -770,11 +770,11 @@
         ]
       },
       "meta": {
-        "hash": "97f3c210b542d4aae691e66f78f7d630352470be67f8e176074285e4abc323d2",
+        "hash": "3530856a37d6fb0acc65d1de4bc828ea24d53b940ff9f28b4006fa7441c6faa2",
         "firstSeen": "1576587842",
-        "lastUpdated": "1576587842",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -783,10 +783,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsEven.md",
-        "text": "Returns `True` if the given number is even, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is even, `False` if the number is odd.\n\n",
+        "text": "Returns `true` if the given number is even, `false` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `true` if the number is even, `false` if the number is odd.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsEven(int n) \n  {\n    return n % 2 == 0;\n  }\n}",
-          "example": "_30s.IsEven(2); // True\n_30s.IsEven(3); // False"
+          "example": "_30s.IsEven(2); // true\n_30s.IsEven(3); // false"
         },
         "tags": [
           "math",
@@ -794,11 +794,11 @@
         ]
       },
       "meta": {
-        "hash": "cdc43c7f86e5f20a93a4f1ab39dc9f67de019ad67d4d8cdaae094dca62d22f49",
+        "hash": "0fb0bbb194f88b79f53b4a8964d736c44652230b2883f79543bd15dd5046f5d4",
         "firstSeen": "1576570816",
-        "lastUpdated": "1576570816",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -807,10 +807,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsInteger.md",
-        "text": "Returns `True` if the given string can be parsed into an integer, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
+        "text": "Returns `true` if the given string can be parsed into an integer, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
         "codeBlocks": {
           "code": "using System.Globalization;\n\npublic static partial class _30s \n{\n  public static bool IsInteger(string num) \n  {\n    Double _ = 0.0;\n    return Double.TryParse(num, NumberStyles.Integer, NumberFormatInfo.CurrentInfo, out _);\n  }\n}",
-          "example": "_30s.IsInteger(\"2\"); // True\n_30s.IsInteger(\"3.1\"); // False"
+          "example": "_30s.IsInteger(\"2\"); // true\n_30s.IsInteger(\"3.1\"); // false"
         },
         "tags": [
           "math",
@@ -818,11 +818,11 @@
         ]
       },
       "meta": {
-        "hash": "2b53765c77a81a4a249cad4654cffbac84b6392da16ccce450ca854c5c0ce3e4",
+        "hash": "b752affac449857bd894dd1915ad32a7b19a13838ea49b59c041c6f688d567b6",
         "firstSeen": "1576587836",
-        "lastUpdated": "1576587836",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -834,7 +834,7 @@
         "text": "Checks if a string is lower case.\n\nConvert the given string to lower case, using  `string.ToLower()`  and compare it to the original.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsLower(string str) \n  {\n    return str.ToLower() == str;\n  }\n}",
-          "example": "string s1 = \"abc\";\nstring s2 = \"cDe\";\n\n_30s.IsLower(s1); // True\n_30s.IsLower(s2); // False"
+          "example": "string s1 = \"abc\";\nstring s2 = \"cDe\";\n\n_30s.IsLower(s1); // true\n_30s.IsLower(s2); // false"
         },
         "tags": [
           "string",
@@ -842,11 +842,11 @@
         ]
       },
       "meta": {
-        "hash": "017f5bf87114fe1b469aea3199b8ba47fc70ac1671c131f50792b69cf3c93746",
+        "hash": "582ff53b416153491e8d1a232df377db1645898221f7aa6e393ca53812dcb520",
         "firstSeen": "1576571006",
-        "lastUpdated": "1576571006",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -855,10 +855,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsNotA.md",
-        "text": "Returns `True` if the given object is not of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
+        "text": "Returns `true` if the given object is not of the specified type, `false` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsNotA<T>(object obj) \n  {\n    return !(obj is T);\n  }\n}",
-          "example": "string s = \"fooBar\";\n\n_30s.IsNotA<string>(s); // False\n_30s.IsNotA<int>(s); // True"
+          "example": "string s = \"fooBar\";\n\n_30s.IsNotA<string>(s); // false\n_30s.IsNotA<int>(s); // true"
         },
         "tags": [
           "utility",
@@ -867,10 +867,10 @@
         ]
       },
       "meta": {
-        "hash": "69eb40555c39d919cd23f60bbc5c7b29cc6a814483671cfafd4251b83822a694",
+        "hash": "487de7b23d77d6e5a69146b3fae37aae2279feea62d8b84635634e490f2d1574",
         "firstSeen": "1577278815",
-        "lastUpdated": "1578311216",
-        "updateCount": 3,
+        "lastUpdated": "1578592261",
+        "updateCount": 4,
         "authorCount": 2
       }
     },
@@ -880,10 +880,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsOdd.md",
-        "text": "Returns `True` if the given number is odd, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is odd, `False` if the number is even.\n\n",
+        "text": "Returns `true` if the given number is odd, `false` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `true` if the number is odd, `false` if the number is even.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsOdd(int n) \n  {\n    return n % 2 != 0;\n  }\n}",
-          "example": "_30s.IsOdd(3); // True\n_30s.IsOdd(4); // False"
+          "example": "_30s.IsOdd(3); // true\n_30s.IsOdd(4); // false"
         },
         "tags": [
           "math",
@@ -891,11 +891,11 @@
         ]
       },
       "meta": {
-        "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db",
+        "hash": "7dbbfda067d1608174382eacc2eee2c20d72297c5e550aeb3d0b5beff9061cf6",
         "firstSeen": "1576570824",
-        "lastUpdated": "1576570824",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -904,10 +904,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsPowerOfTwo.md",
-        "text": "Returns `True` if the given number is a power of `2`, `False` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
+        "text": "Returns `true` if the given number is a power of `2`, `false` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsPowerOfTwo(ulong n) \n  {\n    return (n != 0) && ((n & (n - 1)) == 0);\n  }\n}",
-          "example": "_30s.IsPowerOfTwo(0); // False\n_30s.IsPowerOfTwo(1); // True\n_30s.IsPowerOfTwo(8); // True"
+          "example": "_30s.IsPowerOfTwo(0); // false\n_30s.IsPowerOfTwo(1); // true\n_30s.IsPowerOfTwo(8); // true"
         },
         "tags": [
           "math",
@@ -915,10 +915,10 @@
         ]
       },
       "meta": {
-        "hash": "48bd0fd976b443a4d7434ed4878e8ece7d69a3a13619cfc154d7a75e24f2309c",
+        "hash": "846ab17bd92f8f1190e2bcd8fe5ba877fe3303b0a7bee9c152c4abf2d4022e00",
         "firstSeen": "1577278834",
-        "lastUpdated": "1577278834",
-        "updateCount": 2,
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -931,7 +931,7 @@
         "text": "Checks if a string is upper case.\n\nConvert the given string to upper case, using  `string.ToUpper()`  and compare it to the original.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsUpper(string str) \n  {\n    return str.ToUpper() == str;\n  }\n}",
-          "example": "string s1 = \"ABC\";\nstring s2 = \"cDe\";\n\n_30s.IsUpper(s1); // True\n_30s.IsUpper(s2); // False"
+          "example": "string s1 = \"ABC\";\nstring s2 = \"cDe\";\n\n_30s.IsUpper(s1); // true\n_30s.IsUpper(s2); // false"
         },
         "tags": [
           "string",
@@ -939,11 +939,11 @@
         ]
       },
       "meta": {
-        "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b",
+        "hash": "bfa98b57cc893e34cb499fc3bce305a26f2925a067f940359c1b158e2fb35f44",
         "firstSeen": "1576571048",
-        "lastUpdated": "1576571048",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {
@@ -952,10 +952,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsWeekday.md",
-        "text": "Returns `True` if the given `DateTime` is a weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
+        "text": "Returns `true` if the given `DateTime` is a weekday, `false` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsWeekday(DateTime date) \n  {\n    return date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday;\n    }\n}",
-          "example": "_30s.IsWeekday(new DateTime(2020, 1, 15)); // True\n_30s.IsWeekday(new DateTime(2020, 1, 19)); // False"
+          "example": "_30s.IsWeekday(new DateTime(2020, 1, 15)); // true\n_30s.IsWeekday(new DateTime(2020, 1, 19)); // false"
         },
         "tags": [
           "date",
@@ -964,10 +964,10 @@
         ]
       },
       "meta": {
-        "hash": "c5742b2499fcf5967a9fd646e5e6af5998d4b20fc2658949666f3867b78564bc",
+        "hash": "0c6131c265188dc595d5f03d2b82951a985ba8d940288b0a364ff22fc5b1c017",
         "firstSeen": "1578312944",
-        "lastUpdated": "1578312944",
-        "updateCount": 2,
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -977,10 +977,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "IsWeekend.md",
-        "text": "Returns `True` if the given `DateTime` is a not weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
+        "text": "Returns `true` if the given `DateTime` is a not weekday, `false` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool IsWeekend(DateTime date) \n  {\n    return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;\n  }\n}",
-          "example": "_30s.IsWeekend(new DateTime(2020, 1, 15)); // False\n_30s.IsWeekend(new DateTime(2020, 1, 19)); // True"
+          "example": "_30s.IsWeekend(new DateTime(2020, 1, 15)); // false\n_30s.IsWeekend(new DateTime(2020, 1, 19)); // true"
         },
         "tags": [
           "date",
@@ -989,10 +989,10 @@
         ]
       },
       "meta": {
-        "hash": "bd6d4d87118801450cc16551e42f70a38d210115da6689cbbbb8a8ca1d16fce7",
+        "hash": "5fc6d1b86f5f811617eefb0e0bd86cadcfad59b3e43b312832e67bb1cc7d0bb4",
         "firstSeen": "1578312955",
-        "lastUpdated": "1578312955",
-        "updateCount": 2,
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
         "authorCount": 2
       }
     },
@@ -1228,10 +1228,10 @@
       "type": "snippet",
       "attributes": {
         "fileName": "None.md",
-        "text": "Returns `True` if the provided predicate function returns `False` for all elements in a collection, `False` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `False` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `false` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
         "codeBlocks": {
           "code": "public static partial class _30s \n{\n  public static bool None<T>(T[] arr, Predicate<T> match) \n  {\n    return !Array.Exists(arr, match);\n  }\n  public static bool None<T>(T[] arr) \n  {\n    return Array.Exists(arr, val => val == null);\n  }\n}",
-          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.None(nums, x => x < 0); // True\n_30s.None(nums); // False"
+          "example": "int[] nums = { 4, 2, 3 };\n\n_30s.None(nums, x => x < 0); // true\n_30s.None(nums); // false"
         },
         "tags": [
           "array",
@@ -1241,11 +1241,11 @@
         ]
       },
       "meta": {
-        "hash": "8c7a1751ce92f61972e334db3791d736dd052dd90e3b40d576f264c9a8991f6c",
+        "hash": "994047b6fd9870caad610175b8ae89543eaa6b4e1527a6db189f24eb93927784",
         "firstSeen": "1576571834",
-        "lastUpdated": "1576571834",
-        "updateCount": 2,
-        "authorCount": 2
+        "lastUpdated": "1578592261",
+        "updateCount": 3,
+        "authorCount": 3
       }
     },
     {

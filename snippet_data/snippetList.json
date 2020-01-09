@@ -5,7 +5,7 @@
       "type": "snippetListing",
       "title": "All",
       "attributes": {
-        "text": "Returns `True` if the provided predicate function returns `True` for all elements in a collection, `False` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `True` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
         "tags": [
           "array",
           "lambda",
@@ -14,7 +14,7 @@
         ]
       },
       "meta": {
-        "hash": "c6044d1f81802fa062b94ca120c3f38356d908aedd47236165ffe873584bdf86"
+        "hash": "9f49ae6a8de2ddb83806e74ec242b56c6b90fe9ee84c49d12b7585fc6abe9474"
       }
     },
     {
@@ -262,7 +262,7 @@
       "type": "snippetListing",
       "title": "FindIndexOfAll",
       "attributes": {
-        "text": "Returns all indices in an `IList` that match the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `False` and return only matching indices.\n\n",
+        "text": "Returns all indices in an `IList` that match the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false` and return only matching indices.\n\n",
         "tags": [
           "array",
           "list",
@@ -271,7 +271,7 @@
         ]
       },
       "meta": {
-        "hash": "06bd86223581d73444c8f3a87337aed9132640d9428311b8deb0a2e6aece8bb4"
+        "hash": "44b16b26051594c284b048330167da876bec316c2d63fc9edac5c251121bc96e"
       }
     },
     {
@@ -457,7 +457,7 @@
       "type": "snippetListing",
       "title": "IsA",
       "attributes": {
-        "text": "Returns `True` if the given object is of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
+        "text": "Returns `true` if the given object is of the specified type, `false` otherwise.\n\nUse the `is` operator to check if `obj` is of the given type, `T`.\n\n",
         "tags": [
           "utility",
           "type",
@@ -465,7 +465,7 @@
         ]
       },
       "meta": {
-        "hash": "e3f3e3d7d0d7dee8870c77aa376d36ab17c08b8f55b8f7a253ad7002a1308189"
+        "hash": "c45f870ccfad72b8183ef726d10a590534b2f54632293cc87fb287edab74ae49"
       }
     },
     {
@@ -480,7 +480,7 @@
         ]
       },
       "meta": {
-        "hash": "e486d684dd4dda046b6af539447d258ad4e4200e1056fa7117548ba74efe0009"
+        "hash": "c873bd95a37f8ef96f4c136e920c68c739a88e6e9a5843e01cf6d6b240a2f9fe"
       }
     },
     {
@@ -488,14 +488,14 @@
       "type": "snippetListing",
       "title": "IsDouble",
       "attributes": {
-        "text": "Returns `True` if the given string can be parsed into a double, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
+        "text": "Returns `true` if the given string can be parsed into a double, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
         "tags": [
           "math",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "97f3c210b542d4aae691e66f78f7d630352470be67f8e176074285e4abc323d2"
+        "hash": "3530856a37d6fb0acc65d1de4bc828ea24d53b940ff9f28b4006fa7441c6faa2"
       }
     },
     {
@@ -503,14 +503,14 @@
       "type": "snippetListing",
       "title": "IsEven",
       "attributes": {
-        "text": "Returns `True` if the given number is even, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is even, `False` if the number is odd.\n\n",
+        "text": "Returns `true` if the given number is even, `false` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `true` if the number is even, `false` if the number is odd.\n\n",
         "tags": [
           "math",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "cdc43c7f86e5f20a93a4f1ab39dc9f67de019ad67d4d8cdaae094dca62d22f49"
+        "hash": "0fb0bbb194f88b79f53b4a8964d736c44652230b2883f79543bd15dd5046f5d4"
       }
     },
     {
@@ -518,14 +518,14 @@
       "type": "snippetListing",
       "title": "IsInteger",
       "attributes": {
-        "text": "Returns `True` if the given string can be parsed into an integer, `False` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
+        "text": "Returns `true` if the given string can be parsed into an integer, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
         "tags": [
           "math",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "2b53765c77a81a4a249cad4654cffbac84b6392da16ccce450ca854c5c0ce3e4"
+        "hash": "b752affac449857bd894dd1915ad32a7b19a13838ea49b59c041c6f688d567b6"
       }
     },
     {
@@ -540,7 +540,7 @@
         ]
       },
       "meta": {
-        "hash": "017f5bf87114fe1b469aea3199b8ba47fc70ac1671c131f50792b69cf3c93746"
+        "hash": "582ff53b416153491e8d1a232df377db1645898221f7aa6e393ca53812dcb520"
       }
     },
     {
@@ -548,7 +548,7 @@
       "type": "snippetListing",
       "title": "IsNotA",
       "attributes": {
-        "text": "Returns `True` if the given object is not of the specified type, `False` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
+        "text": "Returns `true` if the given object is not of the specified type, `false` otherwise.\n\nUse the `is` operator to check if `obj` is not of the given type, `T`.\n\n",
         "tags": [
           "utility",
           "type",
@@ -556,7 +556,7 @@
         ]
       },
       "meta": {
-        "hash": "69eb40555c39d919cd23f60bbc5c7b29cc6a814483671cfafd4251b83822a694"
+        "hash": "487de7b23d77d6e5a69146b3fae37aae2279feea62d8b84635634e490f2d1574"
       }
     },
     {
@@ -564,14 +564,14 @@
       "type": "snippetListing",
       "title": "IsOdd",
       "attributes": {
-        "text": "Returns `True` if the given number is odd, `False` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `True` if the number is odd, `False` if the number is even.\n\n",
+        "text": "Returns `true` if the given number is odd, `false` otherwise.\n\nCheck whether a number is odd or even using the modulo (`%`) operator. \nReturn `true` if the number is odd, `false` if the number is even.\n\n",
         "tags": [
           "math",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "ee44e92a52fd0cb8d558318111c2ef19e6d39fbf159d5682b5ed8571348ef1db"
+        "hash": "7dbbfda067d1608174382eacc2eee2c20d72297c5e550aeb3d0b5beff9061cf6"
       }
     },
     {
@@ -579,14 +579,14 @@
       "type": "snippetListing",
       "title": "IsPowerOfTwo",
       "attributes": {
-        "text": "Returns `True` if the given number is a power of `2`, `False` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
+        "text": "Returns `true` if the given number is a power of `2`, `false` otherwise.\n\nUse the bitwise binary AND operator (`&`) to determine if `n` is a power of `2`.\nAdditionally, check that `n` is different from `0`.\n\n",
         "tags": [
           "math",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "48bd0fd976b443a4d7434ed4878e8ece7d69a3a13619cfc154d7a75e24f2309c"
+        "hash": "846ab17bd92f8f1190e2bcd8fe5ba877fe3303b0a7bee9c152c4abf2d4022e00"
       }
     },
     {
@@ -601,7 +601,7 @@
         ]
       },
       "meta": {
-        "hash": "638d82a9fbbcf1b98a76dbc754f1043898e08448fe652b2e4c4ecf7c04f90b7b"
+        "hash": "bfa98b57cc893e34cb499fc3bce305a26f2925a067f940359c1b158e2fb35f44"
       }
     },
     {
@@ -609,7 +609,7 @@
       "type": "snippetListing",
       "title": "IsWeekday",
       "attributes": {
-        "text": "Returns `True` if the given `DateTime` is a weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
+        "text": "Returns `true` if the given `DateTime` is a weekday, `false` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.\n\n",
         "tags": [
           "date",
           "utility",
@@ -617,7 +617,7 @@
         ]
       },
       "meta": {
-        "hash": "c5742b2499fcf5967a9fd646e5e6af5998d4b20fc2658949666f3867b78564bc"
+        "hash": "0c6131c265188dc595d5f03d2b82951a985ba8d940288b0a364ff22fc5b1c017"
       }
     },
     {
@@ -625,7 +625,7 @@
       "type": "snippetListing",
       "title": "IsWeekend",
       "attributes": {
-        "text": "Returns `True` if the given `DateTime` is a not weekday, `False` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
+        "text": "Returns `true` if the given `DateTime` is a not weekday, `false` otherwise.\n\nUse `DateTime.DayOfWeek` to check if the given `DateTime` is a Saturday or Sunday.\n\n",
         "tags": [
           "date",
           "utility",
@@ -633,7 +633,7 @@
         ]
       },
       "meta": {
-        "hash": "bd6d4d87118801450cc16551e42f70a38d210115da6689cbbbb8a8ca1d16fce7"
+        "hash": "5fc6d1b86f5f811617eefb0e0bd86cadcfad59b3e43b312832e67bb1cc7d0bb4"
       }
     },
     {
@@ -786,7 +786,7 @@
       "type": "snippetListing",
       "title": "None",
       "attributes": {
-        "text": "Returns `True` if the provided predicate function returns `False` for all elements in a collection, `False` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `False` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `false` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
         "tags": [
           "array",
           "lambda",
@@ -795,7 +795,7 @@
         ]
       },
       "meta": {
-        "hash": "8c7a1751ce92f61972e334db3791d736dd052dd90e3b40d576f264c9a8991f6c"
+        "hash": "994047b6fd9870caad610175b8ae89543eaa6b4e1527a6db189f24eb93927784"
       }
     },
     {
