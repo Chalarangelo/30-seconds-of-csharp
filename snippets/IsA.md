@@ -3,7 +3,7 @@ title: IsA
 tags: utility,type,beginner
 ---
 
-Returns `True` if the given object is of the specified type, `False` otherwise.
+Returns `true` if the given object is of the specified type, `false` otherwise.
 
 Use the `is` operator to check if `obj` is of the given type, `T`.
 
@@ -20,6 +20,6 @@ public static partial class _30s
 ```csharp
 string s = "fooBar";
 
-_30s.IsA<string>(s); // True
-_30s.IsA<int>(s); // False
+_30s.IsA<string>(s); // true
+_30s.IsA<int>(s); // false
 ```

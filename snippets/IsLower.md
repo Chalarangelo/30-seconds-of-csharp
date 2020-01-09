@@ -21,6 +21,6 @@ public static partial class _30s
 string s1 = "abc";
 string s2 = "cDe";
 
-_30s.IsLower(s1); // True
-_30s.IsLower(s2); // False
+_30s.IsLower(s1); // true
+_30s.IsLower(s2); // false
 ```

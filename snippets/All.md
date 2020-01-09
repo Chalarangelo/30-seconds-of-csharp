@@ -3,9 +3,9 @@ title: All
 tags: array,lambda,overload,intermediate
 ---
 
-Returns `True` if the provided predicate function returns `True` for all elements in a collection, `False` otherwise.
+Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.
 
-Use `Array.TrueForAll()` to test if all elements in the collection return `True` based on the predicate function, `match`.
+Use `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.
 Omit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.
 
 ```csharp
@@ -25,6 +25,6 @@ public static partial class _30s
 ```csharp
 int[] nums = { 4, 2, 3 };
 
-_30s.All(nums, x => x > 1); // True
-_30s.All(nums); // True
+_30s.All(nums, x => x > 1); // true
+_30s.All(nums); // true
 ```

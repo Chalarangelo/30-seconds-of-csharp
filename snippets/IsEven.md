@@ -3,10 +3,10 @@ title: IsEven
 tags: math,beginner
 ---
 
-Returns `True` if the given number is even, `False` otherwise.
+Returns `true` if the given number is even, `false` otherwise.
 
 Check whether a number is odd or even using the modulo (`%`) operator. 
-Return `True` if the number is even, `False` if the number is odd.
+Return `true` if the number is even, `false` if the number is odd.
 
 ```csharp
 public static partial class _30s 
@@ -19,6 +19,6 @@ public static partial class _30s
 ```
 
 ```csharp
-_30s.IsEven(2); // True
-_30s.IsEven(3); // False
+_30s.IsEven(2); // true
+_30s.IsEven(3); // false
 ```
