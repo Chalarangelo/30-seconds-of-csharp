@@ -6,7 +6,7 @@ tags: array,list,math,intermediate
 Given a collection, returns the items that are parity outliers.
 
 Use `IEnumerable.GroupBy()` to create groups for each parity (`0` and `1`).
-Use `IEnumerable.OrderBy()` in combination with `Enumerable.Count()` to order the two groups in ascending order based on frequency.
+Use `IEnumerable.OrderBy()` in combination with `IEnumerable.Count()` to order the two groups in ascending order based on frequency.
 Use `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the least common parity value.
 Finally, use `IEnumerable.Where()` to get all elements with the least common parity value.
 
