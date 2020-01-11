@@ -14,7 +14,8 @@ using System.Linq;
 
 public static partial class _30s
 {
-  public static double MaxBy<T> (IEnumerable<T> values, Func<T,int> fn) {
+  public static double MaxBy<T> (IEnumerable<T> values, Func<T,int> fn)
+  {
     return values.Select(fn).Max();
   }
 }

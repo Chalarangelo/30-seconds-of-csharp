@@ -15,7 +15,8 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static T MostFrequent<T> (IEnumerable<T> values) {
+  public static T MostFrequent<T> (IEnumerable<T> values)
+  {
     return values
       .GroupBy(v => v)
       .OrderByDescending(v => v.Count())
