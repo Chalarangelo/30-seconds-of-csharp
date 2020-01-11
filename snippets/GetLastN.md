@@ -3,7 +3,7 @@ title: GetLastN
 tags: array,list,beginner
 ---
 
-Returns the last `n` elements in an `IEnumerable`.
+Returns the last `n` elements in a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.

@@ -3,7 +3,7 @@ title: DuplicateValues
 tags: array,list,intermediate
 ---
 
-Returns all distinct values in an `IEnumerable`.
+Returns all distinct values in a collection.
 
 Use `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.
 Use `IEnumerable.Where()` to create select only the groups with a count greater than `1`.

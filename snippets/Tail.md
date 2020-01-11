@@ -3,7 +3,7 @@ title: Tail
 tags: array,list,beginner
 ---
 
-Returns the tail of an `IEnumerable`.
+Returns the tail of a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Skip(1)` to get the whole object except for the first element.

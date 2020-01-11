@@ -3,7 +3,7 @@ title: FindParityOutliers
 tags: array,list,math,intermediate
 ---
 
-Given an `IEnumerable`, returns the items that are parity outliers.
+Given a collection, returns the items that are parity outliers.
 
 Use `IEnumerable.GroupBy()` to create groups for each parity (`0` and `1`).
 Use `IEnumerable.OrderBy()` in combination with `Enumerable.Count()` to order the two groups in ascending order based on frequency.

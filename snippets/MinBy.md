@@ -3,7 +3,7 @@ title: MinBy
 tags: math,list,array,lambda,intermediate
 ---
 
-Returns the minimum of an `IEnumerable`, after mapping each element to a value using the provided function.
+Returns the minimum of a collection, after mapping each element to a value using the provided function.
 
 Use `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.
 Use `IEnumerable.Min()` to get the minimum of the resulting values.

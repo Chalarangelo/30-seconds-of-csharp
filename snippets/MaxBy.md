@@ -3,7 +3,7 @@ title: MaxBy
 tags: math,list,array,lambda,intermediate
 ---
 
-Returns the maximum of an `IEnumerable`, after mapping each element to a value using the provided function.
+Returns the maximum of a collection, after mapping each element to a value using the provided function.
 
 Use `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.
 Use `IEnumerable.Max()` to get the maximum of the resulting values.

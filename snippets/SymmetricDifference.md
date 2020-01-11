@@ -3,7 +3,7 @@ title: SymmetricDifference
 tags: array,list,beginner
 ---
 
-Returns the symmetric difference betweend two `IEnumerable`s.
+Returns the symmetric difference betweend two collections.
 
 Use `IEnumerable.Except()` to only return elements in one enumerable object and not the other.
 Use `IEnumerable.Union()` to combine the result of applying that to each object.

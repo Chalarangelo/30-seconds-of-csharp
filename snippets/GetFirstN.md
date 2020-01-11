@@ -3,7 +3,7 @@ title: GetFirstN
 tags: array,list,beginner
 ---
 
-Returns the first `n` elements in an `IEnumerable`.
+Returns the first `n` elements in a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Take(n)` to get the first `n` elements.

@@ -3,7 +3,7 @@ title: MostFrequent
 tags: array,list,intermediate
 ---
 
-Returns the most frequent element of an `IEnumerable`.
+Returns the most frequent element of a collection.
 
 Use `IEnumerable.GroupBy()` to group `values` by value.
 Use `IEnumerable.OrderByDescending()` in combination with `Enumerable.Count()` to order the results in descending order based on frequency.
