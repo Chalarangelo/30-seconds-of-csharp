@@ -1006,6 +1006,38 @@
       }
     },
     {
+      "id": "ToCamelCase",
+      "type": "snippetListing",
+      "title": "ToCamelCase",
+      "attributes": {
+        "text": "Converts a string to camel case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.\nUse `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case, `string.Replace()` with a regular expression to remove spaces afterwards.\nFinally, use `IEnumerable.Select()` on the result to convert the first character to lowercase and return a string from the result.\n\n",
+        "tags": [
+          "string",
+          "regex",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "1ed2b116e4ef91c18efa20197a2501079a60b8edc28f6c59e17da5f66e18e248"
+      }
+    },
+    {
+      "id": "ToKebabCase",
+      "type": "snippetListing",
+      "title": "ToKebabCase",
+      "attributes": {
+        "text": "Converts a string to kebab case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `-` as a separator.\n\n",
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8750ae8a68ab026e6493e50318cc48fc9c07d81b2bb3339e3dafe3f0d8d3024b"
+      }
+    },
+    {
       "id": "Tomorrow",
       "type": "snippetListing",
       "title": "Tomorrow",
@@ -1018,6 +1050,38 @@
       },
       "meta": {
         "hash": "8e45c27d173cec524bf003c180a9dff03dc99b7533402c1abdca717cdc23eb17"
+      }
+    },
+    {
+      "id": "ToSnakeCase",
+      "type": "snippetListing",
+      "title": "ToSnakeCase",
+      "attributes": {
+        "text": "Converts a string to snake case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `_` as a separator.\n\n",
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "56e188de5ce8889cd048f9e9f68231c9b4630ac25e2002860aa1f7f9bd1598c0"
+      }
+    },
+    {
+      "id": "ToTitleCase",
+      "type": "snippetListing",
+      "title": "ToTitleCase",
+      "attributes": {
+        "text": "Converts a string to title case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.\nUse `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case.\n\n",
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6ebf93f81928199d97d7fd755309b5199e213e0084d14acd61c4689e35a26b2c"
       }
     },
     {

@@ -1573,6 +1573,56 @@
       }
     },
     {
+      "id": "ToCamelCase",
+      "title": "ToCamelCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "ToCamelCase.md",
+        "text": "Converts a string to camel case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.\nUse `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case, `string.Replace()` with a regular expression to remove spaces afterwards.\nFinally, use `IEnumerable.Select()` on the result to convert the first character to lowercase and return a string from the result.\n\n",
+        "codeBlocks": {
+          "code": "using System.Globalization;\nusing System.Text.RegularExpressions;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static string ToCamelCase(string str) \n  {\n    Regex pattern = new Regex(@\"[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+\");\n    return new string(\n      new CultureInfo(\"en-US\", false)\n        .TextInfo\n        .ToTitleCase(\n          string.Join(\" \", pattern.Matches(str)).ToLower()\n        )\n        .Replace(@\" \", \"\")\n        .Select((x, i) => i == 0 ? char.ToLower(x) : x)\n        .ToArray()\n    );\n  }\n}",
+          "example": "_30s.ToCamelCase(\"some_database_field_name\"); // \"someDatabaseFieldName\"\n_30s.ToCamelCase(\"Some label that needs to be title-cased\"); // \"someLabelThatNeedsToBeCamelized\"\n_30s.ToCamelCase(\"some-package-name\"); // \"somePackageName\"\n_30s.ToCamelCase(\"some-mixed_string with spaces_underscores-and-hyphens\"); // \"someMixedStringWithSpacesUnderscoresAndHyphens\""
+        },
+        "tags": [
+          "string",
+          "regex",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "1ed2b116e4ef91c18efa20197a2501079a60b8edc28f6c59e17da5f66e18e248",
+        "firstSeen": "1578689810",
+        "lastUpdated": "1578689810",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "ToKebabCase",
+      "title": "ToKebabCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "ToKebabCase.md",
+        "text": "Converts a string to kebab case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `-` as a separator.\n\n",
+        "codeBlocks": {
+          "code": "using System.Text.RegularExpressions;\n\npublic static partial class _30s \n{\n  public static string ToKebabCase(string str) \n  {\n    Regex pattern = new Regex(@\"[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+\");\n    return string.Join(\"-\", pattern.Matches(str)).ToLower();\n  }\n}",
+          "example": "_30s.ToKebabCase(\"camelCase\"); // \"camel-case\"\n_30s.ToKebabCase(\"some text\"); // \"some-text\"\n_30s.ToKebabCase(\"some-mixed_string With spaces_underscores-and-hyphens\"); // \"some-mixed-string-with-spaces-underscores-and-hyphens\"\n_30s.ToKebabCase(\"AllThe-small Things\"); // \"all-the-small-things\""
+        },
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "8750ae8a68ab026e6493e50318cc48fc9c07d81b2bb3339e3dafe3f0d8d3024b",
+        "firstSeen": "1578689800",
+        "lastUpdated": "1578689800",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Tomorrow",
       "title": "Tomorrow",
       "type": "snippet",
@@ -1592,6 +1642,56 @@
         "hash": "8e45c27d173cec524bf003c180a9dff03dc99b7533402c1abdca717cdc23eb17",
         "firstSeen": "1576572220",
         "lastUpdated": "1576572220",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "ToSnakeCase",
+      "title": "ToSnakeCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "ToSnakeCase.md",
+        "text": "Converts a string to snake case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `_` as a separator.\n\n",
+        "codeBlocks": {
+          "code": "using System.Text.RegularExpressions;\n\npublic static partial class _30s \n{\n  public static string ToSnakeCase(string str) \n  {\n    Regex pattern = new Regex(@\"[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+\");\n    return string.Join(\"_\", pattern.Matches(str)).ToLower();\n  }\n}",
+          "example": "_30s.ToSnakeCase(\"camelCase\"); // \"camel_case\"\n_30s.ToSnakeCase(\"some text\"); // \"some_text\"\n_30s.ToSnakeCase(\"some-mixed_string With spaces_underscores-and-hyphens\"); // \"some_mixed_string_with_spaces_underscores_and_hyphens\"\n_30s.ToSnakeCase(\"AllThe-small Things\"); // \"all_the_small_things\""
+        },
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "56e188de5ce8889cd048f9e9f68231c9b4630ac25e2002860aa1f7f9bd1598c0",
+        "firstSeen": "1578689789",
+        "lastUpdated": "1578689789",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "ToTitleCase",
+      "title": "ToTitleCase",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "ToTitleCase.md",
+        "text": "Converts a string to title case.\n\nUse `Regex.Matches()` with an appropriate regular expression to break the string into words.\nUse `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.\nUse `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case.\n\n",
+        "codeBlocks": {
+          "code": "using System.Globalization;\nusing System.Text.RegularExpressions;\n\npublic static partial class _30s \n{\n  public static string ToTitleCase(string str) \n  {\n    Regex pattern = new Regex(@\"[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+\");\n    return new CultureInfo(\"en-US\", false)\n      .TextInfo\n      .ToTitleCase(\n        string.Join(\" \", pattern.Matches(str)).ToLower()\n      );\n  }\n}",
+          "example": "_30s.ToTitleCase(\"some_database_field_name\"); // \"Some Database Field Name\"\n_30s.ToTitleCase(\"Some label that needs to be title-cased\"); // \"Some Label That Needs To Be Title Cased\"\n_30s.ToTitleCase(\"some-package-name\"); // \"Some Package Name\"\n_30s.ToTitleCase(\"some-mixed_string with spaces_underscores-and-hyphens\"); // \"Some Mixed String With Spaces Underscores And Hyphens\""
+        },
+        "tags": [
+          "string",
+          "regex",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6ebf93f81928199d97d7fd755309b5199e213e0084d14acd61c4689e35a26b2c",
+        "firstSeen": "1578689783",
+        "lastUpdated": "1578689783",
         "updateCount": 2,
         "authorCount": 2
       }
