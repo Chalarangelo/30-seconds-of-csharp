@@ -1,9 +1,9 @@
 ---
 title: Chunk
-tags: list,lambda,advanced
+tags: array,list,lambda,advanced
 ---
 
-Chunks an array into smaller arrays of a specified size.
+Chunks a collection into smaller lists of a specified size.
 
 Use `IEnumerable.Select()` to convert the given list to index-value pairs.
 Use `IEnumerable.GroupBy()` to split elements into groups based on their index.
@@ -17,9 +17,9 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static List<List<T>> Chunk<T>(List<T> list, int size)
+  public static List<List<T>> Chunk<T>(IEnumerable<T> data, int size)
   {
-    return list
+    return data
       .Select((x, i) => new { Index = i, Value = x })
       .GroupBy(x => x.Index / size)
       .Select(x => x.Select(v => v.Value).ToList())
