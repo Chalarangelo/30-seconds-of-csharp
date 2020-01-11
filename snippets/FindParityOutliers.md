@@ -1,6 +1,6 @@
 ---
 title: FindParityOutliers
-tags: array,list,math,intermediate
+tags: array,list,math,advanced
 ---
 
 Given a collection, returns the items that are parity outliers.

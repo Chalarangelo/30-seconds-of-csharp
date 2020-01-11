@@ -1,6 +1,6 @@
 ---
 title: IsDouble
-tags: math,beginner
+tags: math,type,intermediate
 ---
 
 Returns `true` if the given string can be parsed into a double, `false` otherwise.

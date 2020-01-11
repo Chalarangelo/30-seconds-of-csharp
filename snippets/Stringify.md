@@ -1,6 +1,6 @@
 ---
 title: Stringify
-tags: utility,array,list,beginner
+tags: utility,array,list,string,beginner
 ---
 
 Combines the elements of an enumerable object into a string.

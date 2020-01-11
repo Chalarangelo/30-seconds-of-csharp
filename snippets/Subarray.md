@@ -1,6 +1,6 @@
 ---
 title: Subarray
-tags: array,beginner
+tags: array,intermediate
 ---
 
 Returns a subarray of the given array starting at the given index and having the specified length.

@@ -1,6 +1,6 @@
 ---
 title: GetLastN
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
 Returns the last `n` elements in a collection.

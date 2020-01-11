@@ -1,6 +1,6 @@
 ---
 title: Head
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
 Returns the head of a collection.

@@ -1,6 +1,6 @@
 ---
 title: BifurcateBy
-tags: array,list,lambda,intermediate
+tags: array,list,lambda,advanced
 ---
 
 Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. 

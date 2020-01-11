@@ -27,5 +27,6 @@ public static partial class _30s
 
 ```csharp
 int [] arr = {1, 2, 1, 3, 2, 4};
+
 _30s.DuplicateValues(arr); // {1, 2}
 ```

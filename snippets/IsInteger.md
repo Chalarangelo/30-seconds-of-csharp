@@ -1,6 +1,6 @@
 ---
 title: IsInteger
-tags: math,beginner
+tags: math,type,intermediate
 ---
 
 Returns `true` if the given string can be parsed into an integer, `false` otherwise.

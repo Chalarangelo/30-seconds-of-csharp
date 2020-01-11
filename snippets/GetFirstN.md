@@ -1,6 +1,6 @@
 ---
 title: GetFirstN
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
 Returns the first `n` elements in a collection.
