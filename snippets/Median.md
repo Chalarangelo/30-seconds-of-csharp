@@ -23,7 +23,7 @@ public static partial class _30s
 ```
 
 ```csharp
-double [] nums = { 5, 6, 7, 8 };
+double[] nums = { 5, 6, 7, 8 };
 
 _30s.Median(4, 8, 1); // 4
 _30s.Median(nums); // 6.5

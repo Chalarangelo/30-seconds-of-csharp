@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
 
 _30s.GetFirstN(nums); // { 1 }
 _30s.GetFirstN(nums, 3); // { 1, 2, 3 }

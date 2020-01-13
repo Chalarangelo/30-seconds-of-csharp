@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
 
 _30s.GetLastN(nums); // { 5 }
 _30s.GetLastN(nums, 3); // { 3, 4, 5 }

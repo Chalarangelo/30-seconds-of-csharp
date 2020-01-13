@@ -14,7 +14,7 @@ public static partial class _30s
 {
   public static string[] SplitStringBy(string s, string separator) 
   {
-    return s.Split(new[] {separator}, StringSplitOptions.None);
+    return s.Split(new [] {separator}, StringSplitOptions.None);
   }
 }
 ```

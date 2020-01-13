@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 public static partial class _30s 
 {
-  public static T[] Subarray<T> (T[] arr, int start, int length) 
+  public static T[] Subarray<T>(T[] arr, int start, int length) 
   {
     return new ArraySegment<T>( arr, start, length ).ToArray();
   }

@@ -23,8 +23,8 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
-List<int> empty = new List<int>(){ };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
+List<int> empty = new List<int> { };
 char[] chars = {'A','B','C'};
 
 _30s.Head(nums); // 1

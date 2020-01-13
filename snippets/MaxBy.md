@@ -14,7 +14,7 @@ using System.Linq;
 
 public static partial class _30s
 {
-  public static double MaxBy<T> (IEnumerable<T> values, Func<T,int> fn)
+  public static double MaxBy<T>(IEnumerable<T> values, Func<T,int> fn)
   {
     return values.Select(fn).Max();
   }
@@ -22,7 +22,7 @@ public static partial class _30s
 ```
 
 ```csharp
-var p = new[] {
+var p = new [] {
   new { a = 3, b = 2},
   new { a = 2, b = 1}
 };

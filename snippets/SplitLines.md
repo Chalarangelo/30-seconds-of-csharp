@@ -14,7 +14,7 @@ public static partial class _30s
 {
   public static string[] SplitLines(string s)
   {
-    return s.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+    return s.Split(new [] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
   }
 }
 ```

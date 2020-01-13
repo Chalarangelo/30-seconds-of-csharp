@@ -28,7 +28,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5, 6 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5, 6 };
 int[] arr = { 1, 2, 3, 4, 5, 6 };
 
 _30s.Shuffle(nums); // nums = { 3, 5, 2, 1, 4, 6 }

@@ -30,6 +30,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = {1, 2, 3, 4, 6};
+int[] nums = {1, 2, 3, 4, 6};
+
 _30s.FindParityOutliers(nums); // {1, 3}
 ```

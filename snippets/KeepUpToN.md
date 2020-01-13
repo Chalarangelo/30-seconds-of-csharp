@@ -23,7 +23,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = {1, 1, 2, 3, 3, 3, 1};
+int[] nums = {1, 1, 2, 3, 3, 3, 1};
 
 _30s.KeepUpToN(nums, 2); // {1, 1, 2, 3, 3}
 ```

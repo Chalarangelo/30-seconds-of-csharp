@@ -13,9 +13,9 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static T[,] Initialize2DArray<T> (int width, int height, T value) 
+  public static T[,] Initialize2DArray<T>(int width, int height, T value) 
   {
-    return new[] { new T [height, width] }
+    return new [] { new T [height, width] }
       .Select(_ => new { x = _, y = Enumerable.Repeat(
           Enumerable.Repeat(value, width).ToArray(), height
         )

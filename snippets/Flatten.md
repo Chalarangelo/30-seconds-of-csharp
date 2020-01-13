@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [][] x = {
+int[][] x = {
   new [] {1, 2, 3},
   new [] {4, 5, 6}
 };

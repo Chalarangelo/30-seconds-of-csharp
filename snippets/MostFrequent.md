@@ -15,7 +15,7 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static T MostFrequent<T> (IEnumerable<T> values)
+  public static T MostFrequent<T>(IEnumerable<T> values)
   {
     return values
       .GroupBy(v => v)
@@ -27,7 +27,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = { 1, 2, 3, 3, 2, 3 };
+int[] nums = { 1, 2, 3, 3, 2, 3 };
 List<string> str = new List<string> { "a", "b", "b", "c" };
 
 _30s.MostFrequent(nums); // 3

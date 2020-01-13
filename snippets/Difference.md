@@ -21,8 +21,8 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] a = { 1, 2, 3, 5 };
-int [] b = { 1, 2, 4 };
+int[] a = { 1, 2, 3, 5 };
+int[] b = { 1, 2, 4 };
 
 _30s.Difference(a, b); // { 3, 5 }
 ```

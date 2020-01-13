@@ -11,10 +11,10 @@ If `n` is less or equal to `0`, return a list containing `0`.
 ```csharp
 public static partial class _30s 
 {
-  public static int[] Fibonacci (int n)
+  public static int[] Fibonacci(int n)
   {
     if (n <= 0 )  return new [] { 0 };
-    int [] fib = new int[n + 1];
+    int[] fib = new int[n + 1];
     fib[0] = 0;
     fib[1] = 1;
     for (int i = 2; i <= n; i ++)

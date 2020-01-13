@@ -15,7 +15,7 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static IEnumerable<T> DuplicateValues <T>(IEnumerable<T> items)
+  public static IEnumerable<T> DuplicateValues<T>(IEnumerable<T> items)
   {
     return items
       .GroupBy(c => c)
@@ -26,7 +26,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] arr = {1, 2, 1, 3, 2, 4};
+int[] arr = {1, 2, 1, 3, 2, 4};
 
 _30s.DuplicateValues(arr); // {1, 2}
 ```
