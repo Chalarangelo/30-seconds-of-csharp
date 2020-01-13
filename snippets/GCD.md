@@ -8,7 +8,7 @@ Calculates the greatest common divisor of the given numbers.
 Define a `GCD()` function for two numbers, which uses recursion.
 Base case is when `y` equals `0`, which returns `x`.
 Otherwise the GCD of `y` and the remainder of the division `x/y` is returned.
-Define an overload that accepts multiple numbers or an array and use `Enumerable.Aggregate()` to apply `GCD()` to them.
+Define an overload that accepts multiple numbers or an array and use `IEnumerable.Aggregate()` to apply `GCD()` to them.
 
 ```csharp
 using System.Linq;

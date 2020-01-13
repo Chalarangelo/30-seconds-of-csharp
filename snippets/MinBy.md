@@ -3,7 +3,7 @@ title: MinBy
 tags: math,list,array,lambda,intermediate
 ---
 
-Returns the minimum of an `IEnumerable`, after mapping each element to a value using the provided function.
+Returns the minimum of a collection, after mapping each element to a value using the provided function.
 
 Use `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.
 Use `IEnumerable.Min()` to get the minimum of the resulting values.
@@ -14,14 +14,15 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static double MinBy<T> (IEnumerable<T> values, Func<T,int> fn) {
+  public static double MinBy<T>(IEnumerable<T> values, Func<T,int> fn)
+  {
     return values.Select(fn).Min();
   }
 }
 ```
 
 ```csharp
-var p = new[] {
+var p = new [] {
   new { a = 3, b = 2},
   new { a = 2, b = 1}
 };

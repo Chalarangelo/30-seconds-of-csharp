@@ -3,10 +3,10 @@ title: MostFrequent
 tags: array,list,intermediate
 ---
 
-Returns the most frequent element of an `IEnumerable`.
+Returns the most frequent element of a collection.
 
 Use `IEnumerable.GroupBy()` to group `values` by value.
-Use `IEnumerable.OrderByDescending()` in combination with `Enumerable.Count()` to order the results in descending order based on frequency.
+Use `IEnumerable.OrderByDescending()` in combination with `IEnumerable.Count()` to order the results in descending order based on frequency.
 Use `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.
 
 ```csharp
@@ -15,7 +15,8 @@ using System.Linq;
 
 public static partial class _30s 
 {
-  public static T MostFrequent<T> (IEnumerable<T> values) {
+  public static T MostFrequent<T>(IEnumerable<T> values)
+  {
     return values
       .GroupBy(v => v)
       .OrderByDescending(v => v.Count())
@@ -26,7 +27,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = { 1, 2, 3, 3, 2, 3 };
+int[] nums = { 1, 2, 3, 3, 2, 3 };
 List<string> str = new List<string> { "a", "b", "b", "c" };
 
 _30s.MostFrequent(nums); // 3

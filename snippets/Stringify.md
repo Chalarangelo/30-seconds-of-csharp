@@ -1,6 +1,6 @@
 ---
 title: Stringify
-tags: utility,array,list,beginner
+tags: utility,array,list,string,beginner
 ---
 
 Combines the elements of an enumerable object into a string.
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 public static partial class _30s 
 {
-  public static string Stringify<T> (IEnumerable<T> elements, string delimiter = ",") 
+  public static string Stringify<T>(IEnumerable<T> elements, string delimiter = ",") 
   {
     return string.Join(delimiter, elements);
   }

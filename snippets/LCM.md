@@ -7,7 +7,7 @@ Calculates the least common multiple of the given numbers.
 
 Define a `_GCD()` method that determines the greatest common divisor, using recursion.
 Use `_GCD()` and the fact that `LCM(x, y) = x * y / GCD(x,y)` to determine the least common multiple.
-Use `Enumerable.Aggregate()` to apply `LCM()` to all the given arguments.
+Use `IEnumerable.Aggregate()` to apply `LCM()` to all the given arguments.
 
 ```csharp
 using System.Linq;

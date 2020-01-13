@@ -1,9 +1,9 @@
 ---
 title: Head
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
-Returns the head of an `IEnumerable`.
+Returns the head of a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.
@@ -23,8 +23,8 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
-List<int> empty = new List<int>(){ };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
+List<int> empty = new List<int> { };
 char[] chars = {'A','B','C'};
 
 _30s.Head(nums); // 1

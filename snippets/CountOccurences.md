@@ -3,7 +3,7 @@ title: CountOccurences
 tags: array,list,intermediate
 ---
 
-Counts the occurences of a value in an `IEnumerable`.
+Counts the occurences of a value in a collection.
 
 Use `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.
 
@@ -22,7 +22,7 @@ public static partial class _30s
 
 ```csharp
 string s = "fooBar";
-List<int> nums = new List<int>(){ 1, 2, 3, 3, 3, 4, 5, 6 };
+List<int> nums = new List<int> { 1, 2, 3, 3, 3, 4, 5, 6 };
 
 _30s.CountOccurences(s,'o'); // 2
 _30s.CountOccurences(nums,3); // 3

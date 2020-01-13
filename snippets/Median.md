@@ -1,6 +1,6 @@
 ---
 title: Median
-tags: math,beginner
+tags: math,intermediate
 ---
 
 Finds the median of a list of numbers.
@@ -12,7 +12,8 @@ Which is either the middle element of the list, if the list length is odd or the
 ```csharp
 public static partial class _30s 
 {
-  public static double Median (params double[] values) {
+  public static double Median(params double[] values)
+  {
     Array.Sort(values);
     if (values.Length % 2 == 0)
       return (values[values.Length / 2 - 1] + values[values.Length / 2]) / 2;
@@ -22,7 +23,7 @@ public static partial class _30s
 ```
 
 ```csharp
-double [] nums = { 5, 6, 7, 8 };
+double[] nums = { 5, 6, 7, 8 };
 
 _30s.Median(4, 8, 1); // 4
 _30s.Median(nums); // 6.5

@@ -1,9 +1,9 @@
 ---
 title: GetFirstN
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
-Returns the first `n` elements in an `IEnumerable`.
+Returns the first `n` elements in a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Take(n)` to get the first `n` elements.
@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
 
 _30s.GetFirstN(nums); // { 1 }
 _30s.GetFirstN(nums, 3); // { 1, 2, 3 }

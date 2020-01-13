@@ -3,7 +3,7 @@ title: Difference
 tags: array,list,beginner
 ---
 
-Returns the difference betweend two `IEnumerable`s.
+Returns the difference betweend two collections.
 
 Use `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.
 
@@ -21,8 +21,8 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] a = { 1, 2, 3, 5 };
-int [] b = { 1, 2, 4 };
+int[] a = { 1, 2, 3, 5 };
+int[] b = { 1, 2, 4 };
 
 _30s.Difference(a, b); // { 3, 5 }
 ```

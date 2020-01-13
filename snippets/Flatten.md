@@ -3,7 +3,7 @@ title: Flatten
 tags: array,list,intermediate
 ---
 
-Flattens a 2D `IEnumerable` into a single dimension.
+Flattens a 2D collection into a single dimension.
 
 Use `IEnumerable.SelectMany()` to flatten the 2D enumerable object.
 
@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-int [][] x = {
+int[][] x = {
   new [] {1, 2, 3},
   new [] {4, 5, 6}
 };

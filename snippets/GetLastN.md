@@ -1,9 +1,9 @@
 ---
 title: GetLastN
-tags: array,list,beginner
+tags: array,list,intermediate
 ---
 
-Returns the last `n` elements in an `IEnumerable`.
+Returns the last `n` elements in a collection.
 
 Use `IEnumerable.Count()` to check if the enumerable is non-empty.
 Use `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.
@@ -21,7 +21,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
 
 _30s.GetLastN(nums); // { 5 }
 _30s.GetLastN(nums, 3); // { 3, 4, 5 }

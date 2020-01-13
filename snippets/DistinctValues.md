@@ -1,21 +1,21 @@
 ---
 title: DistinctValues
-tags: array,beginner
+tags: array,list,beginner
 ---
 
-Returns all distinct values in an array.
+Returns all distinct values in a collection.
 
-Use `Enumerable.Distinct()` to get the distinct values in the given array.
-Use `Enumerable.ToArray()` to convert the result to an array and return it.
+Use `IEnumerable.Distinct()` to get the distinct values in the given collection.
 
 ```csharp
+using System.Collections.Generic;
 using System.Linq;
 
 public static partial class _30s 
 {
-  public static T[] DistinctValues<T>(T[] arr) 
+  public static IEnumerable<T> DistinctValues<T>(IEnumerable<T> data) 
   {
-    return arr.Distinct().ToArray();
+    return data.Distinct();
   }
 }
 ```

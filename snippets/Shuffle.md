@@ -1,6 +1,6 @@
 ---
 title: Shuffle
-tags: list,array,random,intermediate
+tags: array,list,random,intermediate
 ---
 
 Randomizes the order of the values of an `IList`, updating the original `IList` object.
@@ -9,6 +9,8 @@ Use the [Fisher-Yates algorithm](
 https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.
 
 ```csharp
+using System.Collections.Generic;
+
 public static partial class _30s 
 {
   public static void Shuffle<T>(IList<T> list)
@@ -26,7 +28,7 @@ public static partial class _30s
 ```
 
 ```csharp
-List<int> nums = new List<int>(){ 1, 2, 3, 4, 5, 6 };
+List<int> nums = new List<int> { 1, 2, 3, 4, 5, 6 };
 int[] arr = { 1, 2, 3, 4, 5, 6 };
 
 _30s.Shuffle(nums); // nums = { 3, 5, 2, 1, 4, 6 }

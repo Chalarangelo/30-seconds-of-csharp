@@ -10,7 +10,7 @@ Pass both values by reference using the `ref` keyword, then use a `temp` variabl
 ```csharp
 public static partial class _30s 
 {
-  public static void Swap<T> (ref T val1, ref T val2) 
+  public static void Swap<T>(ref T val1, ref T val2) 
   {
     var temp = val1;
     val1 = val2;

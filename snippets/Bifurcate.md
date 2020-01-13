@@ -23,10 +23,10 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = {1, 2, 3, 4};
-bool [] filter = {true, true, false, true};
-int [] n1;
-int [] n2;
+int[] nums = {1, 2, 3, 4};
+bool[] filter = {true, true, false, true};
+int[] n1;
+int[] n2;
 
 _30s.Bifurcate(nums, filter, out n1, out n2); // // n1 = {1, 2, 4}, n2 = {3}
 ```

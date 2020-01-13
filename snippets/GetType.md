@@ -19,7 +19,7 @@ public static partial class _30s
 
 ```csharp
 string s = "fooBar";
-List<string> list = new List<string>() { "a", "b", "c" };
+List<string> list = new List<string> { "a", "b", "c" };
 
 _30s.GetType(s); // System.String
 _30s.GetType(list); // System.Collections.Generic.List`1[System.String]

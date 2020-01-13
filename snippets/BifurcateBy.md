@@ -1,6 +1,6 @@
 ---
 title: BifurcateBy
-tags: array,list,lambda,intermediate
+tags: array,list,lambda,advanced
 ---
 
 Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. 
@@ -23,9 +23,9 @@ public static partial class _30s
 ```
 
 ```csharp
-int [] nums = {1, 2, 3, 4};
-int [] n1;
-int [] n2;
+int[] nums = {1, 2, 3, 4};
+int[] n1;
+int[] n2;
 
 _30s.BifurcateBy(nums, x => x % 2 == 0, out n1, out n2); // n1 = {2, 4}, n2 = {1, 3}
 ```
