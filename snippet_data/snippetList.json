@@ -5,16 +5,17 @@
       "type": "snippetListing",
       "title": "All",
       "attributes": {
-        "text": "Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.\n\nUse `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.\n\nUse `IEnumerable.ToArray()`, `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.\n\n",
         "tags": [
           "array",
+          "list",
           "lambda",
           "overload",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "9f49ae6a8de2ddb83806e74ec242b56c6b90fe9ee84c49d12b7585fc6abe9474"
+        "hash": "ecbb11125281c1f8e93ef9cd891a3cedd7d76c8d8374dd74a747f9d14334e532"
       }
     },
     {
@@ -22,7 +23,7 @@
       "type": "snippetListing",
       "title": "AverageBy",
       "attributes": {
-        "text": "Returns the average of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Average()` to get the average of the resulting values.\n\n",
+        "text": "Returns the average of a collection, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Average()` to get the average of the resulting values.\n\n",
         "tags": [
           "math",
           "list",
@@ -32,7 +33,7 @@
         ]
       },
       "meta": {
-        "hash": "6140561e57f7bf1b16c65ca4d839b7d4dcd0a645c01f5bde94d4bafd96f68b45"
+        "hash": "7e6932bc3d68dfc1b8d09ae1951bb64e64425966bc6b673f63e2a6b4fe9b6a4b"
       }
     },
     {
@@ -48,7 +49,7 @@
         ]
       },
       "meta": {
-        "hash": "9fe4ed1ea98f4fba8fec43fc419c68ade61b067660ab13ac67767daa7389d86f"
+        "hash": "5c018d71465f81bf825ff91d0c5ce2d905d5f6b9e27c07b238fa4675ffa258b3"
       }
     },
     {
@@ -61,11 +62,11 @@
           "array",
           "list",
           "lambda",
-          "intermediate"
+          "advanced"
         ]
       },
       "meta": {
-        "hash": "c8ca5fff72ff7c76108c4e101393bf763e8ca304cc54f93b0172576b7a3fd492"
+        "hash": "0914b9cfc3ec08299ece93e76770a2db0c26c400bd2324b4d3eb77cae5657b8f"
       }
     },
     {
@@ -104,15 +105,16 @@
       "type": "snippetListing",
       "title": "Chunk",
       "attributes": {
-        "text": "Chunks an array into smaller arrays of a specified size.\n\nUse `IEnumerable.Select()` to convert the given list to index-value pairs.\nUse `IEnumerable.GroupBy()` to split elements into groups based on their index.\nUse `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.\nFinally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.\nIf the original list can't be split evenly, the final chunk will contain the remaining elements.\n\n",
+        "text": "Chunks a collection into smaller lists of a specified size.\n\nUse `IEnumerable.Select()` to convert the given list to index-value pairs.\nUse `IEnumerable.GroupBy()` to split elements into groups based on their index.\nUse `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.\nFinally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.\nIf the original list can't be split evenly, the final chunk will contain the remaining elements.\n\n",
         "tags": [
+          "array",
           "list",
           "lambda",
           "advanced"
         ]
       },
       "meta": {
-        "hash": "4b5e3410d1ad58102d284d69b135de6ab0d7a352a2af2a0325ccc44d06600c53"
+        "hash": "dd83fcf9dda4cc70d82cea4a21e29c8deefbe0b7daada66cffbeaa61f41c8542"
       }
     },
     {
@@ -136,7 +138,7 @@
       "type": "snippetListing",
       "title": "CountOccurences",
       "attributes": {
-        "text": "Counts the occurences of a value in an `IEnumerable`.\n\nUse `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.\n\n",
+        "text": "Counts the occurences of a value in a collection.\n\nUse `IEnumerable.Count()` in combination with `EqualityComparer<T>.Default.Equals()` to compare each value in the `IEnumerable` with `el`.\n\n",
         "tags": [
           "array",
           "list",
@@ -144,7 +146,7 @@
         ]
       },
       "meta": {
-        "hash": "e416d30956587c04825689ab69a33d68fc2690fe2f422debf9fc892e770d7c3b"
+        "hash": "5055c097847a619b2cba72811c8c352b41ea19e9f0dc32e90e934a6f03ee9ea0"
       }
     },
     {
@@ -183,7 +185,7 @@
       "type": "snippetListing",
       "title": "Difference",
       "attributes": {
-        "text": "Returns the difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
+        "text": "Returns the difference betweend two collections.\n\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
         "tags": [
           "array",
           "list",
@@ -191,7 +193,7 @@
         ]
       },
       "meta": {
-        "hash": "46b6d3a3e03f63071feae41cb1a17c24256070d762ec208567c50917517f1785"
+        "hash": "c3949420cd356827ae286a681799c8025d36d8b6d56adf72138d16a046b41532"
       }
     },
     {
@@ -199,14 +201,15 @@
       "type": "snippetListing",
       "title": "DistinctValues",
       "attributes": {
-        "text": "Returns all distinct values in an array.\n\nUse `Enumerable.Distinct()` to get the distinct values in the given array.\nUse `Enumerable.ToArray()` to convert the result to an array and return it.\n\n",
+        "text": "Returns all distinct values in a collection.\n\nUse `IEnumerable.Distinct()` to get the distinct values in the given collection.\n\n",
         "tags": [
           "array",
+          "list",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "23d7f6b38ecde3077fb22e65a2aa77642c3dfdb0b8e4e6571f544fe5015155fb"
+        "hash": "4b709d8546684a9651290d1ee57e6ff799729c38e4bcd9b20a5acce41143df25"
       }
     },
     {
@@ -214,7 +217,7 @@
       "type": "snippetListing",
       "title": "DuplicateValues",
       "attributes": {
-        "text": "Returns all distinct values in an `IEnumerable`.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.\nUse `IEnumerable.Where()` to create select only the groups with a count greater than `1`.\nUse `IEnumerable.Select()` to return the `Key` property of each group.\n\n",
+        "text": "Returns all distinct values in a collection.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.\nUse `IEnumerable.Where()` to create select only the groups with a count greater than `1`.\nUse `IEnumerable.Select()` to return the `Key` property of each group.\n\n",
         "tags": [
           "array",
           "list",
@@ -222,7 +225,7 @@
         ]
       },
       "meta": {
-        "hash": "b38a89668fec6cde8e3a2600c69974aeb003dc86bdff6f3e2a7c90078ed10e09"
+        "hash": "528325d25a5dd097d77f5f09d3fb75a5b5cafc760d0b3de61e7cfd2c574e389f"
       }
     },
     {
@@ -234,11 +237,11 @@
         "tags": [
           "math",
           "array",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "99369a3e23e7f70853b4c5519e407e89beda8f9365588564112dd0b3453b627f"
+        "hash": "dde795b5b01b5d7a10a2c64279db8f6a7af293b73030b850c66ae5e68af93532"
       }
     },
     {
@@ -279,16 +282,16 @@
       "type": "snippetListing",
       "title": "FindParityOutliers",
       "attributes": {
-        "text": "Given an `IEnumerable`, returns the items that are parity outliers.\n\nUse `IEnumerable.GroupBy()` to create groups for each parity (`0` and `1`).\nUse `IEnumerable.OrderBy()` in combination with `Enumerable.Count()` to order the two groups in ascending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the least common parity value.\nFinally, use `IEnumerable.Where()` to get all elements with the least common parity value.\n\n",
+        "text": "Given a collection, returns the items that are parity outliers.\n\nUse `IEnumerable.GroupBy()` to create groups for each parity (`0` and `1`).\nUse `IEnumerable.OrderBy()` in combination with `IEnumerable.Count()` to order the two groups in ascending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the least common parity value.\nFinally, use `IEnumerable.Where()` to get all elements with the least common parity value.\n\n",
         "tags": [
           "array",
           "list",
           "math",
-          "intermediate"
+          "advanced"
         ]
       },
       "meta": {
-        "hash": "743880a305f4e310ebe1f9066bd5b712c5fe0e0445a5cc14281285913a53938e"
+        "hash": "0eca80d60ffef12a706bcbe416a9437bfaf0e48e311b7ed18b4cc77cf7465154"
       }
     },
     {
@@ -296,7 +299,7 @@
       "type": "snippetListing",
       "title": "Flatten",
       "attributes": {
-        "text": "Flattens a 2D `IEnumerable` into a single dimension.\n\nUse `IEnumerable.SelectMany()` to flatten the 2D enumerable object.\n\n",
+        "text": "Flattens a 2D collection into a single dimension.\n\nUse `IEnumerable.SelectMany()` to flatten the 2D enumerable object.\n\n",
         "tags": [
           "array",
           "list",
@@ -304,7 +307,7 @@
         ]
       },
       "meta": {
-        "hash": "e67ddb79ac9e8ba4ecf0a092914f6372db9a2e84e1f1d51d467b6c73e85ea47e"
+        "hash": "9a8f2b1e8ffecd3e0721ca5f6ad3621287564b05d9779a6fc709e7740f33964e"
       }
     },
     {
@@ -328,7 +331,7 @@
       "type": "snippetListing",
       "title": "GCD",
       "attributes": {
-        "text": "Calculates the greatest common divisor of the given numbers.\n\nDefine a `GCD()` function for two numbers, which uses recursion.\nBase case is when `y` equals `0`, which returns `x`.\nOtherwise the GCD of `y` and the remainder of the division `x/y` is returned.\nDefine an overload that accepts multiple numbers or an array and use `Enumerable.Aggregate()` to apply `GCD()` to them.\n\n",
+        "text": "Calculates the greatest common divisor of the given numbers.\n\nDefine a `GCD()` function for two numbers, which uses recursion.\nBase case is when `y` equals `0`, which returns `x`.\nOtherwise the GCD of `y` and the remainder of the division `x/y` is returned.\nDefine an overload that accepts multiple numbers or an array and use `IEnumerable.Aggregate()` to apply `GCD()` to them.\n\n",
         "tags": [
           "math",
           "recursion",
@@ -337,7 +340,7 @@
         ]
       },
       "meta": {
-        "hash": "663b772ad09cb136533ccdcf8575185260e8df7fb94dd67e6c7a75f942baded2"
+        "hash": "11c8aa0f1b597533e66b8eac65128b185bfaed9aced2cb5709d51d8780572867"
       }
     },
     {
@@ -345,15 +348,15 @@
       "type": "snippetListing",
       "title": "GetFirstN",
       "attributes": {
-        "text": "Returns the first `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(n)` to get the first `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "text": "Returns the first `n` elements in a collection.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(n)` to get the first `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
         "tags": [
           "array",
           "list",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "c00408502f5bd2f067727d0ab68cded73200c0c64c68b096c0e94eb61795592d"
+        "hash": "c854888fc506f133d7eb5391905e9baba297ff16238376151afca0f12822c1d6"
       }
     },
     {
@@ -361,15 +364,15 @@
       "type": "snippetListing",
       "title": "GetLastN",
       "attributes": {
-        "text": "Returns the last `n` elements in an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
+        "text": "Returns the last `n` elements in a collection.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\nOmit the second argument, `n`, to use a default value of `1`.\n\n",
         "tags": [
           "array",
           "list",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "8578add19a89ab0c15c79a6030f687362fccca235f86b05393cc673d8c145bf4"
+        "hash": "0b9b53484f3ebaeeee2bb39056ba8bd97d8c37fc722442136cf5c9503bce8264"
       }
     },
     {
@@ -385,7 +388,7 @@
         ]
       },
       "meta": {
-        "hash": "229825e3b5d2a4ffd29cb3adc18aa2d51a8eb10c037eb28a6632fef89105c941"
+        "hash": "8958a51e546251cdc7341fab6548ef334a9bd07eef732b54c59a2a4ae65934cd"
       }
     },
     {
@@ -393,15 +396,15 @@
       "type": "snippetListing",
       "title": "Head",
       "attributes": {
-        "text": "Returns the head of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.\nIf the enumerable object is empty, return the `default()` value for the given type.\n\n",
+        "text": "Returns the head of a collection.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.\nIf the enumerable object is empty, return the `default()` value for the given type.\n\n",
         "tags": [
           "array",
           "list",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "014c9c4ff5672a67a24dc3096071ecc9441a85c9a16bf3eac6fa5ebdf3097ef1"
+        "hash": "8489526c47205b64e73c73b75756bdcbf880711d55c017586cec5f81ae129d4f"
       }
     },
     {
@@ -425,7 +428,7 @@
       "type": "snippetListing",
       "title": "IndexOfAll",
       "attributes": {
-        "text": "Returns all indices of `n` in an `IList`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` in combination with `object.Equals()` to compare each value in `data` to `n` and return only matching indices.\n\n",
+        "text": "Returns all indices of `n` in an `IList`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `Enumerable.Where()` in combination with `object.Equals()` to compare each value in `data` to `n` and return only matching indices.\n\n",
         "tags": [
           "array",
           "list",
@@ -433,7 +436,7 @@
         ]
       },
       "meta": {
-        "hash": "319f736b56e445dcea90ed9b1417ed5f1a24320fb9a7d414165779859d7176fb"
+        "hash": "35a4b23c72bbff22758b295a9f6bb02ed467a7698e006e480790fdda13724b84"
       }
     },
     {
@@ -449,7 +452,7 @@
         ]
       },
       "meta": {
-        "hash": "db9f2c7e764584ee9f1fc568aadeb80552f1f805e5a88fae4232e8dd0e9becc5"
+        "hash": "6b1724ad51c747cbe64d1c2175222aa29de5dc082bc4e51e03b35ed4e18b3bea"
       }
     },
     {
@@ -491,7 +494,8 @@
         "text": "Returns `true` if the given string can be parsed into a double, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.\n\n",
         "tags": [
           "math",
-          "beginner"
+          "type",
+          "intermediate"
         ]
       },
       "meta": {
@@ -521,7 +525,8 @@
         "text": "Returns `true` if the given string can be parsed into an integer, `false` otherwise.\n\nReturn the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.\nUse `Double.TryParse()` to allow handling of values larger than `Int64`.\n\n",
         "tags": [
           "math",
-          "beginner"
+          "type",
+          "intermediate"
         ]
       },
       "meta": {
@@ -641,7 +646,7 @@
       "type": "snippetListing",
       "title": "KeepUpToN",
       "attributes": {
-        "text": "Filters an `IEnumerable` keeping up to `n` occurences of each value.\n\nUse `IEnumerable.Distinct()` in combination with `IEnumerable.ToDictionary()` to create a dictionary with an initial count of `0` for each distinct value in `data`.\nUse `IEnumerable.Where()` to filter out occurences after the `n`th one for each element, using the previously created dictionary.\n\n",
+        "text": "Filters a collection keeping up to `n` occurences of each value.\n\nUse `IEnumerable.Distinct()` in combination with `IEnumerable.ToDictionary()` to create a dictionary with an initial count of `0` for each distinct value in `data`.\nUse `IEnumerable.Where()` to filter out occurences after the `n`th one for each element, using the previously created dictionary.\n\n",
         "tags": [
           "array",
           "list",
@@ -649,7 +654,7 @@
         ]
       },
       "meta": {
-        "hash": "10ba7fc64a93b12c76b3ae98cca28ece42be888d4e4cda45a2d9f1bcdbf45f4a"
+        "hash": "b00fb979dac80253099b8465da553ce83546ecfc365b0dfd0f1f0c2d48d37b96"
       }
     },
     {
@@ -657,7 +662,7 @@
       "type": "snippetListing",
       "title": "LCM",
       "attributes": {
-        "text": "Calculates the least common multiple of the given numbers.\n\nDefine a `_GCD()` method that determines the greatest common divisor, using recursion.\nUse `_GCD()` and the fact that `LCM(x, y) = x * y / GCD(x,y)` to determine the least common multiple.\nUse `Enumerable.Aggregate()` to apply `LCM()` to all the given arguments.\n\n",
+        "text": "Calculates the least common multiple of the given numbers.\n\nDefine a `_GCD()` method that determines the greatest common divisor, using recursion.\nUse `_GCD()` and the fact that `LCM(x, y) = x * y / GCD(x,y)` to determine the least common multiple.\nUse `IEnumerable.Aggregate()` to apply `LCM()` to all the given arguments.\n\n",
         "tags": [
           "math",
           "recursion",
@@ -665,7 +670,7 @@
         ]
       },
       "meta": {
-        "hash": "0b43be4b8b7f5cdb2cabdb7d87422f5c2a1e0c37439678ce282309429b50128a"
+        "hash": "8cc6e9a921e304dec0f721a08b7a687e681556a9abe1429574cf18742a5bd116"
       }
     },
     {
@@ -689,7 +694,7 @@
       "type": "snippetListing",
       "title": "MaxBy",
       "attributes": {
-        "text": "Returns the maximum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Max()` to get the maximum of the resulting values.\n\n",
+        "text": "Returns the maximum of a collection, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Max()` to get the maximum of the resulting values.\n\n",
         "tags": [
           "math",
           "list",
@@ -699,7 +704,7 @@
         ]
       },
       "meta": {
-        "hash": "b812f6649954eb1e53641a13cf9418410474b3286444b4be8aad91b578efa45c"
+        "hash": "748be18c074d30f21ce6741a076a996664b4a364ed6324064eceb2135170efe9"
       }
     },
     {
@@ -725,11 +730,11 @@
         "text": "Finds the median of a list of numbers.\n\nUse the `params` keyword to accept either an array or a variable number of arguments.\nSort the array using `Array.sort()` and find the median. \nWhich is either the middle element of the list, if the list length is odd or the average of the two middle elements, if the list length is even.\n\n",
         "tags": [
           "math",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "36ad6e587f9de3d589119ea0dc61c59c490a88caab192e8da895ada709f20684"
+        "hash": "b033e89ef4efe03889612c20d96e1258b491c4434ccac92d35994859d297c9a8"
       }
     },
     {
@@ -737,7 +742,7 @@
       "type": "snippetListing",
       "title": "MinBy",
       "attributes": {
-        "text": "Returns the minimum of an `IEnumerable`, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Min()` to get the minimum of the resulting values.\n\n",
+        "text": "Returns the minimum of a collection, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.\nUse `IEnumerable.Min()` to get the minimum of the resulting values.\n\n",
         "tags": [
           "math",
           "list",
@@ -747,7 +752,7 @@
         ]
       },
       "meta": {
-        "hash": "a2dd63035f6b8ca7a40146283c0ed56aa1e65ae808a5a7ecf80c152a99280ca6"
+        "hash": "4569015b9e0b2657788a61afb1ffdb4d76792407bc68e6c4d8bbfae38f47042a"
       }
     },
     {
@@ -770,7 +775,7 @@
       "type": "snippetListing",
       "title": "MostFrequent",
       "attributes": {
-        "text": "Returns the most frequent element of an `IEnumerable`.\n\nUse `IEnumerable.GroupBy()` to group `values` by value.\nUse `IEnumerable.OrderByDescending()` in combination with `Enumerable.Count()` to order the results in descending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.\n\n",
+        "text": "Returns the most frequent element of a collection.\n\nUse `IEnumerable.GroupBy()` to group `values` by value.\nUse `IEnumerable.OrderByDescending()` in combination with `IEnumerable.Count()` to order the results in descending order based on frequency.\nUse `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.\n\n",
         "tags": [
           "array",
           "list",
@@ -778,7 +783,7 @@
         ]
       },
       "meta": {
-        "hash": "f55d7e9928ecf8a4a1bdcea0da1cc65e1c8fa241996134b077dcaf1a014d0da9"
+        "hash": "51c4fd5983af4f470c3a79d0304e7ad0b6b04cecbd2b554d30a104c718e04339"
       }
     },
     {
@@ -786,16 +791,17 @@
       "type": "snippetListing",
       "title": "None",
       "attributes": {
-        "text": "Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.\n\nUse `Array.Exists()` to test if all elements in the collection return `false` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
+        "text": "Returns `true` if the provided predicate function returns `false` for all elements in a collection, `false` otherwise.\n\nUse `IEnumerable.ToArray()`, `Array.Exists()` to test if all elements in the collection return `false` based on the predicate function, `match`.\nOmit the predicate function, `match`, to use the overload that checks if each value is `null` by default.\n\n",
         "tags": [
           "array",
+          "list",
           "lambda",
           "overload",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "994047b6fd9870caad610175b8ae89543eaa6b4e1527a6db189f24eb93927784"
+        "hash": "cdc71f6a133214ede7e8ef34080aa1b71e7d9f1537146f71d5f78a86beec45af"
       }
     },
     {
@@ -885,14 +891,14 @@
       "attributes": {
         "text": "Randomizes the order of the values of an `IList`, updating the original `IList` object.\n\nUse the [Fisher-Yates algorithm](\nhttps://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.\n\n",
         "tags": [
-          "list",
           "array",
+          "list",
           "random",
           "intermediate"
         ]
       },
       "meta": {
-        "hash": "787070230c11fcce2e124507fade7a887e048b3d696a201bf509d16921fa70e8"
+        "hash": "b9f02871d1a71d1fd5c1f3cfca631bc181b9f1929274ead5d0d0dc958153f056"
       }
     },
     {
@@ -907,7 +913,7 @@
         ]
       },
       "meta": {
-        "hash": "c087d30e60ecacd0162674cef0d197a8dda8ef980c4268df031b2b3a8f8bb2dd"
+        "hash": "c46a0ffef83c277ef435b871cd21481463aed960d4802ff224224c4608ef1e49"
       }
     },
     {
@@ -923,7 +929,7 @@
         ]
       },
       "meta": {
-        "hash": "85b5a86433c25b8a5c1d3429dde3a36c03f0cab77c489d9f30b6233d0e3aecad"
+        "hash": "3e9da1263a43bcd7a678cb3e8e529d48a7f2c38dd5f503e25f28f5f7cb089614"
       }
     },
     {
@@ -936,11 +942,12 @@
           "utility",
           "array",
           "list",
+          "string",
           "beginner"
         ]
       },
       "meta": {
-        "hash": "45df41ece158c680c9623ac822578976c526ce96a027f1d74bf62dbeddaecd7f"
+        "hash": "9e221c5ecad934b89cd29a304c8f7eb3e9a22ad869de814931f7e16ff6ae09d1"
       }
     },
     {
@@ -951,11 +958,11 @@
         "text": "Returns a subarray of the given array starting at the given index and having the specified length.\n\nUse `ArraySegment()` with the given array, `arr`, `start` and `length` to get the subarray.\nConvert the result to an array, using `ArraySegment.ToArray()`.\n\n",
         "tags": [
           "array",
-          "beginner"
+          "intermediate"
         ]
       },
       "meta": {
-        "hash": "9d3d9ac579ead5497ce7230af2374446035dcdbcdd86e6720a4a066cdab59331"
+        "hash": "e1fc5d951242caf2217fc8a27e56b1fb31627387c262ad2ecf92f7e776b5e742"
       }
     },
     {
@@ -970,7 +977,7 @@
         ]
       },
       "meta": {
-        "hash": "22bf5dfd734ebeea4868687cf82f7f63e612a95b95372abd37d7e76df04132d4"
+        "hash": "2d5bdbcac62adf6fbd2b6b1cb9ff9cb290a0b148935906825558ee939d91033e"
       }
     },
     {
@@ -978,7 +985,7 @@
       "type": "snippetListing",
       "title": "SymmetricDifference",
       "attributes": {
-        "text": "Returns the symmetric difference betweend two `IEnumerable`s.\n\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
+        "text": "Returns the symmetric difference betweend two collections.\n\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
         "tags": [
           "array",
           "list",
@@ -986,7 +993,7 @@
         ]
       },
       "meta": {
-        "hash": "897e3dc5a4f926679248175024eb56db619c53d365ca83f44f0ce8e5133d813f"
+        "hash": "6ef0567350b29a10e3dd1d51de1658cea24cfdbf4ffda4dc3cf734491dbde99c"
       }
     },
     {
@@ -994,7 +1001,7 @@
       "type": "snippetListing",
       "title": "Tail",
       "attributes": {
-        "text": "Returns the tail of an `IEnumerable`.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(1)` to get the whole object except for the first element.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\n\n",
+        "text": "Returns the tail of a collection.\n\nUse `IEnumerable.Count()` to check if the enumerable is non-empty.\nUse `IEnumerable.Skip(1)` to get the whole object except for the first element.\nIf the enumerable object is empty, return the `default()` value for the given enumerable.\n\n",
         "tags": [
           "array",
           "list",
@@ -1002,7 +1009,7 @@
         ]
       },
       "meta": {
-        "hash": "f706c3ae89aac3d3605dcbaec88f05df0307e39dccbf52c253a7bde1f810bb41"
+        "hash": "bde60478ea37c445f4101761a3eb2591ba1e7289acdd0c0ad7ac429968322773"
       }
     },
     {
