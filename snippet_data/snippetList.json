@@ -327,6 +327,23 @@
       }
     },
     {
+      "id": "Frequencies",
+      "type": "snippetListing",
+      "title": "Frequencies",
+      "attributes": {
+        "text": "Returns a `Dictionary` with the unique values of a collection as keys and their frequencies as the values.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the collection.\nUse `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "ed586e59d4f7dd0ea4f59a42ba326043bd49f53191a75a6d5ee9127e91c28a84"
+      }
+    },
+    {
       "id": "GCD",
       "type": "snippetListing",
       "title": "GCD",
@@ -389,6 +406,23 @@
       },
       "meta": {
         "hash": "8958a51e546251cdc7341fab6548ef334a9bd07eef732b54c59a2a4ae65934cd"
+      }
+    },
+    {
+      "id": "HaveSameContents",
+      "type": "snippetListing",
+      "title": "HaveSameContents",
+      "attributes": {
+        "text": "Returns `true` if two collections contain the same elements regardless of order, `false` otherwise.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.\nUse `IEnumerable.Union()` and `IEnumerable.Distinct()` to find the distinct values from both collections and loop over them using a `foreach` loop.\nUse `Dictionary.ContainsKey()` to check that each distinct value exists in both collections and compare the count for each one.\nReturn `false` if any value is not found in either collection or if any count does not match, `true` otherwise.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "af3a4198504a05c4747b1518cba109b36e0dac29c7390363ad237e76e0b1c708"
       }
     },
     {
@@ -469,6 +503,23 @@
       },
       "meta": {
         "hash": "c45f870ccfad72b8183ef726d10a590534b2f54632293cc87fb287edab74ae49"
+      }
+    },
+    {
+      "id": "IsContainedIn",
+      "type": "snippetListing",
+      "title": "IsContainedIn",
+      "attributes": {
+        "text": "Returns `true` if the elements of the first collection are contained in the second one regardless of order, `false` otherwise.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.\nUse `IEnumerable.Distinct()` to find the distinct values from the first collection and loop over them using a `foreach` loop.\nUse `Dictionary.ContainsKey()` to check that each distinct value exists in the second collection and compare the count for each one.\nReturn `false` if any value is not found in the second collection or if any count in it is lower than in the first one, `true` otherwise.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "aefdde00ad1f8408186198eb532828df531c3f6f2d360a4118e83c4cd2b8075f"
       }
     },
     {

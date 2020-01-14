@@ -507,6 +507,32 @@
       }
     },
     {
+      "id": "Frequencies",
+      "title": "Frequencies",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "Frequencies.md",
+        "text": "Returns a `Dictionary` with the unique values of a collection as keys and their frequencies as the values.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the collection.\nUse `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static Dictionary<T,int> Frequencies<T>(IEnumerable<T> values)\n  {\n    return values\n      .GroupBy(v => v)\n      .ToDictionary(v => v.Key, v => v.Count());\n  }\n}",
+          "example": "char[] c = {'a', 'b', 'a', 'c', 'a', 'a', 'b'}; \n\n_30s.Frequencies(c); // { [a, 4], [b, 2], [c, 1] }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "ed586e59d4f7dd0ea4f59a42ba326043bd49f53191a75a6d5ee9127e91c28a84",
+        "firstSeen": "1578996778",
+        "lastUpdated": "1578996778",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "GCD",
       "title": "GCD",
       "type": "snippet",
@@ -605,6 +631,32 @@
         "lastUpdated": "1578925388",
         "updateCount": 4,
         "authorCount": 3
+      }
+    },
+    {
+      "id": "HaveSameContents",
+      "title": "HaveSameContents",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "HaveSameContents.md",
+        "text": "Returns `true` if two collections contain the same elements regardless of order, `false` otherwise.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.\nUse `IEnumerable.Union()` and `IEnumerable.Distinct()` to find the distinct values from both collections and loop over them using a `foreach` loop.\nUse `Dictionary.ContainsKey()` to check that each distinct value exists in both collections and compare the count for each one.\nReturn `false` if any value is not found in either collection or if any count does not match, `true` otherwise.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static bool HaveSameContents<T>(IEnumerable<T> a, IEnumerable<T> b)\n  {\n    Dictionary<T,int> dA = a.GroupBy(v => v).ToDictionary(v => v.Key, v => v.Count());\n    Dictionary<T,int> dB = b.GroupBy(v => v).ToDictionary(v => v.Key, v => v.Count());\n    foreach (T val in a.Union(b).Distinct()) {\n      if (!dA.ContainsKey(val) || !dB.ContainsKey(val)) return false;\n      if (dA[val] != dB[val]) return false;\n    }\n    return true;\n  }\n}",
+          "example": "int[] a = {1, 2, 4};\nint[] b = {2, 4, 1};\n\n_30s.HaveSameContents(a, b); // true"
+        },
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "af3a4198504a05c4747b1518cba109b36e0dac29c7390363ad237e76e0b1c708",
+        "firstSeen": "1578996785",
+        "lastUpdated": "1578996785",
+        "updateCount": 2,
+        "authorCount": 2
       }
     },
     {
@@ -729,6 +781,32 @@
         "firstSeen": "1577278798",
         "lastUpdated": "1578592261",
         "updateCount": 4,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "IsContainedIn",
+      "title": "IsContainedIn",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "IsContainedIn.md",
+        "text": "Returns `true` if the elements of the first collection are contained in the second one regardless of order, `false` otherwise.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.\nUse `IEnumerable.Distinct()` to find the distinct values from the first collection and loop over them using a `foreach` loop.\nUse `Dictionary.ContainsKey()` to check that each distinct value exists in the second collection and compare the count for each one.\nReturn `false` if any value is not found in the second collection or if any count in it is lower than in the first one, `true` otherwise.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static bool IsContainedIn<T>(IEnumerable<T> a, IEnumerable<T> b) \n  {\n    Dictionary<T,int> dA = a.GroupBy(v => v).ToDictionary(v => v.Key, v => v.Count());\n    Dictionary<T,int> dB = b.GroupBy(v => v).ToDictionary(v => v.Key, v => v.Count());\n    foreach(T val in a.Distinct()) {\n      if (!dB.ContainsKey(val)) return false;\n      if (dA[val] > dB[val]) return false;\n    }\n    return true;\n  }\n}",
+          "example": "int[] a = {1, 4};\nint[] b = {2, 4, 1};\n\n_30s.IsContainedIn(a, b); // true"
+        },
+        "tags": [
+          "array",
+          "list",
+          "dictionary",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "aefdde00ad1f8408186198eb532828df531c3f6f2d360a4118e83c4cd2b8075f",
+        "firstSeen": "1578996791",
+        "lastUpdated": "1578996791",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
