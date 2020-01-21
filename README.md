@@ -1,4 +1,4 @@
-[![Logo](/logo.png)](https://30secondsofcode.org/csharp/p/1)
+[![Logo](/logo.png)](https://30secondsofcode.org/c-sharp/p/1)
 
 # 30 seconds of C#
 
@@ -6,7 +6,7 @@
 
 * Visit [our website](https://30secondsofcode.org) to view our snippet collection.
 * Use the [Search page](https://30secondsofcode.org/search) to find snippets that suit your needs. You can search by name, tag, language or using a snippet's description. Just start typing a term and see what comes up.
-* Browse the [C# Snippet List](https://30secondsofcode.org/csharp/p/1) to see all the snippets in this project or click individual tags at the top of the same page to narrow down your search to a specific tag.
+* Browse the [C# Snippet List](https://30secondsofcode.org/c-sharp/p/1) to see all the snippets in this project or click individual tags at the top of the same page to narrow down your search to a specific tag.
 * Click on each snippet card to view the whole snippet, including code, explanation and examples.
 * You can use the button on the right side of a snippet card to copy the code to clipboard.
 * If you like the project, give it a star. It means a lot to the people maintaining it.
