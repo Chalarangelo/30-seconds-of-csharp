@@ -134,6 +134,23 @@
       }
     },
     {
+      "id": "CountBy",
+      "type": "snippetListing",
+      "title": "CountBy",
+      "attributes": {
+        "text": "Groups the elements of a collection based on the given function and returns the count of elements in each group.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the collection, after applying the provided function.\nUse `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3ffa30fc1eb295452f4ea8c426787da817e052affd78707a355a5de0514be479"
+      }
+    },
+    {
       "id": "CountOccurences",
       "type": "snippetListing",
       "title": "CountOccurences",
@@ -194,6 +211,23 @@
       },
       "meta": {
         "hash": "c3949420cd356827ae286a681799c8025d36d8b6d56adf72138d16a046b41532"
+      }
+    },
+    {
+      "id": "DifferenceBy",
+      "type": "snippetListing",
+      "title": "DifferenceBy",
+      "attributes": {
+        "text": "Returns the difference between two collections, after applying the provided function to each element of both.\n\nUse `IEnumerable.Select()` to map each element of either collection to the desired type.\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "da7e7a9fde055ce55455ce675464195b954f5a52d3fabb2ef3d4abcc28bcba88"
       }
     },
     {
@@ -261,6 +295,23 @@
       }
     },
     {
+      "id": "FindFirstBy",
+      "type": "snippetListing",
+      "title": "FindFirstBy",
+      "attributes": {
+        "text": "Returns the first element in a collection that matches the given predicate function, `match`.\n\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.First()` to return only the first matching element.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3abcf1927ba0d41d8758832081801c121b902d2a0da079bee894279610b3eab8"
+      }
+    },
+    {
       "id": "FindIndexOfAll",
       "type": "snippetListing",
       "title": "FindIndexOfAll",
@@ -275,6 +326,57 @@
       },
       "meta": {
         "hash": "44b16b26051594c284b048330167da876bec316c2d63fc9edac5c251121bc96e"
+      }
+    },
+    {
+      "id": "FindIndexOfFirstBy",
+      "type": "snippetListing",
+      "title": "FindIndexOfFirstBy",
+      "attributes": {
+        "text": "Returns the first index in an `IList` that matches the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.First()` to return only the first matching index.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "dd319d343dd960eab66a27db8db88ef54ac1b344279eccb551de3d8d3031c3fb"
+      }
+    },
+    {
+      "id": "FindIndexOfLastBy",
+      "type": "snippetListing",
+      "title": "FindIndexOfLastBy",
+      "attributes": {
+        "text": "Returns the last index in an `IList` that matches the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.Last()` to return only the last matching index.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3feb7197cde8bf4e7313dd12f4f0ea756c266a9457c6e4913c4ca0e33714b3f1"
+      }
+    },
+    {
+      "id": "FindLastBy",
+      "type": "snippetListing",
+      "title": "FindLastBy",
+      "attributes": {
+        "text": "Returns the last element in a collection that matches the given predicate function, `match`.\n\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.Last()` to return only the last matching element.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e10aa700d64a2b7b526a66ac2e024e1999ef8aef0409760968a8a20080f212c6"
       }
     },
     {
@@ -1017,6 +1119,24 @@
       }
     },
     {
+      "id": "SumBy",
+      "type": "snippetListing",
+      "title": "SumBy",
+      "attributes": {
+        "text": "Returns the sum of a collection, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element of either collection to a `double`, `IEnumerable.Sum()` to sum the values.\n\n",
+        "tags": [
+          "math",
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "af40035ebafb6dfbdda858cb84a195dbdb5415a205d3cc927569232ce83cf47b"
+      }
+    },
+    {
       "id": "Swap",
       "type": "snippetListing",
       "title": "Swap",
@@ -1045,6 +1165,23 @@
       },
       "meta": {
         "hash": "6ef0567350b29a10e3dd1d51de1658cea24cfdbf4ffda4dc3cf734491dbde99c"
+      }
+    },
+    {
+      "id": "SymmetricDifferenceBy",
+      "type": "snippetListing",
+      "title": "SymmetricDifferenceBy",
+      "attributes": {
+        "text": "Returns the symmetric difference betweend two collections, after applying the provided function to each element of both.\n\nUse `IEnumerable.Select()` to map each element of either collection to the desired type.\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "6742aced4600c03748c98c7dc0efb9eb0e8f611dfdd3925f933bf27e83f2d444"
       }
     },
     {

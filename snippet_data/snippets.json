@@ -206,6 +206,32 @@
       }
     },
     {
+      "id": "CountBy",
+      "title": "CountBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "CountBy.md",
+        "text": "Groups the elements of a collection based on the given function and returns the count of elements in each group.\n\nUse `IEnumerable.GroupBy()` to create groups for each distinct value in the collection, after applying the provided function.\nUse `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static Dictionary<R,int> CountBy<T,R>(IEnumerable<T> values, Func<T,R> map)\n  {\n    return values\n      .GroupBy(map)\n      .ToDictionary(v => v.Key, v => v.Count());\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\n\n_30s.CountBy(p, x => x.a); // { [3, 1], [2, 1] }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3ffa30fc1eb295452f4ea8c426787da817e052affd78707a355a5de0514be479",
+        "firstSeen": "1579716361",
+        "lastUpdated": "1579716361",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "CountOccurences",
       "title": "CountOccurences",
       "type": "snippet",
@@ -302,6 +328,32 @@
         "lastUpdated": "1578925388",
         "updateCount": 5,
         "authorCount": 3
+      }
+    },
+    {
+      "id": "DifferenceBy",
+      "title": "DifferenceBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "DifferenceBy.md",
+        "text": "Returns the difference between two collections, after applying the provided function to each element of both.\n\nUse `IEnumerable.Select()` to map each element of either collection to the desired type.\nUse `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<R> DifferenceBy<T,R>(IEnumerable<T> a, IEnumerable<T> b, Func<T,R> map)\n  {\n    return a.Select(map).Except(b.Select(map));\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\nvar q = new[] {\n  new { a = 6, b = 2}\n};\n\n_30s.DifferenceBy(p, q, x => x.b); // { 1 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "da7e7a9fde055ce55455ce675464195b954f5a52d3fabb2ef3d4abcc28bcba88",
+        "firstSeen": "1579716158",
+        "lastUpdated": "1579716158",
+        "updateCount": 2,
+        "authorCount": 2
       }
     },
     {
@@ -405,6 +457,32 @@
       }
     },
     {
+      "id": "FindFirstBy",
+      "title": "FindFirstBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FindFirstBy.md",
+        "text": "Returns the first element in a collection that matches the given predicate function, `match`.\n\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.First()` to return only the first matching element.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static T FindFirstBy<T>(IEnumerable<T> data, Predicate<T> match)\n  {\n    return data.Where(i => match(i)).First();\n  }\n}",
+          "example": "int[] nums = {1, 2, 4, 5, 2, 2, 4};\n\n_30s.FindFirstBy(nums, x => x % 2 == 0); // 2"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3abcf1927ba0d41d8758832081801c121b902d2a0da079bee894279610b3eab8",
+        "firstSeen": "1579717129",
+        "lastUpdated": "1579717129",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "FindIndexOfAll",
       "title": "FindIndexOfAll",
       "type": "snippet",
@@ -427,6 +505,84 @@
         "firstSeen": "1578315613",
         "lastUpdated": "1578592261",
         "updateCount": 3,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "FindIndexOfFirstBy",
+      "title": "FindIndexOfFirstBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FindIndexOfFirstBy.md",
+        "text": "Returns the first index in an `IList` that matches the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.First()` to return only the first matching index.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static int FindIndexOfFirstBy<T>(IList<T> data, Predicate<T> match)\n  {\n    return Enumerable\n      .Range(0, data.Count())\n      .Where(i => match(data[i]))\n      .First();\n  }\n}",
+          "example": "int[] nums = {1, 2, 4, 5, 2, 2, 4};\n\n_30s.FindIndexOfFirstBy(nums, x => x % 2 == 0); // 1"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "dd319d343dd960eab66a27db8db88ef54ac1b344279eccb551de3d8d3031c3fb",
+        "firstSeen": "1579717142",
+        "lastUpdated": "1579717142",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "FindIndexOfLastBy",
+      "title": "FindIndexOfLastBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FindIndexOfLastBy.md",
+        "text": "Returns the last index in an `IList` that matches the given predicate function, `match`.\n\nUse `Enumerable.Range()` to iterate over all indices in `data`.\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.Last()` to return only the last matching index.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static int FindIndexOfLastBy<T>(IList<T> data, Predicate<T> match)\n  {\n    return Enumerable\n      .Range(0, data.Count())\n      .Where(i => match(data[i]))\n      .Last();\n  }\n}",
+          "example": "int[] nums = {1, 2, 4, 5, 2, 2, 4};\n\n_30s.FindIndexOfLastBy(nums, x => x % 2 == 0); // 6"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "3feb7197cde8bf4e7313dd12f4f0ea756c266a9457c6e4913c4ca0e33714b3f1",
+        "firstSeen": "1579717142",
+        "lastUpdated": "1579717142",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
+      "id": "FindLastBy",
+      "title": "FindLastBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "FindLastBy.md",
+        "text": "Returns the last element in a collection that matches the given predicate function, `match`.\n\nUse `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.\nUse `IEnumerable.Last()` to return only the last matching element.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static T FindLastBy<T>(IEnumerable<T> data, Predicate<T> match)\n  {\n    return data.Where(i => match(i)).Last();\n  }\n}",
+          "example": "int[] nums = {1, 2, 4, 5, 2, 2, 4};\n\n_30s.FindLastBy(nums, x => x % 2 == 0); // 4"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "e10aa700d64a2b7b526a66ac2e024e1999ef8aef0409760968a8a20080f212c6",
+        "firstSeen": "1579717129",
+        "lastUpdated": "1579717129",
+        "updateCount": 2,
         "authorCount": 2
       }
     },
@@ -1584,6 +1740,33 @@
       }
     },
     {
+      "id": "SumBy",
+      "title": "SumBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "SumBy.md",
+        "text": "Returns the sum of a collection, after mapping each element to a value using the provided function.\n\nUse `IEnumerable.Select()` to map each element of either collection to a `double`, `IEnumerable.Sum()` to sum the values.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static double SumBy<T>(IEnumerable<T> data, Func<T,double> map)\n  {\n    return data.Select(map).Sum();\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\n\n_30s.SumBy(p, x => x.a); // 5"
+        },
+        "tags": [
+          "math",
+          "array",
+          "list",
+          "lambda",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "af40035ebafb6dfbdda858cb84a195dbdb5415a205d3cc927569232ce83cf47b",
+        "firstSeen": "1579716361",
+        "lastUpdated": "1579716361",
+        "updateCount": 2,
+        "authorCount": 2
+      }
+    },
+    {
       "id": "Swap",
       "title": "Swap",
       "type": "snippet",
@@ -1630,6 +1813,32 @@
         "lastUpdated": "1578925388",
         "updateCount": 5,
         "authorCount": 3
+      }
+    },
+    {
+      "id": "SymmetricDifferenceBy",
+      "title": "SymmetricDifferenceBy",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "SymmetricDifferenceBy.md",
+        "text": "Returns the symmetric difference betweend two collections, after applying the provided function to each element of both.\n\nUse `IEnumerable.Select()` to map each element of either collection to the desired type.\nUse `IEnumerable.Except()` to only return elements in one enumerable object and not the other.\nUse `IEnumerable.Union()` to combine the result of applying that to each object.\n\n",
+        "codeBlocks": {
+          "code": "using System.Collections.Generic;\nusing System.Linq;\n\npublic static partial class _30s \n{\n  public static IEnumerable<R> SymmetricDifferenceBy<T,R>(IEnumerable<T> a, IEnumerable<T> b, Func<T,R> map) \n  {\n    IEnumerable<R> mapA = a.Select(map);\n    IEnumerable<R> mapB = b.Select(map);\n    return mapA.Except(mapB).Union(mapB.Except(mapA));\n  }\n}",
+          "example": "var p = new[] {\n  new { a = 3, b = 2},\n  new { a = 2, b = 1}\n};\nvar q = new[] {\n  new { a = 6, b = 2},\n  new { a = 6, b = 3}\n};\n\n_30s.SymmetricDifferenceBy(p, q, x => x.b); // { 1, 3 }"
+        },
+        "tags": [
+          "array",
+          "list",
+          "lambda",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "6742aced4600c03748c98c7dc0efb9eb0e8f611dfdd3925f933bf27e83f2d444",
+        "firstSeen": "1579716158",
+        "lastUpdated": "1579716158",
+        "updateCount": 2,
+        "authorCount": 2
       }
     },
     {
