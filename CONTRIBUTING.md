@@ -1,37 +1,52 @@
 # Contribution Guidelines
 
-**30 seconds of C#** is a community effort, so feel free to contribute in any way you can. Every contribution helps!
+**30 seconds of code** is powered by the community, so feel free to contribute in any way you can to help us!
 
-Here's what you can do to help:
+## Tools
 
-- Submit [pull requests](https://github.com/30-seconds/30-seconds-of-csharp/pulls) with snippets that you have created (see below for guidelines).
-- [Open issues](https://github.com/30-seconds/30-seconds-of-csharp/issues/new) for things you want to see added or modified.
-- Be part of the discussion by helping out with [existing issues](https://github.com/30-seconds/30-seconds-of-csharp/issues).
-- Fix typos in existing snippets, improve snippet descriptions and explanations or provide better examples.
+Before you begin contributing, you should install the integration-tools globally on your machine:
 
-### Snippet submission and Pull request guidelines
+```sh
+npm install -g @30-seconds/integration-tools
+```
 
-- **DO NOT MODIFY THE FILES INSIDE THE snippet_data DIRECTORY!** Doing so will result in your Pull Request being closed immediately.
-- **Snippet filenames** must closely resemble the title of the snippet. For example, if your snippet is titled `### My Snippet` the filename should be `my-snippet.md`.
-- **Snippet metadata** must be included in all snippets in the form of frontmatter.
-  - All snippets must contain a title.
-  - All snippets must contain tags, prefixed with `tags:` and separated by commas (optional spaces in-between).
-  - Make sure the first tag in your snippet's tags is one of the main categories, as seen in the website.
-  - Snippet tags must include a difficulty setting (`begginer`, `intermediate` or `advanced`), preferrably at the end of the list.
-- **Snippet titles** should be the same as the name of the main entity that is present in the snippet.
-  - All snippet titles must be prefixed with `title:` and be at the very first line of your snippet's frontmatter.
-  - Snippet titles must be unique (although if you cannot find a better title, just add some placeholder at the end of the filename and title and we will figure it out).
-  - Follow snippet titles with an empty line.
-- **Snippet descriptions** must be short and to the point. Try to explain _what_ the snippet does and _how_ the snippet works and what language features are used. Remember to include what functions/methods/classes you are using and why.
-  - Follow snippet descriptions with an empty line.
-- **Snippet code** must be enclosed inside ` ```csharp ` and ` ``` `.
-  - Remember to start your snippet's code on a new line below the opening backticks.
-  - Use standard function notation to define your snippet.
-  - Please indent with 2 spaces per indentation level. This helps keep the format consistent across the website and increases readability.
-  - Try to keep your snippets' code short and to the point. Use modern techniques and features. Make sure to test your code thoroughly before submitting.
-  - All snippets must be followed by one (more if necessary) test case after the code, in a new block enclosed inside ` ```csharp ` and ` ``` `. Use multiline examples only if necessary.
-  - Try to make your snippet name unique, so that it does not conflict with existing snippets.
-- Snippets should be as brief as possible, without sacrificing functionality. If your snippet seems longer than most, you can still submit it, and we can help you shorten it or figure out ways to improve it.
-- Snippets _should_ solve real-world problems, no matter how simple.
-- Snippets _should_ be abstract enough to be applied to different scenarios.
-- You can start creating a new snippet, by using the [snippet template](snippet-template.md) to format your snippets.
+This will allow you to use our customized tools for all of our content repositories.
+
+## How you can help
+
+- Submit pull requests with new snippets (see guidelines below) or snippet updates (tags, descriptions, explanations, typos, examples, code improvements).
+- Open issues for things you want to see added, modified, discuss ideas or help out with existing issues. 
+
+## Ground rules
+
+Breaking any of these rules will result in your pull request being closed. Please follow these guidelines above all else:
+
+- **Always be polite and respectful to others** and try to follow the advice of the moderators/collaborators/owners.
+- **Only modify snippet files**, never modify the generated files in the `snippet_data` directory.
+- **Use the integration tools commands** to generate new snippets, ensuring they have the correct name and are in the correct location.
+- **Follow snippet format exactly**, otherwise your snippets will not be recognized correctly by the tools responsible for publishing them on the website. This includes such things as spacing and empty lines - if you accidentally make a mistake, consult the repository's [snippet template](snippet-template.md).
+- **Snippets should solve real-world problems**, no matter how simple and should be abstract enough to be applied to different scenarios.
+
+## Snippet creation
+
+After installing the integration tools, you can run the following command:
+
+```sh
+create-new-snippet <my-snippet-name>
+```
+
+Replace `<my-snippet-name>` with the name of the snippet you are adding. 
+
+## Snippet guidelines
+
+- Snippets must have all their frontmatter sections (title, tags etc.) filled.
+- Snippet titles must correspond to the filename and follow the language and repository's naming conventions.
+- Snippet tags must be comma-separated, contain a primary tag as seen on the website as their first tag and an expertise tag (`beginner`, `intermediate` or `advanced`) as their last tag.
+- Snippet descriptions must be short and to the point. Explain *what* the snippet does and detail *how* the snippet works and the language features used in it.
+- Snippet code and examples must be enclosed in appropriate, language-tagged blocks as shown in the snippet template, be short and use modern techniques and features. Also make sure to test your code before submitting.
+- If your snippet contains arguments with default parameters, explain what happens if they are omitted when calling the function and what the default case is. Specify default parameters for arguments only if necessary.
+- If your snippet uses recursion, use the `recursion` tag and explain the base cases.
+- Try to strike a balance between readability, brevity, and performance.
+- Always use soft tabs (2 spaces), never hard tabs.
+- Leave a single space after a comma (`,`) character (both in the description and code).
+- Define multiple variables on the same line, if possible. Use meaningful names (e.g. `letter` instead of `lt`) and follow existing conventions as seen in other snippets. Do not use trailing or leading underscores in variable names.
