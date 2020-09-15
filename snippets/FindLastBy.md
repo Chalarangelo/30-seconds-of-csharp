@@ -5,8 +5,8 @@ tags: array,list,lambda,intermediate
 
 Returns the last element in a collection that matches the given predicate function, `match`.
 
-Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
-Use `IEnumerable.Last()` to return only the last matching element.
+- Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
+- Use `IEnumerable.Last()` to return only the last matching element.
 
 ```csharp
 using System.Collections.Generic;

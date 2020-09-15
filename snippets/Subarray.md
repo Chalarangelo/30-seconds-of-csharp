@@ -5,8 +5,8 @@ tags: array,intermediate
 
 Returns a subarray of the given array starting at the given index and having the specified length.
 
-Use `ArraySegment()` with the given array, `arr`, `start` and `length` to get the subarray.
-Convert the result to an array, using `ArraySegment.ToArray()`.
+- Use `ArraySegment()` with the given array, `arr`, `start` and `length` to get the subarray.
+- Convert the result to an array, using `ArraySegment.ToArray()`.
 
 ```csharp
 using System.Collections.Generic;

@@ -5,8 +5,8 @@ tags: array,list,intermediate
 
 Returns all indices of `n` in an `IList`.
 
-Use `Enumerable.Range()` to iterate over all indices in `data`.
-Use `Enumerable.Where()` in combination with `object.Equals()` to compare each value in `data` to `n` and return only matching indices.
+- Use `Enumerable.Range()` to iterate over all indices in `data`.
+- Use `Enumerable.Where()` in combination with `object.Equals()` to compare each value in `data` to `n` and return only matching indices.
 
 ```csharp
 using System.Collections.Generic;

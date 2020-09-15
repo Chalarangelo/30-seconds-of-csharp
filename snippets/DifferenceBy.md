@@ -5,8 +5,8 @@ tags: array,list,lambda,advanced
 
 Returns the difference between two collections, after applying the provided function to each element of both.
 
-Use `IEnumerable.Select()` to map each element of either collection to the desired type.
-Use `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.
+- Use `IEnumerable.Select()` to map each element of either collection to the desired type.
+- Use `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.
 
 ```csharp
 using System.Collections.Generic;

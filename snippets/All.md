@@ -5,8 +5,8 @@ tags: array,list,lambda,overload,intermediate
 
 Returns `true` if the provided predicate function returns `true` for all elements in a collection, `false` otherwise.
 
-Use `IEnumerable.ToArray()`, `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.
-Omit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.
+- Use `IEnumerable.ToArray()`, `Array.TrueForAll()` to test if all elements in the collection return `true` based on the predicate function, `match`.
+- Omit the predicate function, `match`, to use the overload that checks if each value is different from `null` by default.
 
 ```csharp
 using System.Collections.Generic;

@@ -5,8 +5,8 @@ tags: string,beginner
 
 Reverses a string.
 
-Use `string.ToCharArray()` to convert the string to an array of `char`, `Array.Reverse()` to reverse the array.
-Use `IEnumerable.ToArray()` to create an array of `char` and pass it to a `new string()`.
+- Use `string.ToCharArray()` to convert the string to an array of `char`, `Array.Reverse()` to reverse the array.
+- Use `IEnumerable.ToArray()` to create an array of `char` and pass it to a `new string()`.
 
 ```csharp
 using System.Linq;

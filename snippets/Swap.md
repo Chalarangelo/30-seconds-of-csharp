@@ -5,7 +5,7 @@ tags: utility,intermediate
 
 Swaps the values of two variables of the same type.
 
-Pass both values by reference using the `ref` keyword, then use a `temp` variable to swap their values.
+- Pass both values by reference using the `ref` keyword, then use a `temp` variable to swap their values.
 
 ```csharp
 public static partial class _30s 

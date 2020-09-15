@@ -5,7 +5,7 @@ tags: string,beginner
 
 Checks if a string is lower case.
 
-Convert the given string to lower case, using  `string.ToLower()`  and compare it to the original.
+- Convert the given string to lower case, using  `string.ToLower()`  and compare it to the original.
 
 ```csharp
 public static partial class _30s 

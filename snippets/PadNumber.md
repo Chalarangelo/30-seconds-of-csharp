@@ -5,7 +5,7 @@ tags: string,utility,beginner
 
 Pads a given number to the specified `length`.
 
-Use `Int32.ToString()` with an appropriate format specifier, produced using string interpolation.
+- Use `Int32.ToString()` with an appropriate format specifier, produced using string interpolation.
 
 ```csharp
 public static partial class _30s 

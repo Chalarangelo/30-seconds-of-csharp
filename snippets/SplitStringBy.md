@@ -5,7 +5,7 @@ tags: string,utility,beginner
 
 Splits a string into an array of strings using a multicharacter (string) separator.
 
-Use `string.Split()` with the given `separator` to split the string into an array of strings.
+- Use `string.Split()` with the given `separator` to split the string into an array of strings.
 
 ```csharp
 using System.Collections.Generic;

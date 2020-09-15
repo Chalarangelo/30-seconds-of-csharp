@@ -5,9 +5,9 @@ tags: array,list,intermediate
 
 Returns the most frequent element of a collection.
 
-Use `IEnumerable.GroupBy()` to group `values` by value.
-Use `IEnumerable.OrderByDescending()` in combination with `IEnumerable.Count()` to order the results in descending order based on frequency.
-Use `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.
+- Use `IEnumerable.GroupBy()` to group `values` by value.
+- Use `IEnumerable.OrderByDescending()` in combination with `IEnumerable.Count()` to order the results in descending order based on frequency.
+- Use `IEnumerable.First()` to get the first element and return its `Key` property, which corresponds to the element's value.
 
 ```csharp
 using System.Collections.Generic;

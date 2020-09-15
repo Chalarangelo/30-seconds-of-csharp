@@ -5,8 +5,8 @@ tags: string,utility,intermediate
 
 Filter a string's contents to include only alphanumeric and allowed characters.
 
-Use `string.ToCharArray()` in combination with `Array.FindAll()` to check if each character in the string is alphanumeric or contained in the `filter`.
-Omit the second argument, `filter`, to only allow alphanumeric characters.
+- Use `string.ToCharArray()` in combination with `Array.FindAll()` to check if each character in the string is alphanumeric or contained in the `filter`.
+- Omit the second argument, `filter`, to only allow alphanumeric characters.
 
 ```csharp
 using System.Collections.Generic;

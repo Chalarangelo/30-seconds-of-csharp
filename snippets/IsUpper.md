@@ -5,7 +5,7 @@ tags: string,beginner
 
 Checks if a string is upper case.
 
-Convert the given string to upper case, using  `string.ToUpper()`  and compare it to the original.
+- Convert the given string to upper case, using  `string.ToUpper()`  and compare it to the original.
 
 ```csharp
 public static partial class _30s 

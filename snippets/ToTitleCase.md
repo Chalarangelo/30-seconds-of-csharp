@@ -5,9 +5,9 @@ tags: string,regex,intermediate
 
 Converts a string to title case.
 
-Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
-Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.
-Use `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case.
+- Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
+- Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.
+- Use `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case.
 
 ```csharp
 using System.Globalization;

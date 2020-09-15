@@ -5,7 +5,7 @@ tags: utility,type,beginner
 
 Returns `true` if the given object is not of the specified type, `false` otherwise.
 
-Use the `is` operator to check if `obj` is not of the given type, `T`.
+- Use the `is` operator to check if `obj` is not of the given type, `T`.
 
 ```csharp
 public static partial class _30s 

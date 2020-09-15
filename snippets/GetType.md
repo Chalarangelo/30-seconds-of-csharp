@@ -5,7 +5,7 @@ tags: utility,type,beginner
 
 Returns the type of the given object.
 
-Use `typeof()` on the given object's type.
+- Use `typeof()` on the given object's type.
 
 ```csharp
 public static partial class _30s 

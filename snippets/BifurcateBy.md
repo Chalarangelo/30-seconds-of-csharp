@@ -6,7 +6,7 @@ tags: array,list,lambda,advanced
 Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. 
 If the predicate function returns a truthy value, the collection element belongs to the first group; otherwise, it belongs to the second group.
 
-Use `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.
+- Use `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.
 
 ```csharp
 using System.Collections.Generic;

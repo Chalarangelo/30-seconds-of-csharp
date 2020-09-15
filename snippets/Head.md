@@ -5,9 +5,9 @@ tags: array,list,intermediate
 
 Returns the head of a collection.
 
-Use `IEnumerable.Count()` to check if the enumerable is non-empty.
-Use `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.
-If the enumerable object is empty, return the `default()` value for the given type.
+- Use `IEnumerable.Count()` to check if the enumerable is non-empty.
+- Use `IEnumerable.Take(1)` to get the first element, `IEnumerable.ToArray()[0]` to convert to array and return the element.
+- If the enumerable object is empty, return the `default()` value for the given type.
 
 ```csharp
 using System.Collections.Generic;

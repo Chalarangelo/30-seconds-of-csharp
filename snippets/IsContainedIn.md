@@ -5,10 +5,10 @@ tags: array,list,dictionary,advanced
 
 Returns `true` if the elements of the first collection are contained in the second one regardless of order, `false` otherwise.
 
-Use `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.
-Use `IEnumerable.Distinct()` to find the distinct values from the first collection and loop over them using a `foreach` loop.
-Use `Dictionary.ContainsKey()` to check that each distinct value exists in the second collection and compare the count for each one.
-Return `false` if any value is not found in the second collection or if any count in it is lower than in the first one, `true` otherwise.
+- Use `IEnumerable.GroupBy()` to create groups for each distinct value in each collection, `IEnumerable.ToDictionary()` to convert the result to a `Dictionary`.
+- Use `IEnumerable.Distinct()` to find the distinct values from the first collection and loop over them using a `foreach` loop.
+- Use `Dictionary.ContainsKey()` to check that each distinct value exists in the second collection and compare the count for each one.
+- Return `false` if any value is not found in the second collection or if any count in it is lower than in the first one, `true` otherwise.
 
 ```csharp
 using System.Collections.Generic;

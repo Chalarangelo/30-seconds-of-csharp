@@ -5,8 +5,8 @@ tags: utility,array,list,string,beginner
 
 Combines the elements of an enumerable object into a string.
 
-Use `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.
-Omit the second argument, `delimiter`, to use the default delimiter of `","`.
+- Use `string.Join()` to combine all elements in the `IEnumerable` into a `string`, using `delimiter`.
+- Omit the second argument, `delimiter`, to use the default delimiter of `","`.
 
 ```csharp
 using System.Collections.Generic;

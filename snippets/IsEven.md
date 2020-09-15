@@ -5,8 +5,8 @@ tags: math,beginner
 
 Returns `true` if the given number is even, `false` otherwise.
 
-Check whether a number is odd or even using the modulo (`%`) operator. 
-Return `true` if the number is even, `false` if the number is odd.
+- Check whether a number is odd or even using the modulo (`%`) operator.
+- Return `true` if the number is even, `false` if the number is odd.
 
 ```csharp
 public static partial class _30s 
