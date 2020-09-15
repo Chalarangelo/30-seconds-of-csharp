@@ -5,7 +5,7 @@ tags: string,beginner
 
 Creates a new string by repeating the given string `n` times.
 
-Use `Enumerable.Repeat()` to repeat `s` `n` times, `string.Concat()` to convert the result to a `string`.
+- Use `Enumerable.Repeat()` to repeat `s` `n` times, `string.Concat()` to convert the result to a `string`.
 
 ```csharp
 using System.Linq;

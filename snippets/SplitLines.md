@@ -5,7 +5,7 @@ tags: string,beginner
 
 Splits a multiline string into an array of lines.
 
-Use `string.Split()` with all forms of the newline separator to split the string into an array of strings.
+- Use `string.Split()` with all forms of the newline separator to split the string into an array of strings.
 
 ```csharp
 using System.Collections.Generic;

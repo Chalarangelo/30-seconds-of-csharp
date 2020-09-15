@@ -5,9 +5,9 @@ tags: array,list,lambda,advanced
 
 Returns the symmetric difference betweend two collections, after applying the provided function to each element of both.
 
-Use `IEnumerable.Select()` to map each element of either collection to the desired type.
-Use `IEnumerable.Except()` to only return elements in one enumerable object and not the other.
-Use `IEnumerable.Union()` to combine the result of applying that to each object.
+- Use `IEnumerable.Select()` to map each element of either collection to the desired type.
+- Use `IEnumerable.Except()` to only return elements in one enumerable object and not the other.
+- Use `IEnumerable.Union()` to combine the result of applying that to each object.
 
 ```csharp
 using System.Collections.Generic;

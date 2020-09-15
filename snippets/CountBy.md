@@ -5,8 +5,8 @@ tags: array,list,lambda,intermediate
 
 Groups the elements of a collection based on the given function and returns the count of elements in each group.
 
-Use `IEnumerable.GroupBy()` to create groups for each distinct value in the collection, after applying the provided function.
-Use `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.
+- Use `IEnumerable.GroupBy()` to create groups for each distinct value in the collection, after applying the provided function.
+- Use `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.
 
 ```csharp
 using System.Collections.Generic;

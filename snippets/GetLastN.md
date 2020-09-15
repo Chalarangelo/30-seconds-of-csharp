@@ -5,10 +5,10 @@ tags: array,list,intermediate
 
 Returns the last `n` elements in a collection.
 
-Use `IEnumerable.Count()` to check if the enumerable is non-empty.
-Use `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.
-If the enumerable object is empty, return the `default()` value for the given enumerable.
-Omit the second argument, `n`, to use a default value of `1`.
+- Use `IEnumerable.Count()` to check if the enumerable is non-empty.
+- Use `IEnumerable.Skip(list.Count() - n)` to get the last `n` elements.
+- If the enumerable object is empty, return the `default()` value for the given enumerable.
+- Omit the second argument, `n`, to use a default value of `1`.
 
 ```csharp
 public static partial class _30s 

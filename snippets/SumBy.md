@@ -5,7 +5,7 @@ tags: math,array,list,lambda,intermediate
 
 Returns the sum of a collection, after mapping each element to a value using the provided function.
 
-Use `IEnumerable.Select()` to map each element of either collection to a `double`, `IEnumerable.Sum()` to sum the values.
+- Use `IEnumerable.Select()` to map each element of either collection to a `double`, `IEnumerable.Sum()` to sum the values.
 
 ```csharp
 using System.Collections.Generic;

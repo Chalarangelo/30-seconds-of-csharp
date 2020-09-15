@@ -5,9 +5,9 @@ tags: array,list,lambda,intermediate
 
 Returns the first index in an `IList` that matches the given predicate function, `match`.
 
-Use `Enumerable.Range()` to iterate over all indices in `data`.
-Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
-Use `IEnumerable.First()` to return only the first matching index.
+- Use `Enumerable.Range()` to iterate over all indices in `data`.
+- Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
+- Use `IEnumerable.First()` to return only the first matching index.
 
 ```csharp
 using System.Collections.Generic;

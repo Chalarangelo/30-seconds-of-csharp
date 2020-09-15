@@ -5,8 +5,8 @@ tags: array,utility,advanced
 
 Initializes a 2D array of the given width, height and value.
 
-Use `Enumerable.Repeat()` to repeat `value` `width` times, convert to an array and repeat `height` times using the same method.
-Use `IEnumerable.Select()` and `IEnumerable.First()` to convert the jagged array to a 2D array.
+- Use `Enumerable.Repeat()` to repeat `value` `width` times, convert to an array and repeat `height` times using the same method.
+- Use `IEnumerable.Select()` and `IEnumerable.First()` to convert the jagged array to a 2D array.
 
 ```csharp
 using System.Linq;

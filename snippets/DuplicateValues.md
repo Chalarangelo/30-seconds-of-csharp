@@ -5,9 +5,9 @@ tags: array,list,intermediate
 
 Returns all distinct values in a collection.
 
-Use `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.
-Use `IEnumerable.Where()` to create select only the groups with a count greater than `1`.
-Use `IEnumerable.Select()` to return the `Key` property of each group.
+- Use `IEnumerable.GroupBy()` to create groups for each distinct value in the enumerable.
+- Use `IEnumerable.Where()` to create select only the groups with a count greater than `1`.
+- Use `IEnumerable.Select()` to return the `Key` property of each group.
 
 ```csharp
 using System.Collections.Generic;

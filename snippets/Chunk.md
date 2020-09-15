@@ -5,11 +5,11 @@ tags: array,list,lambda,advanced
 
 Chunks a collection into smaller lists of a specified size.
 
-Use `IEnumerable.Select()` to convert the given list to index-value pairs.
-Use `IEnumerable.GroupBy()` to split elements into groups based on their index.
-Use `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.
-Finally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.
-If the original list can't be split evenly, the final chunk will contain the remaining elements.
+- Use `IEnumerable.Select()` to convert the given list to index-value pairs.
+- Use `IEnumerable.GroupBy()` to split elements into groups based on their index.
+- Use `IEnumerable.Select()` a second time to map each group's elements to their values and `IEnumerable.ToList()` to convert the result to a list.
+- Finally, use `IEnumerable.ToList()` on the result to convert everything to a list and return it.
+- If the original list can't be split evenly, the final chunk will contain the remaining elements.
 
 ```csharp
 using System.Collections.Generic;

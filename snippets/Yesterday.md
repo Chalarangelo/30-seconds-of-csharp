@@ -5,7 +5,7 @@ tags: date,beginner
 
 Returns yesterday's `DateTime` value.
 
-Use `DateTime.Now` to get the current date, then use `DateTime.AddDays(-1)` to decrement by `1`.
+- Use `DateTime.Now` to get the current date, then use `DateTime.AddDays(-1)` to decrement by `1`.
 
 ```csharp
 public static partial class _30s 

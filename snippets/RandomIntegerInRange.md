@@ -5,7 +5,7 @@ tags: math,utility,random,beginner
 
 Returns a random integer in the specified range.
 
-Use `Random.Next()` to generate an integer in the desired range.
+- Use `Random.Next()` to generate an integer in the desired range.
 
 ```csharp
 public static partial class _30s 

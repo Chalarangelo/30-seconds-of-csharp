@@ -6,7 +6,7 @@ tags: array,list,intermediate
 Splits values into two groups. 
 If an element in `filter` is `true`, the corresponding element in the collection belongs to the first group; otherwise, it belongs to the second group.
 
-Use `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.
+- Use `IEnumerable.Where()` to separate values into two groups and assign them to the two passed `out` arrays.
 
 ```csharp
 using System.Collections.Generic;

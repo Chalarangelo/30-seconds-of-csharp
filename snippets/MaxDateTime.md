@@ -5,7 +5,7 @@ tags: date,beginner
 
 Returns the maximum of two `DateTime` values.
 
-Use the conditional operator (`?:`) to return the maximum of the two values.
+- Use the conditional operator (`?:`) to return the maximum of the two values.
 
 ```csharp
 public static partial class _30s 

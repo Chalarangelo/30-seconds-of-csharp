@@ -5,8 +5,8 @@ tags: math,list,array,lambda,intermediate
 
 Returns the average of a collection, after mapping each element to a value using the provided function.
 
-Use `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.
-Use `IEnumerable.Average()` to get the average of the resulting values.
+- Use `IEnumerable.Select()` to map each element to the value returned by the provided selector function, `fn`.
+- Use `IEnumerable.Average()` to get the average of the resulting values.
 
 ```csharp
 using System.Collections.Generic;

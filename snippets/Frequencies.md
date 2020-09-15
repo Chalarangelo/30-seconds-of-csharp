@@ -5,8 +5,8 @@ tags: array,list,dictionary,intermediate
 
 Returns a `Dictionary` with the unique values of a collection as keys and their frequencies as the values.
 
-Use `IEnumerable.GroupBy()` to create groups for each distinct value in the collection.
-Use `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.
+- Use `IEnumerable.GroupBy()` to create groups for each distinct value in the collection.
+- Use `IEnumerable.ToDictionary()` to convert the result of the previous operation to a `Dictionary`.
 
 ```csharp
 using System.Collections.Generic;

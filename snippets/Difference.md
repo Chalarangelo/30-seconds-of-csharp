@@ -5,7 +5,7 @@ tags: array,list,beginner
 
 Returns the difference betweend two collections.
 
-Use `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.
+- Use `IEnumerable.Except()` to only return elements in the second enumerable object and not the first one.
 
 ```csharp
 using System.Collections.Generic;

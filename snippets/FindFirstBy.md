@@ -5,8 +5,8 @@ tags: array,list,lambda,intermediate
 
 Returns the first element in a collection that matches the given predicate function, `match`.
 
-Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
-Use `IEnumerable.First()` to return only the first matching element.
+- Use `IEnumerable.Where()` to filter out all values in `data` for which `match` returns `false`.
+- Use `IEnumerable.First()` to return only the first matching element.
 
 ```csharp
 using System.Collections.Generic;

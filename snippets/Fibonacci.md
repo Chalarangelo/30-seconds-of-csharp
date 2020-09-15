@@ -5,8 +5,8 @@ tags: math,array,intermediate
 
 Generates an array, containing the Fibonacci sequence, up until the nth term.
 
-Starting with `0` and `1`, loop from `2` through `n` adding the sum of the last two numbers and appending to the sequence.
-If `n` is less or equal to `0`, return a list containing `0`.
+- Starting with `0` and `1`, loop from `2` through `n` adding the sum of the last two numbers and appending to the sequence.
+- If `n` is less or equal to `0`, return a list containing `0`.
 
 ```csharp
 public static partial class _30s 

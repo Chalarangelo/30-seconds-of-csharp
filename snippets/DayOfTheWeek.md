@@ -5,7 +5,7 @@ tags: date,utility,beginner
 
 Returns the string representation of the weekday for the given `DateTime`.
 
-Use `DateTime.ToString()` with an appropriate format modifier to return the day of the week.
+- Use `DateTime.ToString()` with an appropriate format modifier to return the day of the week.
 
 ```csharp
 public static partial class _30s 

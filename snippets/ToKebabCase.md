@@ -5,8 +5,8 @@ tags: string,regex,intermediate
 
 Converts a string to kebab case.
 
-Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
-Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `-` as a separator.
+- Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
+- Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding `-` as a separator.
 
 ```csharp
 using System.Text.RegularExpressions;

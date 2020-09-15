@@ -5,8 +5,8 @@ tags: math,type,intermediate
 
 Returns `true` if the given string can be parsed into an integer, `false` otherwise.
 
-Return the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.
-Use `Double.TryParse()` to allow handling of values larger than `Int64`.
+- Return the result of calling `Double.TryParse()` with `NymberStyles.Integer` for the given `num` string.
+- Use `Double.TryParse()` to allow handling of values larger than `Int64`.
 
 ```csharp
 using System.Globalization;

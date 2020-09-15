@@ -5,7 +5,7 @@ tags: date,beginner
 
 Returns the minimum of two `DateTime` values.
 
-Use the conditional operator (`?:`) to return the minimum of the two values.
+- Use the conditional operator (`?:`) to return the minimum of the two values.
 
 ```csharp
 public static partial class _30s 

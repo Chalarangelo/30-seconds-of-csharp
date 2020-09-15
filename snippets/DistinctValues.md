@@ -5,7 +5,7 @@ tags: array,list,beginner
 
 Returns all distinct values in a collection.
 
-Use `IEnumerable.Distinct()` to get the distinct values in the given collection.
+- Use `IEnumerable.Distinct()` to get the distinct values in the given collection.
 
 ```csharp
 using System.Collections.Generic;

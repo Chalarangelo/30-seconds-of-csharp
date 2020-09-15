@@ -5,7 +5,7 @@ tags: array,list,intermediate
 
 Flattens a 2D collection into a single dimension.
 
-Use `IEnumerable.SelectMany()` to flatten the 2D enumerable object.
+- Use `IEnumerable.SelectMany()` to flatten the 2D enumerable object.
 
 ```csharp
 using System.Collections.Generic;

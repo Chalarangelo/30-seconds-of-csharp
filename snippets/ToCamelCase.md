@@ -5,10 +5,10 @@ tags: string,regex,advanced
 
 Converts a string to camel case.
 
-Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
-Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.
-Use `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case, `string.Replace()` with a regular expression to remove spaces afterwards.
-Finally, use `IEnumerable.Select()` on the result to convert the first character to lowercase and return a string from the result.
+- Use `Regex.Matches()` with an appropriate regular expression to break the string into words.
+- Use `string.Join()` and `string.ToLower()` to convert the words to lowercase and combine them adding ` ` as a separator.
+- Use `CultureInfo.TextInfo.ToTitleCase()` on the result to convert it to title case, `string.Replace()` with a regular expression to remove spaces afterwards.
+- Finally, use `IEnumerable.Select()` on the result to convert the first character to lowercase and return a string from the result.
 
 ```csharp
 using System.Globalization;

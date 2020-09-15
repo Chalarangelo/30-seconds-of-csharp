@@ -5,13 +5,12 @@ tags: array,list,random,intermediate
 
 Randomizes the order of the values of an `IList`, updating the original `IList` object.
 
-Use the [Fisher-Yates algorithm](
-https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.
+- Use the [Fisher-Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates%27_original_method) to reorder the elements of the given `IList` object.
 
 ```csharp
 using System.Collections.Generic;
 
-public static partial class _30s 
+public static partial class _30s
 {
   public static void Shuffle<T>(IList<T> list)
   {

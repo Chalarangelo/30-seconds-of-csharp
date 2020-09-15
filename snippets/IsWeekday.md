@@ -5,7 +5,7 @@ tags: date,utility,beginner
 
 Returns `true` if the given `DateTime` is a weekday, `false` otherwise.
 
-Use `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.
+- Use `DateTime.DayOfWeek` to check if the given `DateTime` is not a Saturday or Sunday.
 
 ```csharp
 public static partial class _30s 

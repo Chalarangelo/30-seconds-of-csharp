@@ -5,7 +5,7 @@ tags: string,regex,intermediate
 
 Returns a string with whitespaces compacted.
 
-Use `Regex.Replace()` with a regular expression to replace all occurences of 2 or more subsequent whitespace characters with a single space.
+- Use `Regex.Replace()` with a regular expression to replace all occurences of 2 or more subsequent whitespace characters with a single space.
 
 ```csharp
 using System.Text.RegularExpressions;

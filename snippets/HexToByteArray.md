@@ -5,10 +5,10 @@ tags: string,utility,advanced
 
 Converts a hexadecimal string to a `byte` array.
 
-Use `Enumerable.Range()` in combination with `string.Length` to get the indices of the given string in an array.
-Use `Enumerable.Where()` to get only the even indices in the previous range.
-Use `Enumerable.Select()` in combination with `Convert.ToByte()` and `string.Substring()` to convert each byte's hex code to a `byte`.
-Finally, use `Enumerable.ToArray()` to return a `byte[]`.
+- Use `Enumerable.Range()` in combination with `string.Length` to get the indices of the given string in an array.
+- Use `Enumerable.Where()` to get only the even indices in the previous range.
+- Use `Enumerable.Select()` in combination with `Convert.ToByte()` and `string.Substring()` to convert each byte's hex code to a `byte`.
+- Finally, use `Enumerable.ToArray()` to return a `byte[]`.
 
 ```csharp
 using System.Linq;

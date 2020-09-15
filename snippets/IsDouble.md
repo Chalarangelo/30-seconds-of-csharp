@@ -5,7 +5,7 @@ tags: math,type,intermediate
 
 Returns `true` if the given string can be parsed into a double, `false` otherwise.
 
-Return the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.
+- Return the result of calling `Double.TryParse()` with `NymberStyles.Float` for the given `num` string.
 
 ```csharp
 using System.Globalization;

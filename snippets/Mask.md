@@ -5,10 +5,10 @@ tags: string,utility,intermediate
 
 Replaces all but the last `n` characters in a string with the specified `mask` character.
 
-Use `string.Substring()` to get the last `n` characters of the passed string, `str`.
-Use `string.PadLeft()` to add as many `mask` characters as necessary to the start of the string to return a string of the same length.
-Omit the third argument, `mask`, to use a default character of `'*'`.
-Omit the second argument, `n`, to keep a default of `4` characters unmasked.
+- Use `string.Substring()` to get the last `n` characters of the passed string, `str`.
+- Use `string.PadLeft()` to add as many `mask` characters as necessary to the start of the string to return a string of the same length.
+- Omit the third argument, `mask`, to use a default character of `'*'`.
+- Omit the second argument, `n`, to keep a default of `4` characters unmasked.
 
 ```csharp
 public static partial class _30s 
